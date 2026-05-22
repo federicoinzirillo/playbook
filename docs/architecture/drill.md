@@ -17,7 +17,7 @@ sidebar_position: 3
 
 ## Scenario A — La PMI che vuole un assistente sui dati
 
-**Contesto:** uno studio di consulenza fiscale con 40 dipendenti vuole un assistente AI che risponda a domande sui propri documenti interni (circolari fiscali archiviate, contratti di consulenza, manualistica interna, deliberazioni). Volume: ~50 utenti attivi, ~200 query al giorno. Budget: vogliono spendere "ragionevolmente" — diciamo $1.500/mese inclusi tutti i costi infrastrutturali e API. Privacy: i dati sono sensibili ma non soggetti a vincoli specifici di data residency (no sanità, no PA). Team: due sviluppatori senior generalisti, nessuna esperienza precedente di AI. Tempi: vorrebbero qualcosa di usabile entro 8 settimane.
+**Contesto:** uno studio di consulenza fiscale con 40 dipendenti vuole un assistente AI che risponda a domande sui propri documenti interni (circolari fiscali archiviate, contratti di consulenza, manualistica interna, deliberazioni). Volume: ~50 utenti attivi, ~200 query al giorno. Budget: vogliono spendere "ragionevolmente" — diciamo \$1.500/mese inclusi tutti i costi infrastrutturali e API. Privacy: i dati sono sensibili ma non soggetti a vincoli specifici di data residency (no sanità, no PA). Team: due sviluppatori senior generalisti, nessuna esperienza precedente di AI. Tempi: vorrebbero qualcosa di usabile entro 8 settimane.
 
 **Cosa ti viene chiesto:**
 1. Build vs buy: per ogni componente principale della reference architecture, motiva la scelta.
@@ -71,7 +71,7 @@ In seconda fase (mesi 3-6): cache semantica, eventuale routing su modello più p
 
 ## Scenario B — La multinazionale che valuta proprietario vs open-weight
 
-**Contesto:** una multinazionale farmaceutica vuole un sistema AI per supportare gli scientific affairs nella ricerca su letteratura scientifica e documentazione regolatoria interna. Volume previsto: 5.000 utenti, 100.000 query al giorno a regime. Vincoli: i documenti interni sono altamente riservati (proprietà intellettuale su farmaci in sviluppo); soggetti a GDPR e a controlli regolatori (FDA, EMA). Budget AI dedicato: ~$200.000/mese a regime. Team: due squadre dedicate, una di MLOps con esperienza GPU, una applicativa con esperienza AI. Tempi: 12-18 mesi per arrivare a regime, MVP a 6 mesi.
+**Contesto:** una multinazionale farmaceutica vuole un sistema AI per supportare gli scientific affairs nella ricerca su letteratura scientifica e documentazione regolatoria interna. Volume previsto: 5.000 utenti, 100.000 query al giorno a regime. Vincoli: i documenti interni sono altamente riservati (proprietà intellettuale su farmaci in sviluppo); soggetti a GDPR e a controlli regolatori (FDA, EMA). Budget AI dedicato: ~\$200.000/mese a regime. Team: due squadre dedicate, una di MLOps con esperienza GPU, una applicativa con esperienza AI. Tempi: 12-18 mesi per arrivare a regime, MVP a 6 mesi.
 
 **Cosa ti viene chiesto:**
 1. Modello: proprietario, open-weight, o ibrido? Motiva con i criteri.
@@ -110,7 +110,7 @@ Il routing tra i due passa dal gateway, basato su sensibilità del documento + c
 **Cosa cambierebbe la decisione se i vincoli fossero diversi:**
 
 - **Senza il vincolo IP:** si potrebbe usare maggiormente proprietario via API, riducendo il self-host. Probabilmente comunque ibrido per ragioni di costo a volume, ma il bilancio si sposterebbe.
-- **Budget ridotto a $20.000/mese:** self-host di modelli grandi non più giustificato, si tornerebbe verso proprietari + modelli piccoli open-weight su volumi limitati.
+- **Budget ridotto a \$20.000/mese:** self-host di modelli grandi non più giustificato, si tornerebbe verso proprietari + modelli piccoli open-weight su volumi limitati.
 - **Team senza competenze GPU:** Bedrock/Azure managed open-weight diventerebbe la scelta per gli open-weight, evitando il self-host puro. Compromesso accettabile.
 - **Volume 10x più basso:** quasi tutto proprietario, l'open-weight self-host non si paga.
 

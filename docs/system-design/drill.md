@@ -17,7 +17,7 @@ sidebar_position: 5
 
 ## Scenario A — Chatbot di supporto enterprise
 
-**Contesto:** un'azienda SaaS con 5.000 clienti business vuole un assistente AI per il supporto tecnico. La knowledge base: 3.000 articoli di documentazione (aggiornati frequentemente), 200.000 ticket storici risolti (aggiornati ogni giorno), changelog di prodotto (settimanale). Gli utenti sono sviluppatori che integrano l'API. Richiedono risposte precise e citano la fonte. Il volume stimato: 2.000 richieste al giorno, con picchi a 300 richieste all'ora. Budget: $5.000 al mese per i costi AI. Latenza accettabile: 8 secondi.
+**Contesto:** un'azienda SaaS con 5.000 clienti business vuole un assistente AI per il supporto tecnico. La knowledge base: 3.000 articoli di documentazione (aggiornati frequentemente), 200.000 ticket storici risolti (aggiornati ogni giorno), changelog di prodotto (settimanale). Gli utenti sono sviluppatori che integrano l'API. Richiedono risposte precise e citano la fonte. Il volume stimato: 2.000 richieste al giorno, con picchi a 300 richieste all'ora. Budget: \$5.000 al mese per i costi AI. Latenza accettabile: 8 secondi.
 
 **Cosa ti viene chiesto:**
 1. Disegna l'architettura dei componenti (non serve essere precisi sul codice; bastano i componenti e come si collegano).
@@ -50,7 +50,7 @@ sidebar_position: 5
 - Ticket storici: pipeline batch notturna; non serve intra-day freshness.
 - Changelog: aggiornamento manuale o trigger sul commit/release.
 
-**Budget:** $5.000/mese su 2.000 richieste × 30 giorni = 60.000 richieste/mese. Budget per richiesta: ~$0.083. Con modello medio, contesto di 3.000 token input + 500 token output, il costo è nell'ordine di $0.002-0.010 per richiesta — abbondantemente dentro budget. La cache riduce ulteriormente.
+**Budget:** \$5.000/mese su 2.000 richieste × 30 giorni = 60.000 richieste/mese. Budget per richiesta: ~\$0.083. Con modello medio, contesto di 3.000 token input + 500 token output, il costo è nell'ordine di \$0.002-0.010 per richiesta — abbondantemente dentro budget. La cache riduce ulteriormente.
 
 **Trappole:**
 - Non separare le sorgenti porta a contesto mescolato e rende impossibile l'attributione della fonte.
