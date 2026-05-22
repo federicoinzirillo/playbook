@@ -79,7 +79,7 @@ Cercare il vettore più simile tra milioni con un confronto esaustivo è troppo 
 
 L'idea di HNSW: costruisci un grafo in cui ogni vettore è connesso ai suoi vicini prossimi. La ricerca naviga il grafo "saltando" verso la zona dello spazio dove si trova la query, senza confrontare tutto. È "approssimato" perché può perdere il vicino *esatto* più prossimo, ma in pratica la qualità è alta e la velocità guadagnata vale la piccola perdita.
 
-Ai fini pratici: sceglierai un vector DB (Pinecone, Weaviate, Qdrant, pgvector, Chroma…) e userai la sua implementazione ANN. Non devi implementare HNSW a mano; ma capire che c'è un indice approssimato — e che va costruito una volta e aggiornato quando aggiungi documenti — ti spiega perché il warm-up di un vector DB non è istantaneo.
+Ai fini pratici: sceglierai un vector DB (Pinecone, Weaviate, Qdrant, pgvector, Chroma, Milvus, e — in crescita rapida nel 2025-26 — LanceDB per setup serverless e multimodali) e userai la sua implementazione ANN. Non devi implementare HNSW a mano; ma capire che c'è un indice approssimato — e che va costruito una volta e aggiornato quando aggiungi documenti — ti spiega perché il warm-up di un vector DB non è istantaneo.
 </details>
 
 Attenzione al dettaglio pratico dalla lezione 0.2: i vettori prodotti da modelli di embedding diversi non sono confrontabili. Scegli un modello e usalo sia per indicizzare i chunk sia per embeddare le query. Cambiare modello richiede di re-embeddare tutto.

@@ -29,7 +29,7 @@ Il triangolo qualità-latenza-costo non è una metafora vaga. È il frame che ap
 
 ### Scelta del modello
 
-La leva con più impatto su tutti e tre gli assi. Modelli più grandi (GPT-4o, Claude Opus, Gemini Ultra) danno qualità superiore su task complessi, ma costano di più e sono più lenti. Modelli più piccoli (GPT-4o mini, Claude Haiku, Gemini Flash) sono veloci ed economici, con qualità sufficiente per molti task.
+La leva con più impatto su tutti e tre gli assi. Modelli più grandi (Claude Opus 4.7, GPT-5.4/5.5, Gemini 3.1 Pro) danno qualità superiore su task complessi, ma costano di più e sono più lenti. Modelli più piccoli della stessa generazione (Claude Haiku 4.5, GPT-5.3 Instant, Gemini 3 Flash) sono veloci ed economici, con qualità sufficiente per molti task.
 
 La domanda corretta non è "quale modello è il migliore". È: **quale modello è sufficiente per il mio task specifico?** L'overkill è un costo reale.
 

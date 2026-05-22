@@ -98,6 +98,8 @@ Prima di mettere in produzione qualsiasi sistema che elabora dati utente con un 
 
 <span class="badge-stato stabile">Stabile</span> Il GDPR è regolamento del 2018 con aggiornamenti interpretativi continui. Le linee guida applicative per l'AI vengono dal EDPB (*European Data Protection Board*) e dagli autorità nazionali (per l'Italia, il Garante). Le nozioni base sono stabili; le applicazioni specifiche all'AI si evolvono.
 
+<span class="badge-stato evoluzione">In evoluzione</span> Da tenere d'occhio per il 2027: il **Cyber Resilience Act** (CRA, Regulation EU 2024/2847) entra pienamente in vigore l'11 dicembre 2027 e impone requisiti di cybersecurity, vulnerability handling e SBOM (Software Bill of Materials) ai "prodotti con elementi digitali" — categoria che include sistemi AI distribuiti in EU. Si applica in parallelo a GDPR e AI Act, non in alternativa. Per chi distribuisce modelli o sistemi AI come componenti software (specialmente B2B o open-source non-personale), è il terzo livello di compliance da pianificare.
+
 ## Cosa NON è la privacy nell'AI
 
 | Il pensiero sbagliato | Come stanno le cose |

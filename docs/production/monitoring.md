@@ -57,7 +57,7 @@ Quattro tipi di drift, ognuno con sintomi e cause diverse.
 
 **Drift di documento (corpus drift).** I dati su cui fai retrieval (lezione 5.4) stanno cambiando, ma l'indice no — o viceversa, l'indice è cambiato molto rispetto a quando hai calibrato i prompt. Sintomo: faithfulness che cala, citazioni a documenti vecchi anche quando ce ne sono di nuovi. Come si misura: frequenza dei chunk recuperati, distribuzione delle date di update dei documenti nelle risposte.
 
-**Drift del modello.** Il provider ha aggiornato il modello sotto il tuo naso. Non è teorico — è successo con ogni provider major più volte. Sintomo: cambiano lo stile, la lunghezza media, il comportamento sui prompt borderline. Come si difendi: pin sulla versione del modello quando possibile (`gpt-4o-2024-08-06` invece di `gpt-4o`), eval suite che gira a ogni update annunciato.
+**Drift del modello.** Il provider ha aggiornato il modello sotto il tuo naso. Non è teorico — è successo con ogni provider major più volte (la transizione GPT-4o → GPT-5 a febbraio 2026 ha rotto sistemi che non avevano pinato la versione). Sintomo: cambiano lo stile, la lunghezza media, il comportamento sui prompt borderline. Come ti difendi: pin sulla versione del modello quando possibile (`claude-opus-4-7-20260415` invece di `claude-opus-4`, o `gpt-5.4-2026-04-24` invece di `gpt-5.4`), eval suite che gira a ogni update annunciato.
 
 **Drift di obiettivo.** Il business vuole che il sistema faccia ora cose leggermente diverse da quelle per cui è stato calibrato. Sintomo: il PM dice "perché non risponde mai a X?". Non è un bug, è un drift nei requisiti. Come si gestisce: review periodica dei criteri di valutazione (lezione 3.1), non solo del sistema.
 

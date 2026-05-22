@@ -78,6 +78,14 @@ Per task di video understanding ad alto volume (sorveglianza, analisi di contenu
 
 <span class="badge-stato evoluzione">In evoluzione</span> La comprensione video nativa (senza dover estrarre frame manualmente) è un'area in rapida evoluzione. I modelli Gemini hanno già capacità estese su questo fronte; altri provider stanno seguendo.
 
+## Agentic browsing: vision come interfaccia per gli agenti
+
+Una capacità esplosa nel 2025-26 è l'**agentic browsing** — agenti che operano su un browser come farebbe un umano, vedendo screenshot e producendo coordinate di click e testo da digitare. GPT-5.4 ha la *computer use* nativa, Claude Mythos Preview è in cima ai benchmark WebArena (68.7% ad apr 2026), Google ha Project Mariner. È vision, ma applicata in modo nuovo: invece di descrivere un'immagine, il modello la usa come *stato* di un loop agentico (lezione 1.4).
+
+Il pattern: lo screenshot va al modello → il modello produce un'azione strutturata (`click(x=150, y=320)`, `type("hello@example.com")`, `scroll_down(300)`) → il sistema esegue l'azione → nuovo screenshot → ripeti. Cambia la natura dei tool: invece di API parametriche, sono primitive UI generiche che funzionano su qualsiasi sito senza integrazione dedicata.
+
+Implicazioni che vedrai nei prossimi mesi: nuovi tipi di agenti che automatizzano flussi web non integrabili via API, nuove categorie di rischio (vedi prompt injection visiva nella lezione 4.2), e benchmark dedicati come WebArena e BrowserGym che diventano riferimento per misurare la capabilities di un modello.
+
 ## Cosa NON è la vision AI
 
 | Il pensiero sbagliato | Come stanno le cose |

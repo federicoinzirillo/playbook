@@ -43,7 +43,7 @@ sidebar_position: 5
 
 **Pattern:** sincrono con streaming. Latenza accettabile di 8 secondi è gestibile con streaming — l'utente vede la risposta che cresce, non aspetta in silenzio. Nessun motivo per asincrono su una query interattiva.
 
-**Modello:** un modello di fascia media (GPT-4o mini, Claude Haiku) per la maggior parte delle query; modello grande (GPT-4o) solo per query complesse rilevate dall'orchestratore (query lunghe, multiple entità, "spiegami come funziona X"). Il routing intelligente riduce significativamente il costo medio.
+**Modello:** un modello di fascia veloce (Claude Haiku 4.5, GPT-5.3 Instant, Gemini 3 Flash) per la maggior parte delle query; modello grande (Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro) solo per query complesse rilevate dall'orchestratore (query lunghe, multiple entità, "spiegami come funziona X"). Il routing intelligente riduce significativamente il costo medio.
 
 **Aggiornamento dell'indice:**
 - Documentazione: webhook o polling ogni ora; aggiornamento incrementale basato su hash del contenuto.

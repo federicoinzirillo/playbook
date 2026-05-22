@@ -56,7 +56,7 @@ Quando sai dove vanno i soldi, hai cinque leve principali. In ordine di impatto 
 
 **Caching.** È sempre la prima leva e quella con miglior rapporto sforzo/risultato. Cache esatta (stessa query → risposta cached) elimina costo e latenza. Cache semantica (query simile sopra soglia di similarità) richiede embedding ma copre molti più casi. Su sistemi reali si vedono hit rate del 20-50% — significa abbattere il costo della stessa percentuale.
 
-**Routing intelligente del modello.** Non tutte le query meritano GPT-4o. Un classificatore (anche semplice, anche basato su regole) instrada le query semplici su un modello piccolo (Haiku, GPT-4o mini, modello locale) e solo quelle complesse sul grande. Riduzione del costo medio del 40-70% su workload reali, senza perdita percepita di qualità se il routing è ben calibrato.
+**Routing intelligente del modello.** Non tutte le query meritano il top di gamma. Un classificatore (anche semplice, anche basato su regole) instrada le query semplici su un modello piccolo (Haiku 4.5, GPT-5.3 Instant, Gemini 3 Flash, o un modello open-weight locale) e solo quelle complesse sul grande (Opus 4.7, GPT-5.4, Gemini 3.1 Pro). Riduzione del costo medio del 40-70% su workload reali, senza perdita percepita di qualità se il routing è ben calibrato.
 
 **Ottimizzazione del prompt.** Prompt più corti = meno token input. Spesso i prompt di sistema crescono per accrescimento — ogni volta che qualcosa va storto si aggiunge una riga di "non fare X". Dopo un anno il prompt di sistema è 2000 token, di cui metà non servono più. Revisione periodica obbligatoria. Stesso discorso per il contesto recuperato in RAG — se ne metti 8000 token quando ne bastano 2000, paghi 4x senza vantaggio.
 

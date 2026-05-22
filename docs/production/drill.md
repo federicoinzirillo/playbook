@@ -17,7 +17,7 @@ sidebar_position: 4
 
 ## Scenario A — I costi sono raddoppiati in una settimana
 
-**Contesto:** un assistente AI per il supporto interno di un'azienda è live da quattro mesi. Modello: GPT-4o via API. Budget mensile storico: $3.000. Lunedì arriva un alert: il costo dell'ultima settimana è stato $1.500 invece dei $750 abituali. Nessun deployment recente. Niente alert su latenza, uptime o error rate. Il PM chiede "cosa è successo?".
+**Contesto:** un assistente AI per il supporto interno di un'azienda è live da quattro mesi. Modello: Claude Sonnet 4.6 via API (sostituito a febbraio 2026 al precedente GPT-4o quando il provider ha retirato la famiglia). Budget mensile storico: $3.000. Lunedì arriva un alert: il costo dell'ultima settimana è stato $1.500 invece dei $750 abituali. Nessun deployment recente. Niente alert su latenza, uptime o error rate. Il PM chiede "cosa è successo?".
 
 **Cosa ti viene chiesto:**
 1. Sequenza di indagine: cosa guardi per primo, secondo, terzo?

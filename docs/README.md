@@ -74,13 +74,13 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 - [6.4 Decision drill — Produzione](./production/drill.md) — scritta
 
 ### 7 — Architettura e sintesi
-- [7.1 Reference architecture](./architecture/reference-architecture.md) — da riscrivere
-- [7.2 Build vs buy, proprietari vs open-weight](./architecture/build-vs-buy.md) — da riscrivere
-- [Decision drill — Architettura](./architecture/drill.md) — da riscrivere
-- [7.3 Capstone — progetto end-to-end](./capstone/progetto-finale.md) — da riscrivere
+- [7.1 Reference architecture](./architecture/reference-architecture.md) — scritta
+- [7.2 Build vs buy, proprietari vs open-weight](./architecture/build-vs-buy.md) — scritta
+- [Decision drill — Architettura](./architecture/drill.md) — scritta
+- [7.3 Capstone — progetto end-to-end](./capstone/progetto-finale.md) — scritta
 
 ---
 
-**Avanzamento:** 2 lezioni complete nella voce definitiva (0.1, 0.2). Tutte le altre sono scaffoldate ma da scrivere. Le pagine "da riscrivere" erano state buttate giù prima di definire il registro: vanno rifatte col gold standard.
+**Avanzamento:** tutte le 35 lezioni sono nella voce definitiva. La guida riflette lo stato del settore al maggio 2026 — modelli (Claude 4.x, GPT-5.x, Gemini 3.x), OWASP LLM Top 10 v2025, EU AI Act post-Digital Omnibus, MCP donato alla Linux Foundation. Tracking dei cambiamenti strutturali in **[RADAR.md](./RADAR.md)**.
 
 **Per riprendere:** apri `AGENTS.md` (root del repo), fai leggere al modello la 0.1 e la 0.2 come riferimento di voce, poi scrivi 1-2 pagine per sessione seguendo il SYLLABUS.
