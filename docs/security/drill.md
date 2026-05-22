@@ -1,0 +1,17 @@
+---
+title: Decision Drill
+sidebar_position: 5
+---
+
+# Decision Drill — Sicurezza e governance
+
+Allenamento da architetto: **decidi e giustifica**. Non c'è una sola risposta giusta, c'è il saper nominare i trade-off.
+
+## Scenario
+Un assistente AI con accesso a tool interni (email, database) verrà usato da clienti esterni. Quali rischi e quali contromisure?
+
+## Cosa ti viene chiesto
+Progetta la soluzione e **giustifica ogni scelta**. Scrivi la tua risposta *prima* di guardare la griglia.
+
+## Griglia di valutazione
+_(da completare: cosa avrebbe nominato un senior, quali trade-off, quali trappole evitare)_
