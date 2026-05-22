@@ -25,26 +25,26 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 ### 0 — Fondamenta concettuali
 - [0.1 Come funziona un LLM](./foundations/come-funziona-un-llm.md) — scritta
 - [0.2 Embedding e spazi vettoriali](./foundations/embedding.md) — scritta
-- [0.3 Concetti ML che servono a chiunque](./foundations/concetti-ml.md) — bozza
-- [0.4 LLM vs ML classico: quando NON usare la GenAI](./foundations/llm-vs-ml-classico.md) — da riscrivere
-- [0.5 Prompt engineering come disciplina](./foundations/prompt-engineering.md) — bozza
+- [0.3 Concetti ML che servono a chiunque](./foundations/concetti-ml.md) — scritta
+- [0.4 LLM vs ML classico: quando NON usare la GenAI](./foundations/llm-vs-ml-classico.md) — scritta
+- [0.5 Prompt engineering come disciplina](./foundations/prompt-engineering.md) — scritta
 
 ### 1 — Costruire sistemi LLM
-- [1.1 RAG](./building/rag.md) — da riscrivere
-- [1.2 Context engineering](./building/context-engineering.md) — bozza
-- [1.3 Structured output e function calling](./building/structured-output.md) — da riscrivere
-- [1.4 Agenti e orchestrazione](./building/agenti.md) — da riscrivere
-- [1.5 MCP](./building/mcp.md) — da riscrivere
-- [1.6 Decision drill — Costruire](./building/drill.md) — da riscrivere
-- [1.7 Decision drill — Fine-tuning vs RAG vs PE vs context engineering](./building/drill-fine-tuning-vs-rag.md) — bozza
+- [1.1 RAG](./building/rag.md) — scritta
+- [1.2 Context engineering](./building/context-engineering.md) — scritta
+- [1.3 Structured output e function calling](./building/structured-output.md) — scritta
+- [1.4 Agenti e orchestrazione](./building/agenti.md) — scritta
+- [1.5 MCP](./building/mcp.md) — scritta
+- [1.6 Decision drill — Costruire](./building/drill.md) — scritta
+- [1.7 Decision drill — Fine-tuning vs RAG vs PE vs context engineering](./building/drill-fine-tuning-vs-rag.md) — scritta
 
 ### 2 — Multimodale e altri tipi di AI
-- [2.1 Come funziona il multimodale](./multimodal/come-funziona-multimodale.md) — bozza
-- [2.2 Vision](./multimodal/vision.md) — bozza
-- [2.3 Audio e speech](./multimodal/audio.md) — bozza
-- [2.4 Generazione di immagini](./multimodal/generazione-immagini.md) — bozza
-- [2.5 Multimodale vs pipeline separate](./multimodal/multimodale-vs-pipeline.md) — bozza
-- [2.6 Decision drill — Multimodale](./multimodal/drill.md) — bozza
+- [2.1 Come funziona il multimodale](./multimodal/come-funziona-multimodale.md) — scritta
+- [2.2 Vision](./multimodal/vision.md) — scritta
+- [2.3 Audio e speech](./multimodal/audio.md) — scritta
+- [2.4 Generazione di immagini](./multimodal/generazione-immagini.md) — scritta
+- [2.5 Multimodale vs pipeline separate](./multimodal/multimodale-vs-pipeline.md) — scritta
+- [2.6 Decision drill — Multimodale](./multimodal/drill.md) — scritta
 
 ### 3 — Valutare e rendere affidabile
 - [3.1 LLM-as-judge](./evaluation/llm-as-judge.md) — da riscrivere
