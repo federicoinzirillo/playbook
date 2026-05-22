@@ -45,13 +45,13 @@ Sembra un dettaglio da nerd, e invece ti tocca il portafoglio: il costo delle AP
 
 > **Curiosità** — Una parola rara e lunga si spezza in più token di una comune e corta. Ecco perché, a parità di lettere, certe parole "costano" più di altre.
 
-## La finestra di contesto
+## I limiti del modello: contesto e cut-off
 
-Per indovinare il token dopo, il modello guarda tutto quello che ha davanti: la tua domanda più ciò che ha già scritto. Ma c'è un tetto a quanto testo riesce a tenere d'occhio in una volta, e si chiama **finestra di contesto** (*context window*). Quello che sfora il tetto, sparisce dai radar.
+Un LLM ha due limiti che conviene chiamare per nome subito, perché tornano in metà delle decisioni che farai più avanti.
 
-Pensala come una **scrivania**: ci stanno un tot di fogli, e se ne aggiungi troppi i primi cadono dal bordo. Il modello non li vede più, punto. È il motivo per cui in una chat molto lunga a volte sembra "dimenticare" come avevi iniziato — quel pezzo è semplicemente caduto dalla scrivania.
+Il primo è di **spazio**. Per indovinare il token dopo, il modello guarda tutto quello che ha davanti: la tua domanda più ciò che ha già scritto. Ma c'è un tetto a quanto testo riesce a tenere d'occhio in una volta, e si chiama **finestra di contesto** (*context window*). Quello che sfora il tetto, sparisce dai radar. Pensala come una **scrivania**: ci stanno un tot di fogli, e se ne aggiungi troppi i primi cadono dal bordo. Il modello non li vede più, punto. È il motivo per cui in una chat molto lunga a volte sembra "dimenticare" come avevi iniziato — quel pezzo è semplicemente caduto dalla scrivania.
 
-A questo si aggiunge un secondo limite, diverso. Un modello conosce solo ciò che ha visto fino al suo **cut-off**: la data in cui è finito l'addestramento. Tutto quello che è successo dopo, per lui non esiste — a meno che non glielo passi tu nel contesto.
+Il secondo limite è di **tempo**. Un modello conosce solo ciò che ha visto fino al suo **cut-off**: la data in cui è finito l'addestramento. Tutto quello che è successo dopo, per lui non esiste — a meno che non glielo passi tu nel contesto. È il motivo per cui un LLM ti risponde con sicurezza su eventi vecchi e cade su quelli di ieri: non è che "sbaglia", è che la sua mappa del mondo si ferma a una data.
 
 Metti insieme i due limiti e hai già capito, in anticipo, perché esiste metà di questa guida. **Documento troppo lungo per la scrivania? Informazione successiva al cut-off?** In tutti e due i casi la mossa è la stessa: dare al modello, al momento giusto, solo i pezzi che gli servono. Quella tecnica si chiama **RAG**, ed è la lezione 1.1.
 
@@ -76,7 +76,7 @@ La temperature è un numero, di solito tra 0 e 2, che regola **quanto il modello
 
 Morale: **non esiste la temperature "giusta", esiste quella giusta per il compito.** Una risposta legale, dove inventarsi le cose è un disastro? Bassa. Un brainstorming di nomi, dove la noia è il vero nemico? Alta. Quasi tutto vive nel mezzo, e il punto giusto si trova provando, non copiando un default da un tutorial.
 
-> **Nota** — La temperature non è l'unica manopola. Un'altra molto usata, *top-p*, fa una cosa simile ma tagliando la coda delle opzioni improbabili. Per ora tieni il concetto: ci sono parametri che regolano quanto il modello osa.
+La temperature non è l'unica manopola. Quella che sentirai nominare più spesso insieme è **top-p** (anche detto *nucleus sampling*): un numero tra 0 e 1 che decide *da quanti candidati* il modello è autorizzato a pescare. Con top-p = 0.9, il modello considera solo i token più probabili la cui somma di probabilità arriva al 90%, e ignora del tutto la coda residua. Se la temperature regola *quanto* il modello dà retta alle differenze, top-p regola **quanti finalisti ammette al ballottaggio**: taglia gli outsider improbabili prima che la temperature gli dia voce. In pratica si usano insieme — temperature per il rischio, top-p come rete di sicurezza che impedisce alle opzioni più strampalate di entrare in gioco, anche quando alzi la temperature. Default ragionevoli: temperature 0.7-1.0 e top-p 0.9-1.0; si tocca solo quando si capisce perché.
 
 ### Sotto il cofano: la softmax
 

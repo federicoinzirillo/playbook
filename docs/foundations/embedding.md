@@ -72,7 +72,21 @@ Il prodotto scalare funziona come una **votazione coordinata per coordinata**: s
 
 Non li calcoli a mano: lo fa un **modello di embedding**, un parente stretto degli LLM ma con un altro mestiere. Un LLM genera testo; un modello di embedding prende un testo e **sputa fuori il suo vettore**. Gli dai "il gatto dorme sul divano", ti restituisce una lista di, diciamo, 1.536 numeri. Gli dai un intero documento, stessa cosa: un vettore solo che ne riassume il significato.
 
+Un dettaglio tecnico che conta: la maggior parte dei modelli di embedding produce vettori in cui **il significato è codificato nella direzione, non nella lunghezza**. Tradotto: due testi simili escono con vettori che *puntano dalla stessa parte*, non con vettori "più lunghi" o "più corti". È il motivo per cui la similarità del coseno, che guarda solo la direzione, è la misura standard — la lunghezza del vettore non porterebbe segnale utile, anzi confonderebbe.
+
 La cosa pratica da sapere: esistono tanti modelli di embedding diversi, producono vettori di lunghezze diverse, e **non sono intercambiabili.** Vettori fatti da modelli diversi non si possono confrontare tra loro — è come misurare due cose con righelli tarati in modo diverso. Quando costruisci un sistema, scegli un modello di embedding e tieni quello per tutto.
+
+<details>
+<summary>Sotto il cofano: come impara un modello di embedding</summary>
+
+Resta la domanda: come fa un modello a "sapere" che *cane* e *cagnolino* devono uscire vicini? Non glielo dice nessuno, lo impara con una tecnica chiamata **contrastive learning** (apprendimento per contrasto).
+
+Il meccanismo è semplice da raccontare. Durante l'addestramento gli si mostrano tantissime **coppie di testi**, etichettate in due gruppi: coppie *positive* (testi che si assomigliano davvero — per esempio una domanda e la sua risposta, o due frasi parafrasi l'una dell'altra) e coppie *negative* (testi a caso, che non c'entrano nulla tra loro). L'obiettivo della funzione di costo è duplice: **avvicinare** nello spazio i vettori delle coppie positive, **allontanare** quelli delle coppie negative. Ripeti per miliardi di coppie e i parametri si assestano in modo che lo spazio del significato emerga da solo.
+
+Niente etichette manuali tipo "questa dimensione è 'animalità'". Le dimensioni si distribuiscono da sole per spiegare i dati che il modello ha visto. È lo stesso principio degli LLM (impara dagli esempi, non dalle regole), ma con un obiettivo diverso: lì la prossima parola, qui la *vicinanza* tra testi.
+
+Questo dettaglio torna utile più avanti. Quando in RAG (1.1) un modello di embedding generalista non recupera bene i tuoi documenti specifici, l'opzione "avanzata" è fare **fine-tuning dell'embedding** con coppie positive/negative del tuo dominio. La meccanica è esattamente quella raccontata qui, applicata ai tuoi dati invece che a internet generico.
+</details>
 
 > **Nota** — "Embedding" si usa sia per il concetto (rappresentare significato come numeri) sia per il risultato concreto (il vettore di una frase specifica). Lo sentirai in entrambi i sensi, te ne accorgi dal contesto.
 
@@ -95,14 +109,15 @@ Quattro equivoci che girano e che vale la pena tagliare alla radice:
 
 ## Verifica di comprensione
 
-> Rispondi a memoria, senza rileggere. Le incerte rivedile domani. Le ultime anticipano lezioni future.
+> Rispondi a memoria, senza rileggere. Le incerte rivedile domani. L'ultima anticipa una lezione futura.
 
 1. Cos'è un embedding, in una frase?
 2. Perché "cane" e "cagnolino" finiscono vicini, mentre "cane" e "frigorifero" no?
 3. Cosa misura la similarità del coseno, e perché guarda la direzione e non la distanza?
 4. Perché non puoi confrontare embedding prodotti da due modelli diversi?
-5. *(anticipazione)* Cerchi "come resettare la password" e un documento parla di "ripristinare le credenziali". Come fa un sistema a trovarlo anche senza parole in comune?
-6. *(anticipazione)* Per dare a un LLM i pezzi giusti di mille documenti, gli embedding in che punto entrano in gioco?
+5. Cerchi "come resettare la password" e un documento parla di "ripristinare le credenziali". Come fa un sistema a trovarlo anche senza parole in comune?
+6. Spiega in due righe come fa un modello di embedding a imparare che testi simili devono finire vicini.
+7. *(anticipazione)* Per dare a un LLM i pezzi giusti di mille documenti, gli embedding in che punto entrano in gioco?
 
 ---
 
@@ -114,7 +129,8 @@ Quattro equivoci che girano e che vale la pena tagliare alla radice:
 - **Dimensioni** — il numero di valori in un embedding (es. 768, 1.536); più dimensioni = più sfumature di significato catturabili.
 - **Similarità del coseno (cosine similarity)** — misura di vicinanza tra due vettori basata sulla loro direzione; va da -1 (opposti) a 1 (identici).
 - **Prodotto scalare** — l'operazione (moltiplica e somma le coordinate) alla base della similarità del coseno.
-- **Modello di embedding** — il modello che trasforma un testo nel suo vettore.
+- **Modello di embedding** — il modello che trasforma un testo nel suo vettore, addestrato (di solito con *contrastive learning*) in modo che testi semanticamente simili producano vettori vicini.
+- **Contrastive learning** — tecnica di addestramento basata su coppie di testi positive (simili) e negative (diverse): la funzione di costo avvicina le prime e allontana le seconde nello spazio del significato.
 - **Ricerca semantica** — cercare per significato invece che per parole esatte, usando gli embedding.
 
 ---
