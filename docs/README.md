@@ -47,31 +47,31 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 - [2.6 Decision drill — Multimodale](./multimodal/drill.md) — scritta
 
 ### 3 — Valutare e rendere affidabile
-- [3.1 LLM-as-judge](./evaluation/llm-as-judge.md) — da riscrivere
-- [3.2 Observability](./evaluation/observability.md) — da riscrivere
-- [3.3 Gestire le allucinazioni](./evaluation/hallucination.md) — da riscrivere
-- [3.4 Valutare il comportamento agentico](./evaluation/valutare-agenti.md) — bozza
-- [3.5 Decision drill — Valutazione](./evaluation/drill.md) — da riscrivere
+- [3.1 LLM-as-judge](./evaluation/llm-as-judge.md) — scritta
+- [3.2 Observability](./evaluation/observability.md) — scritta
+- [3.3 Gestire le allucinazioni](./evaluation/hallucination.md) — scritta
+- [3.4 Valutare il comportamento agentico](./evaluation/valutare-agenti.md) — scritta
+- [3.5 Decision drill — Valutazione](./evaluation/drill.md) — scritta
 
 ### 4 — Sicurezza, privacy e governance
-- [4.1 Prompt injection e OWASP LLM Top 10](./security/prompt-injection.md) — da riscrivere
-- [4.2 Sicurezza agentica](./security/sicurezza-agenti.md) — bozza
-- [4.3 Privacy e data residency](./security/privacy.md) — bozza
-- [4.4 EU AI Act e governance](./security/eu-ai-act.md) — da riscrivere
-- [4.5 Decision drill — Sicurezza e privacy](./security/drill.md) — da riscrivere
+- [4.1 Prompt injection e OWASP LLM Top 10](./security/prompt-injection.md) — scritta
+- [4.2 Sicurezza agentica](./security/sicurezza-agenti.md) — scritta
+- [4.3 Privacy e data residency](./security/privacy.md) — scritta
+- [4.4 EU AI Act e governance](./security/eu-ai-act.md) — scritta
+- [4.5 Decision drill — Sicurezza e privacy](./security/drill.md) — scritta
 
 ### 5 — System design dei sistemi AI
-- [5.1 Anatomia di un sistema AI](./system-design/anatomia.md) — bozza
-- [5.2 Pattern di sistema](./system-design/pattern.md) — bozza
-- [5.3 Il triangolo qualità-latenza-costo](./system-design/triangolo.md) — bozza
-- [5.4 I dati come spina dorsale](./system-design/dati.md) — bozza
-- [5.5 Decision drill — System design](./system-design/drill.md) — bozza
+- [5.1 Anatomia di un sistema AI](./system-design/anatomia.md) — scritta
+- [5.2 Pattern di sistema](./system-design/pattern.md) — scritta
+- [5.3 Il triangolo qualità-latenza-costo](./system-design/triangolo.md) — scritta
+- [5.4 I dati come spina dorsale](./system-design/dati.md) — scritta
+- [5.5 Decision drill — System design](./system-design/drill.md) — scritta
 
 ### 6 — Produzione (LLMOps)
-- [6.1 Serving e inference](./production/serving.md) — da riscrivere
-- [6.2 Costi e FinOps a runtime](./production/costi-finops.md) — da riscrivere
-- [6.3 Monitoring e drift in produzione](./production/monitoring.md) — da riscrivere
-- [6.4 Decision drill — Produzione](./production/drill.md) — da riscrivere
+- [6.1 Serving e inference](./production/serving.md) — scritta
+- [6.2 Costi e FinOps a runtime](./production/costi-finops.md) — scritta
+- [6.3 Monitoring e drift in produzione](./production/monitoring.md) — scritta
+- [6.4 Decision drill — Produzione](./production/drill.md) — scritta
 
 ### 7 — Architettura e sintesi
 - [7.1 Reference architecture](./architecture/reference-architecture.md) — da riscrivere

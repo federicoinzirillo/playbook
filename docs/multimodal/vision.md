@@ -19,7 +19,7 @@ Nella lezione 2.1 hai capito il meccanismo: le immagini diventano token visivi, 
 
 La classificazione è il task più vecchio e più maturo del computer vision. Un modello vede un'immagine e assegna una (o più) etichette: "gatto", "documento fiscale", "immagine di qualità accettabile", "prodotto difettoso".
 
-Per molti scenari di classificazione standard, i modelli multimodali moderni (GPT-4o, Gemini, Claude) fanno già un ottimo lavoro senza training aggiuntivo — descrivi in linguaggio naturale cosa distingue le categorie e il modello classifica. Zero dataset etichettati, zero training.
+Per molti scenari di classificazione standard, i modelli multimodali di frontiera 2026 (GPT-5.4, Gemini 3.1 Pro, Claude Opus 4.7) fanno già un ottimo lavoro senza training aggiuntivo — descrivi in linguaggio naturale cosa distingue le categorie e il modello classifica. Zero dataset etichettati, zero training. Il salto di qualità rispetto alla generazione 2024 è netto soprattutto sulle immagini ad alta risoluzione: Opus 4.7 a fine 2025-26 ha portato la risoluzione gestita nativamente da ~1MP a oltre 3.7MP, rendendo affidabile la lettura di documenti, schermate e fotografie ad alta densità.
 
 Il limite: su task di classificazione **fine-grained e domain-specific** — distinguere varianti di uno stesso prodotto industriale, classificare malattie rare su radiografie, riconoscere specie vegetali simili — i modelli generalisti spesso non bastano. Qui servono modelli specializzati addestrati su dati di dominio, o quanto meno il fine-tuning di un modello base.
 
@@ -40,7 +40,7 @@ Quando usare cosa:
 
 Una fattura ha un header, un footer, una tabella di voci con colonne. Un contratto ha sezioni numerate, clausole, paragrafi rientrati. Un form ha campi etichettati. Un OCR classico estrae tutti i caratteri in ordine di posizione — ma senza capire che quella stringa è un importo nella colonna "IVA", o una data di scadenza nel campo "Valid until".
 
-Qui i modelli multimodali nativismarcano una differenza netta. Puoi mostrare a GPT-4o una foto di una fattura e chiederle di restituire un JSON con i campi strutturati — importo, data, partita IVA, voci di dettaglio. Il modello vede il layout, capisce la struttura, e produce l'output. Nessun template di estrazione per-documento. Nessun addestramento su dataset di fatture.
+Qui i modelli multimodali nativi marcano una differenza netta. Puoi mostrare a GPT-5.4 o Claude Opus 4.7 una foto di una fattura e chiedere di restituire un JSON con i campi strutturati — importo, data, partita IVA, voci di dettaglio. Il modello vede il layout, capisce la struttura, e produce l'output. Nessun template di estrazione per-documento. Nessun addestramento su dataset di fatture.
 
 **Document understanding** è il termine che copre questo scenario: non solo estrarre il testo, ma capire il documento come struttura semantica — tabelle, relazioni tra campi, layout multi-colonna, testo misto a grafici.
 

@@ -38,8 +38,8 @@ class RispostaClassificazione(BaseModel):
     motivazione: str
 
 # Il modello è obbligato a produrre un oggetto con questi tre campi
-risposta = client.beta.chat.completions.parse(
-    model="gpt-4o",
+risposta = client.chat.completions.parse(
+    model="gpt-5.4",  # o claude-opus-4-7, gemini-3-pro, ecc.
     messages=[...],
     response_format=RispostaClassificazione,
 )

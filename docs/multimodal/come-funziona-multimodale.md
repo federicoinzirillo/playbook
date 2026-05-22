@@ -57,7 +57,7 @@ flowchart LR
 
 ## Nativo vs pipeline: la distinzione che conta
 
-**Multimodale nativo** — un singolo modello riceve input di modalità diverse e ragiona su tutti insieme. GPT-4o, Gemini 1.5 Pro, Claude 3 sono esempi: gli mandi un'immagine e del testo e producono una risposta che ha considerato entrambi.
+**Multimodale nativo** — un singolo modello riceve input di modalità diverse e ragiona su tutti insieme. I modelli di frontiera del 2026 — GPT-5.4/5.5, Gemini 3.1 Pro, Claude Opus 4.7 — sono tutti nativamente multimodali: gli mandi un'immagine e del testo e producono una risposta che ha considerato entrambi.
 
 **Pipeline separata** — un modello per modalità in sequenza. Immagine → OCR model → testo → LLM. Audio → ASR model → trascrizione → LLM. I passaggi sono isolati e controllabili, ma ogni step perde informazione e il modello finale lavora solo sul testo estratto.
 
@@ -104,7 +104,7 @@ Nessuno dei due è sempre migliore. Il nativo eccelle quando il task richiede ch
 
 - **"An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"** — il paper originale del ViT; cerca il titolo su arXiv.
 - **"Learning Transferable Visual Models From Natural Language Supervision"** — il paper di CLIP di OpenAI; cerca il titolo su arXiv.
-- **Documentazione tecnica dei modelli multimodali** (GPT-4o, Gemini, Claude) — le guide ufficiali spiegano limiti di risoluzione, costo per immagine e capacità supportate.
+- **Documentazione tecnica dei modelli multimodali di frontiera** (GPT-5, Gemini 3, Claude Opus 4) — le guide ufficiali spiegano limiti di risoluzione, costo per immagine e capacità supportate (es. Claude Opus 4.7 ha portato la risoluzione nativa a 3.75 megapixel ad aprile 2026).
 
 *Risorse indicate per la ricerca; per i link aggiornati conviene cercarli al momento.*
 

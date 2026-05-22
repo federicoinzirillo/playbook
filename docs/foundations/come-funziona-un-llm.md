@@ -24,7 +24,7 @@ Un modello impara dagli esempi invece di seguire regole scritte a mano, e la dif
 <details>
 <summary>Cosa c'è davvero dentro un modello</summary>
 
-Dentro c'è una funzione matematica con miliardi di numeri interni, i **parametri** (li sentirai chiamare anche "pesi"). All'inizio sono casuali e il modello non sa fare niente. Durante l'**addestramento** (*training*) gli si mostra una montagna di testo, e ogni volta che sbaglia a prevedere la parola dopo, i parametri vengono corretti di pochissimo nella direzione giusta. Moltiplica per qualche miliardo di volte e quei numeri, da casuali, diventano una mappa sorprendentemente ricca di come funziona il linguaggio. La struttura che li organizza si chiama **rete neurale**, e l'architettura specifica degli LLM moderni è il **transformer** — roba che merita la sua trattazione, e che la guida riprende più avanti.
+Dentro c'è una funzione matematica con miliardi di numeri interni — spesso centinaia di miliardi nei modelli frontier del 2026, e si stima si stia entrando nell'ordine dei trilioni per i top di gamma — i **parametri** (li sentirai chiamare anche "pesi"). All'inizio sono casuali e il modello non sa fare niente. Durante l'**addestramento** (*training*) gli si mostra una montagna di testo, e ogni volta che sbaglia a prevedere la parola dopo, i parametri vengono corretti di pochissimo nella direzione giusta. Moltiplica per qualche miliardo di volte e quei numeri, da casuali, diventano una mappa sorprendentemente ricca di come funziona il linguaggio. La struttura che li organizza si chiama **rete neurale**, e l'architettura specifica degli LLM moderni è il **transformer** — roba che merita la sua trattazione, e che la guida riprende più avanti.
 </details>
 
 ## Il modello non vede parole, vede token

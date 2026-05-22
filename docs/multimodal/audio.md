@@ -17,7 +17,7 @@ L'audio è la modalità più vecchia nell'AI applicativa — i sistemi di ricono
 
 ## ASR: dalla voce al testo
 
-**ASR — Automatic Speech Recognition** — è la trascrizione del parlato in testo. Il modello di riferimento open-source è **Whisper** di OpenAI: addestrato su 680.000 ore di audio multilingue, produce trascrizioni di alta qualità in decine di lingue, con punteggiatura e speaker identification di base.
+**ASR — Automatic Speech Recognition** — è la trascrizione del parlato in testo. Il modello di riferimento open-source è **Whisper** di OpenAI: addestrato su 680.000 ore di audio multilingue, produce trascrizioni di alta qualità in decine di lingue, con punteggiatura e speaker identification di base. La variante più usata nel 2026 è **whisper-large-v3-turbo** (rilasciato fine 2024 e diventato lo standard di fatto): solo 4 decoder layer invece di 32, ~6x più veloce di large-v3 con perdita di qualità minima — sweet spot per real-time e batch a basso costo.
 
 Come funziona ad alto livello: l'audio viene convertito in uno spettrogramma — una rappresentazione visiva delle frequenze nel tempo — che viene poi processato da un encoder (simile al ViT per le immagini). L'encoder trasforma lo spettrogramma in una sequenza di vettori, che un decoder trasforma in testo.
 
@@ -37,13 +37,13 @@ I casi d'uso tipici: accessibilità (lettura di contenuti per non vedenti), assi
 
 La **voice cloning** — clonare la voce di una persona da pochi secondi di campione audio — è tecnicamente accessibile con modelli open-source. Apre possibilità di personalizzazione (es. un assistente che parla con la tua voce) ma anche rischi significativi (deepfake audio, frodi). Le implicazioni di sicurezza sono trattate nella lezione 4.3.
 
-<span class="badge-stato evoluzione">In evoluzione</span> La qualità del TTS ha raggiunto un livello dove il problema non è più la qualità della voce ma l'espressività — variare tono, emozione, ritmo su richiesta. Modelli come ElevenLabs e la modalità audio di GPT-4o spingono in questa direzione.
+<span class="badge-stato evoluzione">In evoluzione</span> La qualità del TTS ha raggiunto un livello dove il problema non è più la qualità della voce ma l'espressività — variare tono, emozione, ritmo su richiesta. ElevenLabs, le voci realtime di OpenAI (sulla generazione GPT-5) e i modelli voce di Gemini 3 spingono in questa direzione.
 
 ## Modelli audio-nativi: ragionare sull'audio
 
 Il salto qualitativo avviene con i **modelli audio-nativi** — modelli che ricevono l'audio grezzo come input (non la trascrizione) e ragionano su di esso direttamente.
 
-GPT-4o in modalità audio, Gemini con audio nativo, e i modelli voce di ElevenLabs Lab sono esempi: l'audio entra come sequenza di token audio, viene processato dal transformer insieme al testo del prompt, e il modello risponde — in testo o audio.
+GPT-5 in modalità audio (la famiglia `gpt-*-transcribe` e i modelli realtime di OpenAI sulla generazione 5), Gemini 3 con audio nativo, e i modelli voce di ElevenLabs sono esempi: l'audio entra come sequenza di token audio, viene processato dal transformer insieme al testo del prompt, e il modello risponde — in testo o audio.
 
 Il vantaggio critico: il modello ha accesso all'intonazione, alle pause, al ritmo, all'emozione. Una frase pronunciata con frustrazione suona diversamente da una pronunciata con entusiasmo, e il modello audio-nativo può farne uso. Questo non è disponibile in nessuna pipeline ASR → testo → LLM, perché la trascrizione butta via quella informazione.
 
@@ -53,7 +53,7 @@ Casi d'uso dove conta:
 - **Accessibilità avanzata**: comprendere il parlato di persone con difficoltà di articolazione
 - **Traduzione con preservazione del tono**: non solo tradurre le parole, ma mantenere l'emozione
 
-**Il costo di questa capacità:** i modelli audio-nativi sono significativamente più costosi dei modelli ASR dedicati. Whisper su un server è frazioni di centesimo al minuto. GPT-4o in modalità audio è ordini di grandezza più caro. La scelta tra i due è quasi sempre economica, non qualitativa.
+**Il costo di questa capacità:** i modelli audio-nativi sono significativamente più costosi dei modelli ASR dedicati. Whisper turbo on-premise è frazioni di centesimo al minuto. La modalità audio dei modelli di frontiera (GPT-5, Gemini 3) è ordini di grandezza più cara. La scelta tra i due è quasi sempre economica, non qualitativa.
 
 ## Speaker diarization
 
@@ -68,12 +68,12 @@ La maggior parte dei servizi ASR cloud (AWS Transcribe, Google Speech-to-Text, A
 ```mermaid
 flowchart LR
   subgraph Pipeline classica
-    A["Audio"] --> B["ASR\n(Whisper)"]
+    A["Audio"] --> B["ASR\n(Whisper turbo)"]
     B --> C["Testo trascritto"]
     C --> D["LLM\n(ragionamento)"]
   end
   subgraph Audio-nativo
-    E["Audio"] --> F["Modello audio-nativo\n(GPT-4o audio, Gemini)"]
+    E["Audio"] --> F["Modello audio-nativo\n(GPT-5 audio, Gemini 3, Claude Opus 4.7)"]
   end
 ```
 
@@ -86,7 +86,7 @@ flowchart LR
 | **Controllo e debugging** | Alto (vedi il testo intermedio) | Basso (black box) |
 | **On-premise possibile** | Sì (Whisper open-source) | No (solo API) |
 
-La regola pratica: **inizia con la pipeline ASR + LLM**. È economica, controllabile, i modelli ASR sono maturi. Migra al modello audio-nativo solo se hai evidenza che il tono/emozione conta per il tuo use case — e sei pronto a pagare il costo.
+La regola pratica: **inizia con la pipeline ASR + LLM** (Whisper turbo + un modello testo qualunque della generazione 2026). È economica, controllabile, i modelli ASR sono maturi. Migra al modello audio-nativo solo se hai evidenza che il tono/emozione conta per il tuo use case — e sei pronto a pagare il costo.
 
 ## Cosa NON è
 
@@ -115,7 +115,7 @@ La regola pratica: **inizia con la pipeline ASR + LLM**. È economica, controlla
 
 - **ASR (Automatic Speech Recognition)** — trascrizione automatica del parlato in testo.
 - **TTS (Text-to-Speech)** — sintesi automatica di audio parlato a partire da testo.
-- **Whisper** — modello ASR open-source di OpenAI, addestrato su 680k ore di audio multilingue; punto di riferimento per la trascrizione.
+- **Whisper** — modello ASR open-source di OpenAI, addestrato su 680k ore di audio multilingue; punto di riferimento per la trascrizione. La variante **large-v3-turbo** è lo standard di fatto nel 2026 (4 decoder layer, ~6x più veloce di large-v3 a parità di qualità sostanziale).
 - **Spettrogramma** — rappresentazione visiva delle frequenze audio nel tempo; l'input tipico degli encoder audio.
 - **Modello audio-nativo** — modello che riceve e ragiona sull'audio grezzo senza passare per la trascrizione.
 - **Speaker diarization** — identificazione e separazione dei diversi parlanti in una registrazione audio.

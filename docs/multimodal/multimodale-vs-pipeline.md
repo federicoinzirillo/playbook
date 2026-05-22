@@ -41,7 +41,7 @@ Questo asse spesso decide da solo.
 
 I modelli multimodali nativi addebitano i token visivi e audio come token aggiuntivi — e li addebitano ogni volta. Un'immagine ad alta risoluzione può costare 800-1500 token. A 100.000 richieste al giorno con un'immagine ciascuna, il conto si nota.
 
-Una pipeline Whisper (on-premise o quasi gratuito) + GPT-4o (solo testo) può costare 10-20 volte meno della modalità audio-nativa su grandi volumi.
+Una pipeline Whisper turbo (on-premise o quasi gratuito) + un modello testo della generazione 2026 (GPT-5.3 Instant, Claude Haiku 4.5, Gemini 3 Flash) può costare 10-20 volte meno della modalità audio-nativa dei modelli di frontiera su grandi volumi.
 
 **Regola pratica:** se il volume è alto e il task è separabile in step, fai il conto prima di scegliere l'architettura. La differenza può essere di un ordine di grandezza.
 

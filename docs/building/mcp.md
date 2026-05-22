@@ -12,7 +12,7 @@ sidebar_position: 5
   <span>~8 min di lettura</span>
 </div>
 
-<p class="lesson-lead">MCP risolve il problema di collegare modelli, tool e dati in modo standardizzato — come fece USB per le periferiche. Non è un framework AI: è un protocollo di trasporto. Conoscerlo è ormai atteso.</p>
+<p class="lesson-lead">MCP risolve il problema di collegare modelli, tool e dati in modo standardizzato — come fece USB per le periferiche. Non è un framework AI: è un protocollo di trasporto. A maggio 2026 non è più "uno standard emergente": è infrastruttura di settore, donata da Anthropic alla Linux Foundation a dicembre 2025 con OpenAI, Google e Microsoft come co-sponsor.</p>
 
 Nella lezione 1.4 hai visto che gli agenti hanno bisogno di tool — funzioni che il modello può richiedere di eseguire. Il problema pratico che emergeva subito: come colleghi quegli strumenti al modello? Storicamente, ogni framework, ogni provider, ogni azienda inventava il suo protocollo. Risultato: integrazioni fragili, non riusabili, da riscrivere ogni volta che cambiavi modello o framework.
 
@@ -82,7 +82,17 @@ Un modello con tool via MCP può fare cose nel mondo reale — modificare file, 
 
 Le regole pratiche: esponi solo i tool necessari (principio del minimo privilegio); ogni tool deve validare i propri input; considera un layer di autorizzazione tra il client MCP e i tool più critici. La sicurezza del tool calling è trattata in dettaglio nella lezione 4.1 (prompt injection) e nella 4.2 (sicurezza agentica).
 
-<span class="badge-stato evoluzione">In evoluzione</span> L'ecosistema di server MCP pronti cresce velocemente. La mappa di "cosa esiste già" cambia di mese in mese: controlla il registro ufficiale quando cerchi un'integrazione, perché potrebbe già esistere.
+<span class="badge-stato evoluzione">In evoluzione</span> L'ecosistema di server MCP pronti cresce velocemente. A inizio 2025 il registry pubblico contava ~1.200 server; ad aprile 2026 ne conta oltre 9.400, con crescita mese-su-mese a doppia cifra. Controlla il registry ufficiale quando cerchi un'integrazione, perché probabilmente esiste già.
+
+## Lo stato del 2026: da standard emergente a infrastruttura di settore
+
+Tre eventi del 2025-26 hanno cambiato la natura di MCP da "protocollo proposto da Anthropic" a "infrastruttura di settore":
+
+1. **Dicembre 2025 — Donazione alla Linux Foundation.** Anthropic ha donato la governance del protocollo, con OpenAI, Google e Microsoft come co-sponsor fondatori. Non è più "il protocollo di Anthropic"; è uno standard di proprietà neutrale.
+2. **Adozione cross-vendor.** Ad aprile 2026 il 78% dei team AI enterprise ha almeno un agente MCP in produzione (sondaggi di settore); 67% dei CTO lo dichiara standard di default. Tutti i principali lab e IDE lo supportano nativamente: Claude (native), ChatGPT (aprile 2025), Google Gemini API e Vertex AI Agent Builder (marzo 2026), Cursor, Windsurf, Zed, JetBrains AI Assistant, Vercel AI SDK, OpenAI Agents SDK.
+3. **Roadmap 2026 ufficiale.** Tre fronti principali: *enterprise authentication* (OAuth 2.1 + identity provider enterprise), *multi-agent coordination* (tool calling agent-to-agent via MCP), *registry verificato* con security ratings. La specifica successiva — release candidate al 28 luglio 2026 — introduce stateless protocol core, framework di estensioni, Tasks, MCP Apps, authorization hardening.
+
+Pratica conseguenza per chi costruisce ora: **MCP non è una scommessa**. Investirci tempo non è "guardare al futuro", è seguire dove l'industria è già.
 
 ## Cosa MCP non è
 
@@ -91,7 +101,7 @@ Le regole pratiche: esponi solo i tool necessari (principio del minimo privilegi
 | "MCP è un framework AI" | È un protocollo di trasporto, non un framework. Non gestisce la logica degli agenti: gestisce la comunicazione tra client e server. |
 | "MCP risolve la sicurezza del tool calling" | Definisce il canale, non i controlli. La sicurezza si costruisce nei server e nell'orchestratore. |
 | "Serve solo per agenti" | Qualsiasi applicazione LLM che ha bisogno di tool o dati esterni beneficia dello standard. |
-| "MCP è proprietario di Anthropic" | È uno standard aperto, pubblicato e governato come tale. |
+| "MCP è proprietario di Anthropic" | Lo era nominalmente fino al 2025. A dicembre 2025 Anthropic l'ha donato alla Linux Foundation: governance neutrale con OpenAI, Google, Microsoft come co-sponsor. |
 
 ---
 
@@ -120,8 +130,9 @@ Le regole pratiche: esponi solo i tool necessari (principio del minimo privilegi
 
 ## Per approfondire
 
-- **Specifica ufficiale di MCP** — la fonte primaria aggiornata; cerca "Model Context Protocol specification" o vai su modelcontextprotocol.io.
-- **Registry dei server MCP disponibili** — lista dei server già pronti per uso comune; utile prima di scriverne uno da zero.
+- **Specifica ufficiale di MCP** — la fonte primaria aggiornata; cerca "Model Context Protocol specification" o vai su modelcontextprotocol.io. La release candidate prevista per il 28 luglio 2026 introduce stateless protocol core, Extensions framework, Tasks, MCP Apps.
+- **Registry ufficiale dei server MCP** — lista dei server già pronti (9.400+ ad aprile 2026); utile prima di scriverne uno da zero.
+- **MCP roadmap 2026** — pubblicata sul blog ufficiale `blog.modelcontextprotocol.io`; spiega le priorità (enterprise auth, multi-agent, registry verificato).
 
 *Risorse indicate per la ricerca; per i link aggiornati conviene cercarli al momento.*
 

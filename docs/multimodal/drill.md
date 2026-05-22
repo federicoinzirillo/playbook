@@ -34,7 +34,7 @@ Hai le basi di tutta la Parte 2: meccanismo multimodale, capacità per modalità
 
 **Architettura: multimodale nativo per l'estrazione, con validazione nel codice.**
 
-Un modello multimodale nativo (GPT-4o vision, Gemini) è la scelta migliore qui perché le fatture hanno layout variabili — il layout visivo è inseparabile dai dati. Un OCR classico estrae testo in ordine di posizione, perdendo le relazioni tra colonne e campi. Il modello multimodale vede la pagina come un documento strutturato.
+Un modello multimodale nativo (Claude Opus 4.7, GPT-5.4, Gemini 3.1 Pro) è la scelta migliore qui perché le fatture hanno layout variabili — il layout visivo è inseparabile dai dati. Un OCR classico estrae testo in ordine di posizione, perdendo le relazioni tra colonne e campi. Il modello multimodale vede la pagina come un documento strutturato.
 
 **Structured output obbligatorio.** Non lasciare che il modello risponda in prosa. Definisci uno schema Pydantic preciso con tutti i campi richiesti. Il modello produce JSON strutturato, il codice valida prima di inserire nel DB.
 
@@ -47,7 +47,7 @@ Il modello può sbagliare a leggere un numero, trasporre cifre, perdere una riga
 
 **Gestione dei scan di bassa qualità.** Non tutti gli scan sono leggibili. Prima della chiamata al modello, una pre-verifica della qualità dell'immagine (contrasto, risoluzione, orientamento) permette di inviare per revisione umana i documenti con qualità sotto soglia, invece di sprecare chiamate API su input irrecuperabili.
 
-**Volume e costo.** 15.000 fatture al mese × costo per immagine. Fai il conto: con GPT-4o vision a ~800 token per immagine media, a un certo prezzo per token, il budget mensile deve essere sostenibile. Considera se un modello più piccolo (o Gemini Flash invece di Pro) con qualità leggermente inferiore è accettabile sul tuo use case.
+**Volume e costo.** 15.000 fatture al mese × costo per immagine. Fai il conto: a ~800-1500 token per immagine media (dipende dalla risoluzione del modello), a un certo prezzo per token, il budget mensile deve essere sostenibile. Considera se un modello più piccolo (Gemini 3 Flash, Claude Haiku 4.5) con qualità leggermente inferiore è accettabile sul tuo use case prima di scegliere il modello top.
 
 **Latenza.** Batch notturno → nessun vincolo real-time. Puoi processare in parallelo (pool di chiamate API) per finire in tempo.
 
@@ -78,9 +78,9 @@ Il modello può sbagliare a leggere un numero, trasporre cifre, perdere una riga
 
 **Architettura: pipeline ASR + LLM + TTS, non audio-nativo.**
 
-Il ragionamento economico è decisivo. 500 chiamate simultanee × costo audio-nativo = costi probabilmente insostenibili. Una pipeline Whisper + GPT-4o (testo) + TTS è un ordine di grandezza più economica e ha latenza comparabile se ottimizzata.
+Il ragionamento economico è decisivo. 500 chiamate simultanee × costo audio-nativo = costi probabilmente insostenibili. Una pipeline Whisper turbo + un modello testo veloce (GPT-5.3 Instant, Claude Haiku 4.5, Gemini 3 Flash) + TTS è un ordine di grandezza più economica e ha latenza comparabile se ottimizzata.
 
-**Whisper per ASR.** Per customer support vocale, la comprensione del *tono* non è il focus primario — capisci l'intenzione dalle parole. Il tono diventa rilevante per identificare un cliente frustrato; ma puoi farlo anche con sentiment analysis sul testo, non necessariamente con audio-nativo. Whisper gestisce bene l'italiano colloquiale e ha modelli ottimizzati per velocità (Whisper large-v3 vs distilled per latenza).
+**Whisper per ASR.** Per customer support vocale, la comprensione del *tono* non è il focus primario — capisci l'intenzione dalle parole. Il tono diventa rilevante per identificare un cliente frustrato; ma puoi farlo anche con sentiment analysis sul testo, non necessariamente con audio-nativo. Whisper gestisce bene l'italiano colloquiale e ha varianti ottimizzate per velocità (la **large-v3-turbo** è lo standard di fatto: ~6x più veloce di large-v3 a qualità sostanzialmente uguale).
 
 **LLM per il reasoning.** Classifica il tipo di richiesta, decide la risposta, decide se trasferire a umano. Structured output per la risposta: forza il modello a produrre `{risposta: "...", trasferisci: bool, motivo: "..."}`.
 
@@ -111,7 +111,7 @@ Implementazione: la condizione `trasferisci: true` nell'output strutturato. Il c
 **Trade-off da nominare:**
 
 - *Pipeline ASR+LLM+TTS vs audio-nativo*: il nativo capirebbe il tono (frustrazione, urgenza) senza passare per il testo. Vale il costo a 500 chiamate simultanee? Probabilmente no, a meno che la detection del tono non sia il core differenziante del prodotto.
-- *Velocità vs qualità ASR*: Whisper Large dà qualità massima ma è lento; Whisper Distilled è 6x più veloce con qualità solo leggermente inferiore. Per real-time, il Distilled spesso vince.
+- *Velocità vs qualità ASR*: Whisper large-v3 dà qualità massima ma è lento; **large-v3-turbo** è ~6x più veloce con qualità solo leggermente inferiore. Per real-time, il turbo praticamente sempre vince.
 </details>
 
 ---

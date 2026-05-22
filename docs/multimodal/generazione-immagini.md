@@ -13,7 +13,7 @@ sidebar_position: 4
 
 <p class="lesson-lead">I diffusion model partono da rumore puro e lo raffinano progressivamente guidati dal prompt testuale — un processo opposto a quello che immagina la maggior parte delle persone. Capire il meccanismo chiarisce sia le capacità che i limiti, e ti fa smettere di meravigliarti che le mani vengano strane.</p>
 
-La generazione di immagini è il caso AI più visibile al grande pubblico — Midjourney, DALL-E, Stable Diffusion sono entrati nel mainstream. Ma il meccanismo che li alimenta è spesso frainteso, e fraintenderlo porta a aspettative sbagliate. Questa lezione ti da il quadro corretto senza la matematica completa.
+La generazione di immagini è il caso AI più visibile al grande pubblico — Midjourney, GPT Image, Stable Diffusion, Flux sono entrati nel mainstream. Ma il meccanismo che li alimenta è spesso frainteso, e fraintenderlo porta a aspettative sbagliate. Questa lezione ti dà il quadro corretto senza la matematica completa.
 
 ## L'idea di base: dal rumore all'immagine
 
@@ -67,7 +67,7 @@ Ecco perché Stable Diffusion gira su GPU consumer: il diffusion avviene su un t
 
 Alcuni limiti sono strutturali — emergono dal meccanismo stesso — non bug in via di risoluzione.
 
-**Testo nelle immagini.** I diffusion model generano testo come pattern visivo, non come caratteri semantici. Il risultato è spesso un testo deformato, con lettere inventate, quasi-leggibile ma sbagliato. Modelli come DALL-E 3 hanno migliorato molto (usando CLIP conditioning più forte), ma il problema non è completamente risolto.
+**Testo nelle immagini.** I diffusion model generano testo come pattern visivo, non come caratteri semantici. Il risultato è spesso un testo deformato, con lettere inventate, quasi-leggibile ma sbagliato. I modelli con ragionamento integrato (es. **GPT Image 2** rilasciato da OpenAI ad aprile 2026, che ha rimpiazzato DALL-E 3 — sunset delle API DALL-E 2/3 a maggio 2026) hanno migliorato molto introducendo un passo di reasoning prima della generazione, ma il problema non è completamente risolto.
 
 **Mani e anatomia complessa.** Le mani umane hanno una struttura geometrica precisa — 5 dita, articolazioni specifiche — e i modelli faticano a mantenerla. Le mani con 6 dita o geometrie strane sono un artefatto noto. Lo stesso vale per geometrie complesse, gioielli articolati, meccanismi.
 
@@ -97,7 +97,7 @@ Alcuni limiti sono strutturali — emergono dal meccanismo stesso — non bug in
 | "Il modello disegna come un umano" | Parte dal rumore e lo rimuove progressivamente. Il processo è opposto. |
 | "Le mani vengono storte per un bug" | È un limite strutturale del meccanismo. Migliora con scale e conditioning migliori, ma non è "risolto". |
 | "CFG alto = sempre meglio" | Troppo alto produce artefatti e over-saturation. Il punto dolce è 7-9. |
-| "Stable Diffusion e DALL-E fanno la stessa cosa" | Stesso principio, architetture e training diversi, capacità e limiti differenti. |
+| "Stable Diffusion e GPT Image / Midjourney fanno la stessa cosa" | Stesso principio di base (diffusion), architetture e training diversi, capacità e limiti differenti. I modelli con reasoning integrato (GPT Image 2) battono i diffusion "puri" su testo e composizioni complesse; i modelli open (SD 3.5, Flux 2) vincono su personalizzazione e on-prem. |
 
 ---
 
@@ -131,7 +131,7 @@ Alcuni limiti sono strutturali — emergono dal meccanismo stesso — non bug in
 
 - **"Denoising Diffusion Probabilistic Models"** di Ho et al. — il paper fondante dei diffusion model moderni; cerca il titolo su arXiv.
 - **"High-Resolution Image Synthesis with Latent Diffusion Models"** — il paper di Stable Diffusion; cerca su arXiv.
-- **Documentazione di DALL-E 3, Midjourney, Stability AI** — i provider principali documentano capabilities e limiti nelle guide ufficiali.
+- **Provider principali nel 2026**: **GPT Image 2** (OpenAI, ha rimpiazzato DALL-E 3), **Midjourney v8** (rilasciato marzo 2026, abbandonato Discord per la web app), **Stable Diffusion 3.5** (Stability AI, open-weight), **Flux 2** di Black Forest Labs (il principale concorrente open di SD). Documentazione su capabilities e limiti sui rispettivi siti ufficiali.
 
 *Risorse indicate per la ricerca; per i link aggiornati conviene cercarli al momento.*
 

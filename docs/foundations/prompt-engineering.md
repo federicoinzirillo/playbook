@@ -37,7 +37,7 @@ La distinzione più fondamentale nel prompt engineering è quanti esempi includi
 
 La scelta non dipende dall'istinto: si prova zero-shot, si misura, e se non basta si aggiungono esempi. I few-shot example non si scelgono a caso: la loro qualità, il formato e la varietà dei casi coperti cambiano l'output in modo misurabile. Un esempio sbagliato fa danni — meglio zero esempi che un esempio fuorviante.
 
-> **Nota** — Nei modelli più recenti e più grandi, lo zero-shot va benissimo su una fascia di task sempre più ampia. Questo non elimina il few-shot: su task molto specializzati, con terminologia inusuale o format non standard, gli esempi fanno ancora la differenza.
+> **Nota** — Nei modelli di frontiera del 2026 (GPT-5.4/5.5, Claude Opus 4.7, Gemini 3.1) lo zero-shot copre ormai la maggior parte dei task non specializzati: il salto rispetto al 2024 è netto. Questo non elimina il few-shot: su task molto specializzati, con terminologia inusuale o format non standard, gli esempi fanno ancora la differenza. La regola pratica si è solo spostata: prova zero-shot prima, *aspettati* che basti più spesso di prima.
 
 ## Chain-of-thought: far ragionare ad alta voce
 
