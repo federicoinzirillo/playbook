@@ -103,6 +103,10 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
   structured prompting. La parte seria, non da blog: **prompt versioning e A/B testing dei prompt
   in produzione** (si rivede in Parte 3, valutazione). È il primo strumento che si tocca: va qui,
   presto, perché è prerequisito implicito di mezza Parte 1.
+- **0.6 Reasoning models — quando il pensiero costa, e quando vale** ⊳ 0.1, 0.5 — modelli che
+  *pensano prima di parlare* (o1/o3, Claude extended thinking, Gemini reasoning budget). La
+  distinzione tra chain-of-thought via prompt e ragionamento *addestrato*. Latenza ×5-20 e costo
+  ×3-10: quando il guadagno di qualità vale il prezzo, quando no. Pattern di cascata/router.
 
 ## PARTE 1 — Costruire sistemi LLM
 *Il cuore. Subito dopo i fondamenti.*
@@ -124,6 +128,10 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
   0.5, 1.1, 1.2 — la domanda architetturale più frequente in assoluto. Griglia di quando l'uno
   batte l'altro: costo, dati disponibili, frequenza di aggiornamento, serve uno *stile* o una
   *conoscenza*.
+- **1.8 Fine-tuning operativo — LoRA, QLoRA, DPO** ⊳ 0.3, 1.7 — l'altra faccia della 1.7: una
+  volta deciso che ti serve fine-tuning, *come* lo fai senza addestrare 70B parametri. Tecniche
+  PEFT (LoRA, QLoRA), preferenze (DPO/ORPO), dataset size realistico, forgetting catastrofico,
+  managed vs self-hosted.
 
 ## PARTE 2 — Multimodale e altri tipi di AI
 *La fetta "AI generalista" oltre il testo. Conoscenza fondazionale di cosa sa fare l'AI oggi.*
@@ -139,6 +147,11 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
   casi d'uso e limiti.
 - **2.5 Quando multimodale, quando pipeline separate** ⊳ 2.1 — criteri di scelta e trade-off.
 - **2.6 Decision drill — Multimodale**
+- **2.7 Voice agents in tempo reale** ⊳ 2.3, 1.4 —
+  <span class="badge-stato evoluzione">In evoluzione</span> conversazione vocale fluida sotto la
+  soglia degli ~800ms percepiti. Perché la pipeline STT→LLM→TTS non basta, modelli speech-to-speech
+  nativi (Realtime API, Gemini Live), gestione delle interruzioni (barge-in, turn detection),
+  vincoli di rete mobile. Quando NON usarlo.
 
 ## PARTE 3 — Valutare e rendere affidabile
 *Ciò che separa una demo da un sistema serio. In interleaving con Parte 1.*
@@ -157,6 +170,10 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
   (cosa significa valutare un processo, quali domande porsi), non sui tool del mese, perché è
   un'area giovane che cambia in fretta.
 - **3.5 Decision drill — Valutazione** (incluso un caso di valutazione agentica)
+- **3.6 Eval benchmarks e dataset — il vocabolario** ⊳ 3.1, 0.2 — i benchmark pubblici che senti
+  nominare (MMLU, GPQA, SWE-bench, AgentBench, MTEB) e cosa misurano davvero. Contamination e
+  perché i leaderboard sono segnale rumoroso. Costruire un **golden dataset interno** (50-200
+  esempi curati > 10k sintetici random). Synthetic data: usi legittimi e trappole.
 
 ## PARTE 4 — Sicurezza, privacy e governance
 - **4.1 Prompt injection e OWASP LLM Top 10** ⊳ 1.4 — attacchi, esfiltrazione, abuso di tool sul
@@ -188,6 +205,10 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
 - **5.4 I dati come spina dorsale** ⊳ 0.2 — qualità, preparazione, pipeline a livello
   concettuale; database vettoriali a fondo. Spesso il vero collo di bottiglia, sottovalutato.
 - **5.5 Decision drill — System design** (es. "progetta un chatbot di supporto su LLM di terzi")
+- **5.6 Caching semantico e model routing** ⊳ 5.1, 5.3, 0.2 — le due leve di costo/latenza che
+  vivono in architettura, non in produzione. Cache esatta vs semantica (con la trappola della
+  soglia di similarità), prompt caching del provider, router upfront vs cascade reattiva,
+  LLM gateway (LiteLLM, Portkey, Helicone, OpenRouter). Risparmio reale tipico 50-65%.
 
 ## PARTE 6 — Produzione (LLMOps)
 *L'asse OPERATIONS: far vivere in produzione un sistema che NON addestri. Non ripete la Parte 5
@@ -207,7 +228,10 @@ sistema è già live e qualcosa va storto.*
 
 ## PARTE 7 — Architettura e sintesi
 - **7.1 Reference architecture** ⊳ Parti 1-6 — come si compone un sistema completo.
-- **7.2 Build vs buy, proprietari vs open-weight** ⊳ 7.1 — criteri di decisione, costo, controllo.
+- **7.2 Build vs buy, proprietari vs open-weight (e SLM)** ⊳ 7.1 — criteri di decisione, costo,
+  controllo. Include la terza opzione **SLM (Small Language Models)**: Phi, Gemma small, Llama
+  3.2 1B/3B, Qwen small — quando privacy on-device / latenza ultra-bassa / costo a scala /
+  edge li rendono la scelta giusta.
 - **7.3 Decision drill — Architettura** ⊳ 7.1, 7.2 — due scenari realistici con vincoli concreti, da scelta dell'archetipo a build vs buy.
 - **7.4 Capstone — progetto end-to-end** ⊳ tutto — dalla scelta architetturale a costi,
   sicurezza e monitoring, con un decision record che difende le scelte.

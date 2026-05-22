@@ -84,6 +84,23 @@ Molti sistemi seri oggi usano entrambi. Il modello proprietario per le query com
 
 </details>
 
+## La terza opzione: gli SLM (Small Language Models)
+
+Oltre alla dicotomia proprietario frontier vs open-weight grande, nel 2025-26 si è stabilizzata una **terza categoria**: gli **SLM — Small Language Models**. Modelli con 1-8 miliardi di parametri (contro i 70-400+ dei frontier), pensati per girare *vicino al dato* invece che in un datacenter remoto. Nomi che senti: **Phi-4** (Microsoft), **Gemma 3 small** (Google), **Llama 3.2 1B/3B** (Meta), **Qwen 2.5 1.5B/3B/7B** (Alibaba), **Mistral 7B** e varianti.
+
+Non sono "open-weight piccoli" e basta — sono una scelta architetturale diversa, con casi d'uso che né i proprietari né i grandi open-weight coprono bene:
+
+- **Privacy stretta / on-device.** L'app gira su smartphone, laptop, dispositivo medico, veicolo. Il dato non lascia mai il device. Niente provider, niente datacenter, niente data residency da negoziare. Caso d'uso classico: assistente che legge documenti sensibili dell'utente senza inviarli a terze parti.
+- **Latenza ultra-bassa.** Niente round-trip di rete. Un SLM quantizzato su GPU consumer risponde in 50-200ms, contro i 500-1500ms di un'API frontier. Su tasti pratici (autocomplete, classificazione real-time, smart home), la differenza è percepita.
+- **Costo a scala estrema.** Quando hai miliardi di chiamate al mese (es. classificazione di ticket interni, smistamento di email), il costo per token di un SLM self-hosted è 10-50x inferiore al frontier. Conviene appena hai il volume.
+- **Edge / contesti offline.** Aerei, navi, siti industriali con rete intermittente. Il sistema deve funzionare comunque.
+
+Il prezzo da pagare è in **qualità**. Un SLM da 3B parametri non ragiona come Claude 4 o GPT-5. Per compiti generalisti aperti perde di brutto. Ma per **task narrow ben definiti** — classificazione, estrazione strutturata (lezione 1.3), retrieval routing, parsing — un SLM ben fine-tunato (lezione 1.8) può eguagliare un frontier al 5% del costo. Il pattern che funziona: **SLM fine-tunato sul task specifico**, non SLM generalista usato a caso.
+
+**Prerequisito tecnico**: la **quantizzazione** (lezione 5.2). Un SLM "vero" gira quantizzato in 4-bit o 8-bit (formati: GGUF per llama.cpp, AWQ, GPTQ). Un Llama 3.2 3B quantizzato sta in 2 GB e gira su un MacBook Pro a 30-50 token/s. Senza quantizzazione l'SLM smette di essere "small" praticamente.
+
+> **Quando NON usare un SLM** — Per qualunque task che richiede ragionamento aperto, conversazione complessa, conoscenza del mondo aggiornata, scrittura creativa di qualità. Lì gli SLM perdono male. La regola spannometrica: SLM = compito narrow definito + volume alto + uno tra privacy/latenza/edge/costo. Manca uno dei pezzi e quasi sempre conviene un modello più grande.
+
 ## Il ragionamento sul vendor lock-in
 
 Un argomento spesso usato a favore dell'open-weight è "non vogliamo dipendere da un singolo provider". È un argomento sensato ma sopravvalutato se non hai un gateway. Con un gateway ben fatto (lezione 6.1), cambiare provider proprietario (da Anthropic a OpenAI, o aggiungere un secondo provider come fallback) è una configurazione. Il lock-in vero non è sull'API, è su:

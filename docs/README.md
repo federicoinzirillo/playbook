@@ -28,6 +28,7 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 - [0.3 Concetti ML che servono a chiunque](./foundations/concetti-ml.md) — scritta
 - [0.4 LLM vs ML classico: quando NON usare la GenAI](./foundations/llm-vs-ml-classico.md) — scritta
 - [0.5 Prompt engineering come disciplina](./foundations/prompt-engineering.md) — scritta
+- [0.6 Reasoning models — quando il pensiero costa, e quando vale](./foundations/reasoning-models.md) — scritta
 
 ### 1 — Costruire sistemi LLM
 - [1.1 RAG](./building/rag.md) — scritta
@@ -37,6 +38,7 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 - [1.5 MCP](./building/mcp.md) — scritta
 - [1.6 Decision drill — Costruire](./building/drill.md) — scritta
 - [1.7 Decision drill — Fine-tuning vs RAG vs PE vs context engineering](./building/drill-fine-tuning-vs-rag.md) — scritta
+- [1.8 Fine-tuning operativo — LoRA, QLoRA, DPO](./building/fine-tuning-operativo.md) — scritta
 
 ### 2 — Multimodale e altri tipi di AI
 - [2.1 Come funziona il multimodale](./multimodal/come-funziona-multimodale.md) — scritta
@@ -45,6 +47,7 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 - [2.4 Generazione di immagini](./multimodal/generazione-immagini.md) — scritta
 - [2.5 Multimodale vs pipeline separate](./multimodal/multimodale-vs-pipeline.md) — scritta
 - [2.6 Decision drill — Multimodale](./multimodal/drill.md) — scritta
+- [2.7 Voice agents in tempo reale](./multimodal/voice-agents.md) — scritta
 
 ### 3 — Valutare e rendere affidabile
 - [3.1 LLM-as-judge](./evaluation/llm-as-judge.md) — scritta
@@ -52,6 +55,7 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 - [3.3 Gestire le allucinazioni](./evaluation/hallucination.md) — scritta
 - [3.4 Valutare il comportamento agentico](./evaluation/valutare-agenti.md) — scritta
 - [3.5 Decision drill — Valutazione](./evaluation/drill.md) — scritta
+- [3.6 Eval benchmarks e dataset — il vocabolario](./evaluation/eval-benchmarks.md) — scritta
 
 ### 4 — Sicurezza, privacy e governance
 - [4.1 Prompt injection e OWASP LLM Top 10](./security/prompt-injection.md) — scritta
@@ -66,6 +70,7 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 - [5.3 Il triangolo qualità-latenza-costo](./system-design/triangolo.md) — scritta
 - [5.4 I dati come spina dorsale](./system-design/dati.md) — scritta
 - [5.5 Decision drill — System design](./system-design/drill.md) — scritta
+- [5.6 Caching semantico e model routing](./system-design/caching-routing.md) — scritta
 
 ### 6 — Produzione (LLMOps)
 - [6.1 Serving e inference](./production/serving.md) — scritta
@@ -81,6 +86,6 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 
 ---
 
-**Avanzamento:** tutte le 35 lezioni sono nella voce definitiva. La guida riflette lo stato del settore al maggio 2026 — modelli (Claude 4.x, GPT-5.x, Gemini 3.x), OWASP LLM Top 10 v2025, EU AI Act post-Digital Omnibus, MCP donato alla Linux Foundation. Tracking dei cambiamenti strutturali in **[RADAR.md](./RADAR.md)**.
+**Avanzamento:** tutte le 40 lezioni sono nella voce definitiva. La guida riflette lo stato del settore al maggio 2026 — modelli (Claude 4.x, GPT-5.x, Gemini 3.x), OWASP LLM Top 10 v2025, EU AI Act post-Digital Omnibus, MCP donato alla Linux Foundation. Tracking dei cambiamenti strutturali in **[RADAR.md](./RADAR.md)**.
 
 **Per riprendere:** apri `AGENTS.md` (root del repo), fai leggere al modello la 0.1 e la 0.2 come riferimento di voce, poi scrivi 1-2 pagine per sessione seguendo il SYLLABUS.

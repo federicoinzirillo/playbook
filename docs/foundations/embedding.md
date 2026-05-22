@@ -90,6 +90,21 @@ Questo dettaglio torna utile più avanti. Quando in RAG (1.1) un modello di embe
 
 > **Nota** — "Embedding" si usa sia per il concetto (rappresentare significato come numeri) sia per il risultato concreto (il vettore di una frase specifica). Lo sentirai in entrambi i sensi, te ne accorgi dal contesto.
 
+## Quando l'embedding generico non basta
+
+I modelli di embedding "generalisti" (OpenAI `text-embedding-3`, Cohere Embed, i Sentence Transformers open) sono addestrati su internet generico. Vanno benissimo per la maggior parte dei casi. **Si rompono** in due scenari specifici:
+
+- **Dominio iper-tecnico con vocabolario proprio.** Diritto, medicina, brevetti, codice di un linguaggio specifico, manualistica industriale. Termini che nel modello generico sono rari o ambigui, e i vettori dei tuoi documenti finiscono ammassati invece che distribuiti. La ricerca non discrimina: tutto è "abbastanza simile" a tutto.
+- **Lingua o sottolingua sottorappresentata.** Italiano tecnico, sloveno, dialetti regionali. Il modello c'è ma è stato esposto poco a quel materiale.
+
+Quando succede, le opzioni in ordine di sforzo:
+
+1. **Cambia modello.** Prima cosa da provare. Esistono modelli specializzati: **Voyage AI** ha `voyage-law-2` per il legale e `voyage-code-3` per il codice; **Cohere** ha varianti multilingue forti; per il codice puro c'è una galassia open-source. Spesso lo sforzo si ferma qui.
+2. **Fine-tuna l'embedding sul tuo dominio.** Se nessun modello pronto basta, applichi la stessa **contrastive learning** descritta sopra ai tuoi dati: raccogli alcune migliaia di coppie positive (es. domande del tuo customer service abbinate ai documenti che le hanno risolte, oppure documenti del tuo corpus accoppiati con loro parafrasi) e coppie negative (testi non correlati), fine-tuni un modello base. Strumenti come `sentence-transformers` lo rendono accessibile. Dataset realistico: 5.000-50.000 coppie. Il guadagno tipico su retrieval di dominio è **5-15 punti di nDCG/recall**, abbastanza da giustificare lo sforzo per progetti seri.
+3. **Re-ranking sopra il generico.** Alternativa alla 2: tieni l'embedding generico per il primo retrieval e aggiungi un **cross-encoder** che ri-ordina i primi 50-100 risultati. Spesso costa meno del fine-tuning e basta. (Approfondito in 1.1 RAG.)
+
+Punto operativo: **non fine-tunare embedding "per default".** È il livello finale, dopo aver provato modello migliore + re-ranker. La metrica che ti dice se serve davvero non è "il manager vuole che lo facciamo": è **eval sul tuo retrieval** (lezione 3.6) che mostra che recall@k è troppo basso e che nessun modello off-the-shelf lo alza.
+
 ## Perché tutto questo ti serve
 
 Gli embedding sono il motore silenzioso sotto un sacco di cose che vedrai. **Cercare per significato invece che per parole esatte**: cerchi "come resettare la password" e trovi un documento che dice "ripristinare le credenziali di accesso", anche se non c'è una parola in comune — perché i due testi hanno embedding vicini. È il cuore di **RAG** (lezione 1.1): per trovare i pezzi di documento giusti da dare al modello, prima li trasformi tutti in embedding, poi cerchi quelli più vicini alla domanda. Senza embedding, niente ricerca semantica, e senza quella, niente RAG.
