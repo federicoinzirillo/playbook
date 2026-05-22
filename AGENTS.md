@@ -1,4 +1,4 @@
-# AGENTS.md — Guida AI (istruzioni di lavoro)
+# AGENTS.md — AI Playbook (istruzioni di lavoro)
 
 > Questo file è la **memoria del progetto**. Aprilo all'inizio di ogni sessione.
 > Scopo: scrivere una pagina (o poche) per volta, con qualità costante, senza ripartire da zero.

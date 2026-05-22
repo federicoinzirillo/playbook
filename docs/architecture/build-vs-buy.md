@@ -11,7 +11,7 @@ sidebar_position: 2
   <span>~13 min di lettura</span>
 </div>
 
-<p class="lesson-lead">Due decisioni che attraversano ogni progetto AI serio: cosa costruire in casa e cosa comprare; quando un modello proprietario chiuso (GPT, Claude, Gemini) vince e quando un open-weight (Llama, Mistral, Qwen) batte la mano. Non ci sono risposte universali — ci sono criteri di decisione che, applicati bene, ti fanno scegliere oggi senza pentirti tra sei mesi.</p>
+<p class="lesson-lead">Due decisioni che attraversano ogni progetto AI serio: cosa costruire in casa e cosa comprare; quando un modello proprietario chiuso (GPT-5, Claude 4, Gemini 3) vince e quando un open-weight (Llama 4, Mistral, Qwen, DeepSeek) batte la mano. Non ci sono risposte universali — ci sono criteri di decisione che, applicati bene, ti fanno scegliere oggi senza pentirti tra sei mesi.</p>
 
 Queste due decisioni vengono spesso discusse come fossero ideologiche: "noi facciamo tutto in casa" oppure "noi compriamo tutto". Entrambe sono posizioni sbagliate. La realtà è che ogni componente della reference architecture (lezione 7.1) ha la sua risposta, e la risposta giusta dipende da: maturità del componente sul mercato, criticità per il tuo business, controllo richiesto, costo a volume atteso, competenze del team. Cinque criteri, non uno.
 
@@ -58,7 +58,9 @@ E cosa praticamente non si compra mai pronto (perché *è* il sistema):
 
 ## Modelli proprietari vs open-weight
 
-Ortogonale al build vs buy: anche scegliendo "buy del modello", c'è da decidere se proprietario chiuso (GPT-4o, Claude, Gemini) o open-weight (Llama, Mistral, Qwen, DeepSeek). Non è una scelta religiosa.
+Ortogonale al build vs buy: anche scegliendo "buy del modello", c'è da decidere se proprietario chiuso (GPT-5, Claude 4, Gemini 3) o open-weight (Llama 4, Mistral, Qwen, DeepSeek). Non è una scelta religiosa.
+
+> **Nota 2026** — Meta ha iniziato ad aprile 2026 una transizione verso modelli closed-weight (Muse Spark) accanto a Llama, e Goldman Sachs prevede Llama 5 al 2027 invece che 2026. Il vantaggio "open" di Llama va monitorato: l'open-weight non è una garanzia eterna, è una strategia commerciale che può cambiare. Qwen e Mistral restano open-first, DeepSeek pure.
 
 **A favore dei modelli proprietari:**
 
@@ -154,7 +156,7 @@ Cambia: **chi vince in quale fascia** — la classifica dei modelli (proprietari
 
 - **Build vs buy** — decisione su se costruire un componente in casa o acquistare/usare uno esistente.
 - **Self-host di open-source** — variante di "build" in cui non costruisci da zero ma gestisci tu un componente open-source.
-- **Modello proprietario / closed-weight** — modello accessibile solo via API del provider, pesi non distribuiti (GPT-4o, Claude, Gemini).
+- **Modello proprietario / closed-weight** — modello accessibile solo via API del provider, pesi non distribuiti (GPT-5, Claude 4, Gemini 3).
 - **Modello open-weight** — modello i cui pesi sono distribuiti pubblicamente e possono essere serviti in proprio (Llama, Mistral, Qwen, DeepSeek).
 - **Frontier capability** — capacità di punta che solo i modelli proprietari più avanzati hanno (al netto del momento).
 - **ADR — Architecture Decision Record** — documento breve che cattura una decisione architettonica, le alternative considerate e le conseguenze.
@@ -172,4 +174,4 @@ Cambia: **chi vince in quale fascia** — la classifica dei modelli (proprietari
 
 ## Prossima lezione
 
-**Decision drill — Architettura.** Tre scenari per testare i criteri di decisione di questa lezione e della 7.1. Una PMI che vuole un assistente sui dati, un'enterprise che valuta proprietario vs open-weight, una scelta di componenti su un sistema esistente.
+**7.3 Decision drill — Architettura.** Due scenari per testare i criteri di decisione di questa lezione e della 7.1: una PMI che vuole un assistente sui dati e una multinazionale che valuta proprietario vs open-weight. Decidi e giustifica.

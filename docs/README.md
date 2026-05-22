@@ -1,10 +1,10 @@
 ---
-title: Guida AI — Inizia da qui
+title: Indice
 slug: /
 sidebar_position: 1
 ---
 
-# Guida AI — capire di cosa parlano tutti, ed esserne competitivi
+# Indice
 
 Guida di studio sull'AI applicativa moderna. Niente laurea richiesta: questo campo premia chi capisce i concetti e i trade-off, non chi ha un titolo. L'obiettivo è portarti dal "sento parole che non capisco" al "so di cosa si parla, so decidere, so costruire l'essenziale".
 
@@ -76,8 +76,8 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 ### 7 — Architettura e sintesi
 - [7.1 Reference architecture](./architecture/reference-architecture.md) — scritta
 - [7.2 Build vs buy, proprietari vs open-weight](./architecture/build-vs-buy.md) — scritta
-- [Decision drill — Architettura](./architecture/drill.md) — scritta
-- [7.3 Capstone — progetto end-to-end](./capstone/progetto-finale.md) — scritta
+- [7.3 Decision drill — Architettura](./architecture/drill.md) — scritta
+- [7.4 Capstone — progetto end-to-end](./capstone/progetto-finale.md) — scritta
 
 ---
 

@@ -40,7 +40,7 @@ sidebar_position: 3
 - **Observability:** **buy managed** (Langfuse Cloud o Helicone). A questo volume, costo è basso e UI immediata vale più del self-host.
 - **Pipeline di ingestion:** **build** (è specifica al dominio — circolari fiscali hanno struttura particolare). Usano parser open-source (pdfplumber per i PDF) e scrivono la logica di chunking sopra.
 
-**Modello:** **proprietario** (GPT-4o o Claude tramite API). Non ci sono vincoli di data residency che richiedano open-weight, il volume non giustifica self-host, il team non ha le competenze. Più avanti possono valutare di aggiungere un modello più piccolo (anche open-weight via Bedrock/Azure) per le query semplici, ma è una micro-ottimizzazione.
+**Modello:** **proprietario** (Claude Sonnet 4.6, GPT-5.4 o Gemini 3.1 Pro tramite API). Non ci sono vincoli di data residency che richiedano open-weight, il volume non giustifica self-host, il team non ha le competenze. Più avanti possono valutare di aggiungere un modello più piccolo (anche open-weight via Bedrock/Azure) per le query semplici, ma è una micro-ottimizzazione.
 
 **Archetipo:** **RAG conversazionale**. Il task è Q&A su corpus interno, non azioni — non serve un agente. Pipeline pura sarebbe troppo rigida (gli utenti faranno follow-up). RAG conversazionale con storia limitata è la scelta giusta.
 
@@ -85,7 +85,7 @@ In seconda fase (mesi 3-6): cache semantica, eventuale routing su modello più p
 
 **Modello: ibrido.**
 
-- **Open-weight self-hosted** (Llama 3 70B, Mistral Large, o equivalenti) per il grosso del traffico. Motivi: (1) i dati di IP farmaceutica non possono uscire dall'infrastruttura controllata; (2) a 100.000 query/giorno, il costo di self-host diventa drasticamente più conveniente del pay-per-token; (3) hanno il team per gestirlo.
+- **Open-weight self-hosted** (Llama 4 Scout o Maverick, Mistral Large, Qwen 3 o DeepSeek v3, a seconda del benchmark sul dominio scientifico) per il grosso del traffico. Motivi: (1) i dati di IP farmaceutica non possono uscire dall'infrastruttura controllata; (2) a 100.000 query/giorno, il costo di self-host diventa drasticamente più conveniente del pay-per-token; (3) hanno il team per gestirlo.
 - **Modello proprietario tramite Azure OpenAI / AWS Bedrock con data isolation** per le query che richiedono frontier capabilities (ragionamento complesso su letteratura scientifica, multimodale se serve analizzare immagini di studi clinici). I provider cloud offrono contratti enterprise con data residency garantita, accettabili per la maggior parte dei dati.
 - **I documenti altamente riservati** (formule di farmaci in sviluppo, IP non pubblica) restano confinati al modello open-weight self-hosted.
 

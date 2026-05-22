@@ -76,11 +76,13 @@ Quando un tema riappare, riappare su un asse diverso, con domande diverse.
 Questo è un campo che si muove in fretta: parte di ciò che studi invecchia *mentre* lo studi —
 soprattutto i tool concreti (Parte 6: vLLM, TGI, gateway) e le aree marcate `In evoluzione`
 (3.4, 4.2). Un programma statico su un campo così non basta: serve una **valvola di sfogo**.
-Tieni un *Radar* personale — un file dove annoti cosa sta diventando standard (changelog dei
-provider, release dei tool che usi, qualche paper) — e rivedilo ~una volta al mese. Quando
-qualcosa è passato da curiosità a standard di fatto, aggiorna la pagina relativa. **Il rischio
-numero uno per chi va lento non è dimenticare i concetti — è studiare tool già superati senza
-accorgersene.** I concetti fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
+Il *Radar* vive in **[RADAR.md](./RADAR.md)** — un file dove annotare cosa sta diventando
+standard (changelog dei provider, release dei tool che usi, qualche paper) con stati
+`EMERGENTE → IN ADOZIONE → STANDARD → LEGACY`. Da rivedere ~una volta al mese. Quando
+qualcosa è passato da curiosità a standard di fatto, aggiorna la pagina relativa e sposta
+la voce nella tabella STANDARD del Radar. **Il rischio numero uno per chi va lento non è
+dimenticare i concetti — è studiare tool già superati senza accorgersene.** I concetti
+fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
 
 ---
 
@@ -206,8 +208,9 @@ sistema è già live e qualcosa va storto.*
 ## PARTE 7 — Architettura e sintesi
 - **7.1 Reference architecture** ⊳ Parti 1-6 — come si compone un sistema completo.
 - **7.2 Build vs buy, proprietari vs open-weight** ⊳ 7.1 — criteri di decisione, costo, controllo.
-- **7.3 Capstone — progetto end-to-end** ⊳ tutto — dalla scelta architetturale a costi,
-  sicurezza e monitoring, con un documento che difende le scelte.
+- **7.3 Decision drill — Architettura** ⊳ 7.1, 7.2 — due scenari realistici con vincoli concreti, da scelta dell'archetipo a build vs buy.
+- **7.4 Capstone — progetto end-to-end** ⊳ tutto — dalla scelta architetturale a costi,
+  sicurezza e monitoring, con un decision record che difende le scelte.
 
 ---
 

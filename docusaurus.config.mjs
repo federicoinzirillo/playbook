@@ -1,12 +1,15 @@
 // @ts-check
+import {createRequire} from 'module';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const require = createRequire(import.meta.url);
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Guida AI',
-  tagline: 'capire di cosa parlano tutti, ed esserne competitivi',
+  title: 'AI Playbook',
+  tagline: 'il manuale di gioco per chi costruisce con l\'AI moderna',
   favicon: 'img/favicon.ico',
 
   url: 'http://localhost:3000',
@@ -26,7 +29,21 @@ const config = {
     },
   },
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+    '@docusaurus/theme-mermaid',
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      ({
+        hashed: true,
+        language: ['it', 'en'],
+        indexBlog: false,
+        docsRouteBasePath: '/',
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      }),
+    ],
+  ],
 
   presets: [
     [
@@ -76,12 +93,12 @@ const config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Guida AI',
+      title: 'AI Playbook',
       items: [],
     },
     footer: {
       style: 'dark',
-      copyright: 'Guida AI — note di studio personali.',
+      copyright: 'AI Playbook — note di studio personali.',
     },
     prism: {
       theme: prismThemes.github,

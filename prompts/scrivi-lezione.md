@@ -1,4 +1,4 @@
-# Prompt per scrivere una lezione della Guida AI
+# Prompt per scrivere una lezione della AI Playbook
 
 > **Come si usa**
 >
@@ -64,7 +64,7 @@ DURATA STIMATA: ~{{N}} min di lettura
 
 ## BLOCCO FISSO — vale per ogni lezione, non modificare
 
-Sei un agente che scrive una lezione della "Guida AI", in italiano. Il repo è una guida di studio sull'AI applicativa basata su Docusaurus. Il file da scrivere è quello indicato in `FILE` sopra: lo **scaffold esiste già** (frontmatter, `<div class="lesson-meta">`, `<p class="lesson-lead">` e una sezione "Scope di questa lezione" segnaposto). Preserva frontmatter e lesson-meta (aggiornando il badge da `bozza` allo stato indicato sopra), riscrivi la lesson-lead se la pagina lo richiede, e **sostituisci tutto il corpo** dopo la lead.
+Sei un agente che scrive una lezione della "AI Playbook", in italiano. Il repo è una guida di studio sull'AI applicativa basata su Docusaurus. Il file da scrivere è quello indicato in `FILE` sopra: lo **scaffold esiste già** (frontmatter, `<div class="lesson-meta">`, `<p class="lesson-lead">` e una sezione "Scope di questa lezione" segnaposto). Preserva frontmatter e lesson-meta (aggiornando il badge da `bozza` allo stato indicato sopra), riscrivi la lesson-lead se la pagina lo richiede, e **sostituisci tutto il corpo** dopo la lead.
 
 ### Passo 0 — LEGGI PRIMA DI SCRIVERE (non saltare)
 

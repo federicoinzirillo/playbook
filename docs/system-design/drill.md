@@ -89,7 +89,7 @@ Flusso:
 
 I contratti legali non possono uscire dall'infrastruttura controllata. Soluzione: **modello on-premise o cloud privato**.
 
-- **Opzione 1 — Open-weight model on-premise:** Llama 3 o Mistral su hardware GPU proprio (o in cloud con dedicated compute). Il dato non lascia l'infrastruttura. Richiede team con competenze di deployment.
+- **Opzione 1 — Open-weight model on-premise:** Llama 4, Mistral o Qwen 3 su hardware GPU proprio (o in cloud con dedicated compute). Il dato non lascia l'infrastruttura. Richiede team con competenze di deployment.
 - **Opzione 2 — Azure OpenAI / AWS Bedrock in modalità data isolation:** i modelli proprietari in esecuzione su infrastruttura cloud dedicata al cliente. Il provider del cloud ha accesso all'infrastruttura, ma i dati non sono usati per training e la data residency è garantita contrattualmente. Più semplice dell'on-premise puro.
 
 Non usare l'API pubblica di OpenAI/Anthropic per dati che non devono uscire — le garanzie di data isolation sono diverse.

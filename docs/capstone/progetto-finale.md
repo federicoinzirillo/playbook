@@ -7,7 +7,7 @@ sidebar_position: 1
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Capstone</span>
+  <span>Lezione 7.4 — Capstone</span>
   <span>~più sessioni (non si legge, si fa)</span>
 </div>
 
