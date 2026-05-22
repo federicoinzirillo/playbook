@@ -97,7 +97,6 @@ const config = {
       items: [],
     },
     footer: {
-      style: 'dark',
       copyright: 'AI Playbook — note di studio personali.',
     },
     prism: {

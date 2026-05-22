@@ -161,3 +161,22 @@ details > summary {
   font-weight: 500;
 }
 
+/* --- Footer: trasparente, integrato nella pagina ------------------------ */
+
+.footer {
+  background-color: transparent;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-600);
+  padding: 1.5rem 0;
+}
+
+.footer__copyright {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.88em;
+}
+
+[data-theme='dark'] .footer {
+  border-top-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-600);
+}
+
