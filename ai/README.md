@@ -32,11 +32,11 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 
 ### 1 — Costruire sistemi LLM
 - [1.1 RAG — il nucleo](./building/rag.md) — scritta
-- [1.2 Retrieval avanzato](./building/retrieval-avanzato.md) — bozza
+- [1.2 Retrieval avanzato](./building/retrieval-avanzato.md) — scritta
 - [1.3 Context engineering](./building/context-engineering.md) — scritta
 - [1.4 Structured output e function calling](./building/structured-output.md) — scritta
 - [1.5 Agenti semplici — tool calling e ReAct](./building/agenti.md) — scritta
-- [1.6 Orchestrazione multi-agent](./building/agenti-orchestrazione.md) — bozza
+- [1.6 Orchestrazione multi-agent](./building/agenti-orchestrazione.md) — scritta
 - [1.7 MCP](./building/mcp.md) — scritta
 - [1.8 Decision drill — Costruire](./building/drill.md) — scritta
 - [1.9 Fine-tuning operativo — LoRA, QLoRA, DPO](./building/fine-tuning-operativo.md) — scritta
@@ -45,13 +45,13 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 ### 2 — Multimodale e altri tipi di AI
 - [2.1 Come funziona il multimodale](./multimodal/come-funziona-multimodale.md) — scritta
 - [2.2 Vision](./multimodal/vision.md) — scritta
-- [2.3 Multimodal RAG](./multimodal/multimodal-rag.md) — da scrivere
+- [2.3 Multimodal RAG](./multimodal/multimodal-rag.md) — scritta
 - [2.4 Audio e speech](./multimodal/audio.md) — scritta
 - [2.5 Generazione di immagini](./multimodal/generazione-immagini.md) — scritta
 - [2.6 Multimodale vs pipeline separate](./multimodal/multimodale-vs-pipeline.md) — scritta
 - [2.7 Decision drill — Multimodale](./multimodal/drill.md) — scritta
 - [2.8 Voice agents in tempo reale](./multimodal/voice-agents.md) — scritta
-- [2.9 Video generation](./multimodal/video-generation.md) — bozza
+- [2.9 Video generation](./multimodal/video-generation.md) — scritta
 
 ### 3 — Valutare e rendere affidabile
 - [3.1 Eval benchmarks e dataset — il vocabolario](./evaluation/eval-benchmarks.md) — scritta
@@ -80,7 +80,7 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 - [6.1 Serving e inference](./production/serving.md) — scritta
 - [6.2 Costi e FinOps a runtime](./production/costi-finops.md) — scritta
 - [6.3 Monitoring e drift in produzione](./production/monitoring.md) — scritta
-- [6.4 Rollout sicuro: canary, A/B e shadow traffic per LLM](./production/rollout-canary-ab.md) — bozza
+- [6.4 Rollout sicuro: canary, A/B e shadow traffic per LLM](./production/rollout-canary-ab.md) — scritta
 - [6.5 Decision drill — Produzione](./production/drill.md) — scritta
 
 ### 7 — Architettura e sintesi
@@ -91,6 +91,6 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 
 ---
 
-**Avanzamento:** 46 lezioni scritte nella voce definitiva, 5 in bozza (1.2, 1.6, 2.3, 2.9, 6.4). Totale: 51 lezioni. La guida riflette lo stato del settore al maggio 2026 — modelli (Claude 4.x, GPT-5.x, Gemini 3.x), OWASP LLM Top 10 v2025, EU AI Act post-Digital Omnibus, MCP donato alla Linux Foundation. Tracking dei cambiamenti strutturali in **[RADAR.md](./RADAR.md)**.
+**Avanzamento:** 51 lezioni scritte nella voce definitiva. Totale: 51 lezioni. La guida riflette lo stato del settore al maggio 2026 — modelli (Claude 4.x, GPT-5.x, Gemini 3.x), OWASP LLM Top 10 v2025, EU AI Act post-Digital Omnibus, MCP donato alla Linux Foundation. Tracking dei cambiamenti strutturali in **[RADAR.md](./RADAR.md)**.
 
 **Per riprendere:** apri `AGENTS.md` (root del repo), fai leggere al modello la 0.1 e la 0.2 come riferimento di voce, poi scrivi 1-2 pagine per sessione seguendo il SYLLABUS.

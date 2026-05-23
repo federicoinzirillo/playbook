@@ -136,8 +136,7 @@ const config = {
       ],
     },
     footer: {
-      copyright: 'Playbook — note di studio personali.',
-    },
+      copyright: `Playbook — Note di studio personali. © ${new Date().getFullYear()}` },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
