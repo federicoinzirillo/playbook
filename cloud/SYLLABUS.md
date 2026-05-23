@@ -188,6 +188,35 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
 
 ---
 
+## PARTE 8 — Architettura enterprise (traccia SA)
+*Opzionale ma strategica per chi punta ad AI Cloud Solution Architect. I 4 temi che la guida
+base non copre e che nei colloqui SA chiedono sempre.*
+
+- **8.1 AWS Well-Architected Framework** ⊳ Parti 4-6 — i 6 pilastri (operational excellence,
+  security, reliability, performance efficiency, cost optimization, sustainability) + il
+  **Responsible AI Lens** (nov 2025). Come si fa una WAF Review con un cliente, cosa produce,
+  come si prioritizzano gli High-Risk Issues. Lo strumento che i SA AWS usano in ogni engagement.
+- **8.2 Governance multi-account** ⊳ 1.3, 4.1 — AWS Organizations: OUs, Service Control
+  Policies (SCP) e Resource Control Policies (RCP), come si separa produzione da dev da sandbox.
+  **AWS Control Tower**: landing zone come "account vending machine", Account Factory, guardrail
+  preventivi/detective/proattivi, drift detection. Il pattern che le enterprise chiedono prima di
+  firmare qualsiasi contratto cloud.
+- **8.3 Migrazione e modernizzazione** ⊳ Parti 0-4 — le **7R** (Retire, Retain, Rehost,
+  Relocate, Repurchase, Replatform, Refactor): la griglia di decisione per ogni workload da
+  migrare. **Strangler fig** per i monoliti. AWS Migration Hub come strumento di tracking.
+  Come si presenta una business case di migrazione al C-level.
+- **8.4 Multi-cloud: consapevolezza senza dispersione** ⊳ Parti 0-3 — Azure e GCP come
+  equivalenti concettuali (il mapping: EC2 ↔ Azure VM ↔ Compute Engine; Lambda ↔ Azure Functions
+  ↔ Cloud Run; S3 ↔ Blob Storage ↔ GCS). Quando la scelta multi-cloud è tecnica (ridurre
+  vendor lock-in, latenza geografica) e quando è politica (il cliente ha già Azure). **FinOps
+  Foundation FOCUS standard** (2026): schema unificato per costi cross-cloud. Non si diventa
+  multi-cloud engineer — si impara a parlarne con i clienti.
+- **8.5 Decision drill — Progetta una landing zone enterprise** — scenario reale: azienda da
+  50 developer, 3 team, requisiti di compliance SOC 2. Disegna la struttura account, gli SCP,
+  il processo di provisioning.
+
+---
+
 ## Certificazioni (verificato 2026 — ordine e ROI)
 Non sono l'obiettivo, ma passano i filtri dei recruiter. L'ordine giusto:
 1. **Cloud Practitioner** (opzionale, per principianti assoluti; dà spesso un voucher sconto) — segnale debole da solo.
@@ -212,7 +241,7 @@ quando ANCHE la guida AI è a buon punto. Micro-interleaving dentro ogni parte.
 
 ## I confini
 **Coperto:** concetti cloud universali, networking/sicurezza, container, IaC, AWS pratico sui
-servizi che contano (~15, non 200), Cloud+AI, FinOps, certificazioni.
+servizi che contano (~15, non 200), Cloud+AI, FinOps, certificazioni. Parte 8 (opzionale):
+Well-Architected, governance enterprise, migrazione, multi-cloud a livello di consapevolezza.
 **Non coperto (di proposito):** amministrazione K8s avanzata (senior), networking di basso livello
-da sysadmin, multi-cloud, ogni servizio AWS. E l'esperienza vera, che si prende deployando e
-rompendo cose reali.
+da sysadmin, ogni servizio AWS. E l'esperienza vera, che si prende deployando e rompendo cose reali.

@@ -87,6 +87,13 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 - [7.2 Capstone — sistema end-to-end su AWS](./capstone/capstone.md) — bozza
 - [7.3 Il portfolio che fa assumere](./capstone/portfolio.md) — bozza
 
+### 8 — Architettura enterprise (traccia SA)
+- [8.1 AWS Well-Architected Framework](./enterprise-architecture/well-architected.md) — bozza
+- [8.2 Governance multi-account](./enterprise-architecture/governance-multiacccount.md) — bozza
+- [8.3 Migrazione e modernizzazione](./enterprise-architecture/migrazione-modernizzazione.md) — bozza
+- [8.4 Multi-cloud: consapevolezza senza dispersione](./enterprise-architecture/multicloud-awareness.md) — bozza
+- [8.5 Decision drill — Landing zone enterprise](./enterprise-architecture/drill.md) — bozza
+
 ## Totale
 
-**44 lezioni** distribuite su 8 parti. Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md).
+**49 lezioni** distribuite su 9 parti. Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md). La Parte 8 è opzionale — traccia per chi punta ad AI Cloud Solution Architect.
