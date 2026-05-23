@@ -20,7 +20,7 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 
 ## Stato delle pagine
 
-> **Parti 0, 1, 2, 3, 4, 5 e 6 scritte** (46 lezioni). Tutte le altre sezioni sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
+> **Parti 0, 1, 2, 3, 4, 5, 6 e 7 scritte** (49 lezioni). Le lezioni della Parte 8 sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
 
 ### 0 — Fondamenta
 - [0.1 Cosa significa cloud](./foundations/cosa-significa-cloud.md) — scritta
@@ -83,9 +83,9 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 - [6.7 Decision drill — I costi sono raddoppiati](./operations/drill.md) — scritta
 
 ### 7 — Sintesi
-- [7.1 Reference architecture cloud](./capstone/reference-architecture-cloud.md) — bozza
-- [7.2 Capstone — sistema end-to-end su AWS](./capstone/capstone.md) — bozza
-- [7.3 Il portfolio che fa assumere](./capstone/portfolio.md) — bozza
+- [7.1 Reference architecture cloud](./capstone/reference-architecture-cloud.md) — scritta
+- [7.2 Capstone — sistema end-to-end su AWS](./capstone/capstone.md) — scritta
+- [7.3 Il portfolio che fa assumere](./capstone/portfolio.md) — scritta
 
 ### 8 — Architettura enterprise (traccia SA)
 - [8.1 AWS Well-Architected Framework](./enterprise-architecture/well-architected.md) — bozza
@@ -96,4 +96,4 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 
 ## Totale
 
-**49 lezioni** distribuite su 9 parti. **46 scritte**, 3 placeholder (Parte 7). Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md). La Parte 8 è opzionale — traccia per chi punta ad AI Cloud Solution Architect.
+**49 lezioni** distribuite su 9 parti. **49 scritte**, 5 placeholder (Parte 8). Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md). La Parte 8 è opzionale — traccia per chi punta ad AI Cloud Solution Architect.
