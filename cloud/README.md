@@ -20,7 +20,7 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 
 ## Stato delle pagine
 
-> **Parti 0, 1, 2 e 3 scritte** (22 lezioni). Tutte le altre sezioni sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
+> **Parti 0, 1, 2, 3 e 4 scritte** (30 lezioni). Tutte le altre sezioni sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
 
 ### 0 — Fondamenta
 - [0.1 Cosa significa cloud](./foundations/cosa-significa-cloud.md) — scritta
@@ -53,14 +53,14 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 - [3.4 Decision drill — Cosa automatizzare](./iac-automation/drill.md) — scritta
 
 ### 4 — AWS pratica
-- [4.1 Orientarsi in AWS](./aws/orientarsi-aws.md) — bozza
-- [4.2 Compute (EC2, ECS/Fargate, Lambda)](./aws/compute.md) — bozza
-- [4.3 Messaggistica ed eventi (SQS, SNS, EventBridge, Step Functions)](./aws/messaggistica-eventi.md) — bozza
-- [4.4 Storage e database](./aws/storage-database.md) — bozza
-- [4.5 Networking su AWS](./aws/networking-aws.md) — bozza
-- [4.6 IaC su AWS](./aws/iac-aws.md) — bozza
-- [4.7 Observability (CloudWatch)](./aws/observability.md) — bozza
-- [4.8 Decision drill — Architettura AWS serverless](./aws/drill.md) — bozza
+- [4.1 Orientarsi in AWS](./aws/orientarsi-aws.md) — scritta
+- [4.2 Compute (EC2, ECS/Fargate, Lambda)](./aws/compute.md) — scritta
+- [4.3 Messaggistica ed eventi (SQS, SNS, EventBridge, Step Functions)](./aws/messaggistica-eventi.md) — scritta
+- [4.4 Storage e database](./aws/storage-database.md) — scritta
+- [4.5 Networking su AWS](./aws/networking-aws.md) — scritta
+- [4.6 IaC su AWS](./aws/iac-aws.md) — scritta
+- [4.7 Observability (CloudWatch)](./aws/observability.md) — scritta
+- [4.8 Decision drill — URL shortener su AWS](./aws/drill.md) — scritta
 
 ### 5 — Cloud per l'AI
 - [5.1 GPU nel cloud](./cloud-for-ai/gpu-cloud.md) — bozza
