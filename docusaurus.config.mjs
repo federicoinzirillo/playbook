@@ -8,8 +8,8 @@ const require = createRequire(import.meta.url);
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'AI Playbook',
-  tagline: 'il manuale di gioco per chi costruisce con l\'AI moderna',
+  title: 'Playbook',
+  tagline: 'il manuale di gioco per chi costruisce con l\'AI moderna sul cloud',
   favicon: 'img/favicon.ico',
 
   url: 'http://localhost:3000',
@@ -38,7 +38,8 @@ const config = {
         hashed: true,
         language: ['it', 'en'],
         indexBlog: false,
-        docsRouteBasePath: '/',
+        docsRouteBasePath: ['/', '/cloud'],
+        docsPluginIdForPreferredVersion: 'default',
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
       }),
@@ -60,6 +61,21 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+      }),
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'cloud',
+        path: 'cloud',
+        routeBasePath: 'cloud',
+        sidebarPath: './sidebars-cloud.js',
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
       }),
     ],
   ],
@@ -93,11 +109,26 @@ const config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'AI Playbook',
-      items: [],
+      title: 'Playbook',
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          docsPluginId: 'default',
+          label: 'AI',
+          position: 'left',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          docsPluginId: 'cloud',
+          label: 'Cloud',
+          position: 'left',
+        },
+      ],
     },
     footer: {
-      copyright: 'AI Playbook — note di studio personali.',
+      copyright: 'Playbook — note di studio personali.',
     },
     prism: {
       theme: prismThemes.github,

@@ -1,7 +1,13 @@
-# AGENTS.md — AI Playbook (istruzioni di lavoro)
+# AGENTS.md — Playbook (istruzioni di lavoro)
 
 > Questo file è la **memoria del progetto**. Aprilo all'inizio di ogni sessione.
 > Scopo: scrivere una pagina (o poche) per volta, con qualità costante, senza ripartire da zero.
+
+> **Due playbook, stesse regole.** Le istruzioni qui valgono identiche per entrambi i percorsi:
+> - **AI Playbook** — contenuto in `docs/`, syllabus in [`docs/SYLLABUS.md`](docs/SYLLABUS.md), stato pagine in [`docs/README.md`](docs/README.md).
+> - **Cloud Playbook** — contenuto in `cloud/`, syllabus in [`cloud/SYLLABUS.md`](cloud/SYLLABUS.md), stato pagine in [`cloud/README.md`](cloud/README.md).
+>
+> Stessa voce, stesso template di lezione, stessi badge di stato. Studio in alternanza a blocchi (mai due fronti aperti lo stesso giorno). Il RADAR è unico in [`docs/RADAR.md`](docs/RADAR.md).
 
 ---
 
