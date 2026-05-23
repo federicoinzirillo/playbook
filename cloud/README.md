@@ -20,7 +20,7 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 
 ## Stato delle pagine
 
-> **Parti 0, 1, 2, 3 e 4 scritte** (30 lezioni). Tutte le altre sezioni sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
+> **Parti 0, 1, 2, 3, 4 e 5 scritte** (39 lezioni). Tutte le altre sezioni sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
 
 ### 0 — Fondamenta
 - [0.1 Cosa significa cloud](./foundations/cosa-significa-cloud.md) — scritta
@@ -63,15 +63,15 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 - [4.8 Decision drill — URL shortener su AWS](./aws/drill.md) — scritta
 
 ### 5 — Cloud per l'AI
-- [5.1 GPU nel cloud](./cloud-for-ai/gpu-cloud.md) — bozza
-- [5.2 Servizi AI gestiti vs self-hosted](./cloud-for-ai/gestiti-vs-self-hosted.md) — bozza
-- [5.3 Ottimizzare i costi di inferenza](./cloud-for-ai/costi-inferenza.md) — bozza
-- [5.4 Caching e CDN strategies](./cloud-for-ai/caching-strategie.md) — bozza
-- [5.5 Kubernetes per workload AI](./cloud-for-ai/k8s-per-ai.md) — bozza
-- [5.6 Architettura di un sistema AI in produzione](./cloud-for-ai/architettura-sistema-ai.md) — bozza
-- [5.7 Vector database managed vs self-hosted](./cloud-for-ai/vector-db.md) — bozza
-- [5.8 Training pipeline gestiti](./cloud-for-ai/training-pipeline.md) — bozza
-- [5.9 Decision drill — Deploy RAG su AWS](./cloud-for-ai/drill.md) — bozza
+- [5.1 GPU nel cloud](./cloud-for-ai/gpu-cloud.md) — scritta
+- [5.2 Servizi AI gestiti vs self-hosted](./cloud-for-ai/gestiti-vs-self-hosted.md) — scritta
+- [5.3 Ottimizzare i costi di inferenza](./cloud-for-ai/costi-inferenza.md) — scritta
+- [5.4 Caching e CDN strategies](./cloud-for-ai/caching-strategie.md) — scritta
+- [5.5 Kubernetes per workload AI](./cloud-for-ai/k8s-per-ai.md) — scritta
+- [5.6 Architettura di un sistema AI in produzione](./cloud-for-ai/architettura-sistema-ai.md) — scritta
+- [5.7 Vector database managed vs self-hosted](./cloud-for-ai/vector-db.md) — scritta
+- [5.8 Training pipeline gestiti](./cloud-for-ai/training-pipeline.md) — scritta
+- [5.9 Decision drill — Deploy RAG su AWS](./cloud-for-ai/drill.md) — scritta
 
 ### 6 — Operations
 - [6.1 FinOps: il cloud costa in modi sorprendenti](./operations/finops.md) — bozza
