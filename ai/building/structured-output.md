@@ -1,19 +1,19 @@
 ---
 title: Structured output e function calling
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Structured output e function calling
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 1.3</span>
+  <span>Lezione 1.4</span>
   <span>~10 min di lettura</span>
 </div>
 
 <p class="lesson-lead">Un LLM che risponde in prosa libera non si aggancia a un'API, un database o una pipeline. Structured output e function calling sono i due meccanismi che portano le risposte del modello dentro il tuo sistema — in forma che il codice può consumare.</p>
 
-Nelle lezioni 1.1 e 1.2 hai visto come portare le informazioni *al* modello — recuperarle, organizzarle, scegliere cosa mettere nel contesto. Ma nelle applicazioni reali il problema è anche l'inverso: come usi quello che il modello *produce*?
+Nelle lezioni 1.1 e 1.3 hai visto come portare le informazioni *al* modello — recuperarle, organizzarle, scegliere cosa mettere nel contesto. Ma nelle applicazioni reali il problema è anche l'inverso: come usi quello che il modello *produce*?
 
 In una demo basta la prosa libera. In produzione hai bisogno che il modello produca dati strutturati — un oggetto JSON, un elenco di campi, un'azione con parametri — che il tuo codice possa leggere e usare senza fare text parsing fragile su testo libero. Structured output e function calling risolvono questo.
 
@@ -63,7 +63,7 @@ flowchart TD
   D --> E["LLM genera la risposta finale"]
 ```
 
-Questo pattern è il cuore di ogni sistema agentico (lezione 1.4): un agente non è altro che questo loop ripetuto — l'LLM decide cosa chiamare, il codice lo esegue, il risultato torna nel contesto, l'LLM decide di nuovo.
+Questo pattern è il cuore di ogni sistema agentico (lezione 1.5): un agente non è altro che questo loop ripetuto — l'LLM decide cosa chiamare, il codice lo esegue, il risultato torna nel contesto, l'LLM decide di nuovo.
 
 ## Validazione: non si assume che sia sempre corretto
 
@@ -128,4 +128,4 @@ Quindi: **valida sempre l'output del modello prima di usarlo**, anche con struct
 
 ## Prossima lezione
 
-**1.4 Agenti e orchestrazione.** Hai visto come il modello può dichiarare di voler chiamare una funzione. Un agente è il loop completo: il modello decide, il codice agisce, il risultato torna al modello, il modello decide di nuovo. Questo loop cambia radicalmente la complessità — e i rischi — del sistema.
+**1.5 Agenti semplici — tool calling e ReAct.** Hai visto come il modello può dichiarare di voler chiamare una funzione. Un agente è il loop completo: il modello decide, il codice agisce, il risultato torna al modello, il modello decide di nuovo. Questo loop cambia radicalmente la complessità — e i rischi — del sistema.

@@ -1,13 +1,13 @@
 ---
 title: Decision drill — Fine-tuning vs RAG vs prompt engineering vs context engineering
-sidebar_position: 7
+sidebar_position: 10
 ---
 
 # Decision drill — Fine-tuning vs RAG vs prompt engineering vs context engineering
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 1.7</span>
+  <span>Lezione 1.10</span>
   <span>~15 min (incluso il tempo di lavoro)</span>
 </div>
 
@@ -18,7 +18,7 @@ Questo drill presuppone che tu abbia capito la meccanica di ciascuno strumento:
 - **Prompt engineering** — lezione 0.5
 - **Fine-tuning** — lezione 0.3
 - **RAG** — lezione 1.1
-- **Context engineering** — lezione 1.2
+- **Context engineering** — lezione 1.3
 
 Se uno di questi è ancora nebuloso, torna alla lezione prima di usare la griglia: capire la griglia senza capire i mattoni è recitarla, non usarla.
 

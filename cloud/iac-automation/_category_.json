@@ -1,7 +1,7 @@
 {
-  "label": "4 — IaC & automazione",
+  "label": "4 IaC & automazione",
   "position": 8,
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "link": null
 }

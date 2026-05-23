@@ -1,7 +1,7 @@
 {
-  "label": "2 — Container & compute",
+  "label": "2 Container & compute",
   "position": 6,
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "link": null
 }

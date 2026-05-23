@@ -75,7 +75,7 @@ Quando un tema riappare, riappare su un asse diverso, con domande diverse.
 ### Tenere viva la guida (abitudine parallela — non opzionale se studi lento)
 Questo è un campo che si muove in fretta: parte di ciò che studi invecchia *mentre* lo studi —
 soprattutto i tool concreti (Parte 6: vLLM, TGI, gateway) e le aree marcate `In evoluzione`
-(3.4, 4.2). Un programma statico su un campo così non basta: serve una **valvola di sfogo**.
+(3.5, 4.2). Un programma statico su un campo così non basta: serve una **valvola di sfogo**.
 Il *Radar* vive in **[RADAR.md](./RADAR.md)** — un file dove annotare cosa sta diventando
 standard (changelog dei provider, release dei tool che usi, qualche paper) con stati
 `EMERGENTE → IN ADOZIONE → STANDARD → LEGACY`. Da rivedere ~una volta al mese. Quando
@@ -89,7 +89,7 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
 ## PARTE 0 — Fondamenta concettuali
 *Necessarie a tutto il resto. Da fare per prime.*
 
-- **0.1 Come funziona un LLM** — token, context window, sampling, temperature. Include perché i token sono l'unità di costo (paghi a token, non a parola): un chiodo da piantare presto.
+- **0.1 Come funziona un LLM** — token, context window, sampling, temperature. Include perché i token sono l'unità di costo (paghi a token, non a parola): un chiodo da piantare presto. Include anche il **prompt caching**: i token ripetuti (istruzioni di sistema, few-shot) possono costare 10× meno con il caching del provider — primo gesto su qualsiasi sistema serio (dettaglio tecnico in 5.6).
 - **0.2 Embedding e spazi vettoriali** ⊳ 0.1 — significato come numeri, similarità del coseno.
 - **0.3 Concetti ML che servono a chiunque** — training, fine-tuning, overfitting, dati
   train/test, bias nei dati. Non solo vocabolario: serve l'**intuizione meccanica** di cosa il
@@ -111,27 +111,31 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
 ## PARTE 1 — Costruire sistemi LLM
 *Il cuore. Subito dopo i fondamenti.*
 
-- **1.1 RAG** ⊳ 0.2 — chunking, vector DB, retrieval, reranking, hybrid search, GraphRAG.
-- **1.2 Context engineering: cosa mettere nel contesto, a scala** ⊳ 1.1 — competenza distinta dal
+- **1.1 RAG — il nucleo** ⊳ 0.2 — chunking, vector DB, retrieval base (ricerca semantica a coseno),
+  pipeline dalla query al documento recuperato. Il ciclo completo nella versione essenziale.
+- **1.2 Retrieval avanzato** ⊳ 1.1 — reranking, hybrid search (BM25 + vettoriale), agentic
+  retrieval, GraphRAG per domini a grafo. Le ottimizzazioni si studiano dopo aver capito il nucleo.
+- **1.3 Context engineering: cosa mettere nel contesto, a scala** ⊳ 1.1 — competenza distinta dal
   RAG classico. Con context window enormi, *decidere cosa entra nel contesto* è un mestiere a sé:
   il trade-off tra riempire il contesto e il degrado di attenzione nel mezzo ("lost in the
   middle"), più il costo che cresce col contesto. Aggancio al triangolo qualità-latenza-costo (5.3).
-- **1.3 Structured output e function calling** ⊳ 1.1 — far produrre dati strutturati, collegare funzioni.
-- **1.4 Agenti e orchestrazione** ⊳ 1.3 — tool calling, ReAct, multi-agent, orchestratore-worker.
-  *Principio chiave: ciò che va garantito sta nell'orchestratore, ciò che richiede giudizio
-  nell'LLM. Mai mettere il controllo di flusso nei prompt (→ loop e costi fuori controllo).*
-  *Costo e latenza: un sistema multi-agent costa e impiega molto più di una singola chiamata —
-  ogni passo è un'altra inferenza. Vedi il triangolo in 5.3 prima di scegliere un'architettura agentica.*
-- **1.5 MCP — Model Context Protocol** ⊳ 1.3 — lo standard per collegare modelli, tool e dati.
-- **1.6 Decision drill — Costruire**
-- **1.7 Decision drill — Fine-tuning vs RAG vs prompt engineering vs context engineering** ⊳ 0.3,
-  0.5, 1.1, 1.2 — la domanda architetturale più frequente in assoluto. Griglia di quando l'uno
-  batte l'altro: costo, dati disponibili, frequenza di aggiornamento, serve uno *stile* o una
-  *conoscenza*.
-- **1.8 Fine-tuning operativo — LoRA, QLoRA, DPO** ⊳ 0.3, 1.7 — l'altra faccia della 1.7: una
-  volta deciso che ti serve fine-tuning, *come* lo fai senza addestrare 70B parametri. Tecniche
-  PEFT (LoRA, QLoRA), preferenze (DPO/ORPO), dataset size realistico, forgetting catastrofico,
-  managed vs self-hosted.
+- **1.4 Structured output e function calling** ⊳ 1.1 — far produrre dati strutturati, collegare funzioni.
+- **1.5 Agenti semplici — tool calling e ReAct** ⊳ 1.4 — tool calling, il loop ReAct (Reason + Act),
+  l'agente come processo iterativo. *Principio chiave: il controllo di flusso sta nell'orchestratore,
+  il giudizio nell'LLM. Mai delegare il flusso ai prompt (→ loop e costi fuori controllo).*
+- **1.6 Orchestrazione multi-agent** ⊳ 1.5 — pattern supervisore-worker, agenti paralleli, stato
+  condiviso, framework (LangGraph, CrewAI). *Costo e latenza: ogni passo è un'altra inferenza —
+  un sistema multi-agent costa molto più di una singola chiamata. Vedi 5.3 prima di scegliere
+  un'architettura agentica.*
+- **1.7 MCP — Model Context Protocol** ⊳ 1.4 — lo standard per collegare modelli, tool e dati.
+- **1.8 Decision drill — Costruire**
+- **1.9 Fine-tuning operativo — LoRA, QLoRA, DPO** ⊳ 0.3 — come fai fine-tuning senza addestrare
+  70B parametri. Tecniche PEFT (LoRA, QLoRA), preferenze (DPO/ORPO), dataset size realistico,
+  forgetting catastrofico, managed vs self-hosted.
+- **1.10 Decision drill — Fine-tuning vs RAG vs prompt engineering vs context engineering** ⊳ 0.3,
+  0.5, 1.1, 1.3, 1.9 — la domanda architetturale più frequente in assoluto, *dopo* aver toccato
+  con mano sia RAG (1.1-1.2) che fine-tuning (1.9). Griglia di quando l'uno batte l'altro: costo,
+  dati disponibili, frequenza di aggiornamento, serve uno *stile* o una *conoscenza*.
 
 ## PARTE 2 — Multimodale e altri tipi di AI
 *La fetta "AI generalista" oltre il testo. Conoscenza fondazionale di cosa sa fare l'AI oggi.*
@@ -150,7 +154,7 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
   casi d'uso e limiti.
 - **2.6 Quando multimodale, quando pipeline separate** ⊳ 2.1 — criteri di scelta e trade-off.
 - **2.7 Decision drill — Multimodale**
-- **2.8 Voice agents in tempo reale** ⊳ 2.4, 1.4 —
+- **2.8 Voice agents in tempo reale** ⊳ 2.4, 1.5 —
   <span class="badge-stato evoluzione">In evoluzione</span> conversazione vocale fluida sotto la
   soglia degli ~800ms percepiti. Perché la pipeline STT→LLM→TTS non basta, modelli speech-to-speech
   nativi (Realtime API, Gemini Live), gestione delle interruzioni (barge-in, turn detection),
@@ -164,12 +168,17 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
 ## PARTE 3 — Valutare e rendere affidabile
 *Ciò che separa una demo da un sistema serio. In interleaving con Parte 1.*
 
-- **3.1 LLM-as-judge** ⊳ 1.1 — golden dataset, criteri, eval offline/online, bias del giudice.
-  Valuta il **singolo output**: la base, ma non basta per gli agenti (vedi 3.4).
-- **3.2 Observability** ⊳ 3.1 — tracing, costi, latenza, cosa loggare per *misurare*. Include il
+- **3.1 Eval benchmarks e dataset — il vocabolario** ⊳ 0.2 — prima il vocabolario, poi gli
+  strumenti. I benchmark pubblici che senti nominare (MMLU, GPQA, SWE-bench, AgentBench, MTEB)
+  e cosa misurano davvero. Contamination e perché i leaderboard sono segnale rumoroso. Costruire
+  un **golden dataset interno** (50-200 esempi curati > 10k sintetici random). Synthetic data:
+  usi legittimi e trappole.
+- **3.2 LLM-as-judge** ⊳ 3.1, 1.1 — golden dataset, criteri, eval offline/online, bias del
+  giudice. Valuta il **singolo output**: la base, ma non basta per gli agenti (vedi 3.5).
+- **3.3 Observability** ⊳ 3.2 — tracing, costi, latenza, cosa loggare per *misurare*. Include il
   tracking dei prompt versionati introdotti in 0.5.
-- **3.3 Gestire le allucinazioni** ⊳ 1.1, 3.1 — perché succedono, grounding, mitigazione.
-- **3.4 Valutare il comportamento agentico end-to-end** ⊳ 1.4, 3.1 —
+- **3.4 Gestire le allucinazioni** ⊳ 1.1, 3.2 — perché succedono, grounding, mitigazione.
+- **3.5 Valutare il comportamento agentico end-to-end** ⊳ 1.6, 3.2 —
   <span class="badge-stato evoluzione">In evoluzione</span> il buco che si sta allargando più in
   fretta nel settore. Un agente non è un singolo output, è una **traiettoria** di decisioni e tool.
   Può produrre ogni risposta plausibile e fallire *come processo*: tool sbagliato, loop, obiettivo
@@ -177,17 +186,13 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
   scelta dei tool, il completamento del task — non solo il token finale. Scritto sui **principi**
   (cosa significa valutare un processo, quali domande porsi), non sui tool del mese, perché è
   un'area giovane che cambia in fretta.
-- **3.5 Decision drill — Valutazione** (incluso un caso di valutazione agentica)
-- **3.6 Eval benchmarks e dataset — il vocabolario** ⊳ 3.1, 0.2 — i benchmark pubblici che senti
-  nominare (MMLU, GPQA, SWE-bench, AgentBench, MTEB) e cosa misurano davvero. Contamination e
-  perché i leaderboard sono segnale rumoroso. Costruire un **golden dataset interno** (50-200
-  esempi curati > 10k sintetici random). Synthetic data: usi legittimi e trappole.
+- **3.6 Decision drill — Valutazione** (incluso un caso di valutazione agentica)
 
 ## PARTE 4 — Sicurezza, privacy e governance
-- **4.1 Prompt injection e OWASP LLM Top 10** ⊳ 1.4 — attacchi, esfiltrazione, abuso di tool sul
+- **4.1 Prompt injection e OWASP LLM Top 10** ⊳ 1.5 — attacchi, esfiltrazione, abuso di tool sul
   *singolo input*, guardrail. La sicurezza va resa **strutturale** (policy engine tra LLM e azioni),
   non affidata ai prompt.
-- **4.2 Sicurezza agentica: la superficie d'attacco comportamentale** ⊳ 4.1, 1.4 —
+- **4.2 Sicurezza agentica: la superficie d'attacco comportamentale** ⊳ 4.1, 1.6 —
   <span class="badge-stato evoluzione">In evoluzione</span> un agente con tool non è vulnerabile
   solo sull'input, ma sulla **catena di azioni**: una sequenza di passi ciascuno legittimo che
   insieme producono un danno (esfiltrazione progressiva, azioni distruttive concatenate). Perché
@@ -202,25 +207,27 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
 ## PARTE 5 — System design dei sistemi AI
 *L'asse DESIGN: come decidi l'architettura. Oggi richiesto anche per ruoli software generali.*
 
-- **5.1 Anatomia di un sistema AI** ⊳ 1.4 — i componenti (orchestratore, retrieval, tool,
+- **5.1 Anatomia di un sistema AI** ⊳ 1.5 — i componenti (orchestratore, retrieval, tool,
   guardrail, observability) e come si parlano. L'LLM è ~20% di un sistema di produzione.
 - **5.2 Pattern di sistema** ⊳ 5.1 — sincrono vs asincrono, batch vs real-time, code/queue,
   batching delle richieste, load balancing. Sono i pattern dei sistemi distribuiti applicati all'AI.
   *Qui si sceglie il pattern; il come gestirlo in produzione è Parte 6.*
 - **5.3 Il triangolo qualità-latenza-costo** ⊳ 5.1 — il trade-off che governa ogni decisione
-  (richiamato da 1.2 e 1.4); caching (incluso semantico), rate limiting, fallback, ridondanza.
+  (richiamato da 1.3 e 1.5); caching (incluso semantico e **prompt caching del provider**), rate limiting, fallback, ridondanza.
   *Qui si ragiona sul trade-off in fase di design; l'ottimizzazione dei costi reali a runtime è 6.2.*
 - **5.4 I dati come spina dorsale** ⊳ 0.2 — qualità, preparazione, pipeline a livello
   concettuale; database vettoriali a fondo. Spesso il vero collo di bottiglia, sottovalutato.
 - **5.5 Decision drill — System design** (es. "progetta un chatbot di supporto su LLM di terzi")
 - **5.6 Caching semantico e model routing** ⊳ 5.1, 5.3, 0.2 — le due leve di costo/latenza che
   vivono in architettura, non in produzione. Cache esatta vs semantica (con la trappola della
-  soglia di similarità), prompt caching del provider, router upfront vs cascade reattiva,
+  soglia di similarità), **prompt caching del provider** (cache_control su Anthropic, automatic
+  caching su OpenAI: -80-90% sui token ripetuti in prefix fissi — istruzioni di sistema,
+  few-shot stabili), router upfront vs cascade reattiva,
   LLM gateway (LiteLLM, Portkey, Helicone, OpenRouter). Risparmio reale tipico 50-65%.
 
 ## PARTE 6 — Produzione (LLMOps)
 *L'asse OPERATIONS: far vivere in produzione un sistema che NON addestri. Non ripete la Parte 5
-(design) né la 3.2 (misurare): qui si parla di **tool concreti e giorno-2** — cosa fai quando il
+(design) né la 3.3 (misurare): qui si parla di **tool concreti e giorno-2** — cosa fai quando il
 sistema è già live e qualcosa va storto.*
 
 - **6.1 Serving e inference** ⊳ 5.1 — gli **strumenti reali**: gateway/router, motori (vLLM, TGI),

@@ -1,19 +1,19 @@
 ---
 title: "Observability: tracing, costi, latenza"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Observability — vedere dentro il sistema
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 3.2</span>
+  <span>Lezione 3.3</span>
   <span>~12 min di lettura</span>
 </div>
 
 <p class="lesson-lead">Un sistema LLM senza observability è una scatola che produce risposte e brucia soldi senza che tu sappia dove. Quando qualcosa va storto — qualità che cala, costi che schizzano, latenze che si gonfiano — devi sapere *dove* è successo, non solo *che* è successo. È il livello sotto la valutazione: il giudice misura la qualità, l'observability ti dice perché.</p>
 
-Nella lezione 3.1 hai visto come misurare la qualità delle risposte. Funziona se ogni risposta è un evento singolo, isolato. Ma un sistema reale è un grafo di chiamate — il prompt va a un retriever, che chiama un embedding model, che interroga un vector DB, che ridà chunk, che vanno al modello finale, che a volte chiama un tool, che torna al modello. Quando una risposta è scadente o lenta, *dove* nel grafo è andato storto? Senza observability, brancoli.
+Nella lezione 3.2 hai visto come misurare la qualità delle risposte. Funziona se ogni risposta è un evento singolo, isolato. Ma un sistema reale è un grafo di chiamate — il prompt va a un retriever, che chiama un embedding model, che interroga un vector DB, che ridà chunk, che vanno al modello finale, che a volte chiama un tool, che torna al modello. Quando una risposta è scadente o lenta, *dove* nel grafo è andato storto? Senza observability, brancoli.
 
 ## Cos'è observability quando in mezzo c'è un LLM
 
@@ -62,7 +62,7 @@ Per LLM, quattro famiglie di metriche coprono la stragrande maggioranza delle do
 
 **Tasso di errore.** Non solo errori HTTP. *Refusal rate* (quanto spesso il modello rifiuta di rispondere), *fallback rate* (quanto spesso scatta un piano B), errori dei tool, rate limit hit. Ogni numero qui è un segnale di salute.
 
-**Qualità.** I punteggi del giudice (lezione 3.1) agganciati al trace. Una distribuzione dei punteggi nel tempo: se la media scende, *quale step* del trace è cambiato? Aggancio cruciale tra valutazione e observability.
+**Qualità.** I punteggi del giudice (lezione 3.2) agganciati al trace. Una distribuzione dei punteggi nel tempo: se la media scende, *quale step* del trace è cambiato? Aggancio cruciale tra valutazione e observability.
 
 ## Cosa loggare: input, output, metadata
 
@@ -93,7 +93,7 @@ In pratica: ogni release di un prompt produce un identifier (semver, hash, o un 
 
 ## Eval online: il giudice agganciato al sistema
 
-L'eval offline (lezione 3.1) gira sul golden dataset prima del rilascio. L'**eval online** invece campiona le risposte reali in produzione e le passa al giudice — periodicamente o in streaming.
+L'eval offline (lezione 3.2) gira sul golden dataset prima del rilascio. L'**eval online** invece campiona le risposte reali in produzione e le passa al giudice — periodicamente o in streaming.
 
 Due pattern:
 

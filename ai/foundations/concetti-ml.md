@@ -11,7 +11,7 @@ sidebar_position: 3
   <span>~14 min di lettura</span>
 </div>
 
-<p class="lesson-lead">Training, fine-tuning, overfitting, split dei dati, bias. Non il vocabolario: l'intuizione meccanica. Capire cosa il fine-tuning sposta davvero nel modello — e cosa invece non tocca — è il pezzo che rende sensata la griglia di decisione fine-tuning vs RAG che incontrerai alla lezione 1.7.</p>
+<p class="lesson-lead">Training, fine-tuning, overfitting, split dei dati, bias. Non il vocabolario: l'intuizione meccanica. Capire cosa il fine-tuning sposta davvero nel modello — e cosa invece non tocca — è il pezzo che rende sensata la griglia di decisione fine-tuning vs RAG che incontrerai alla lezione 1.10.</p>
 
 Nella lezione 0.2 abbiamo visto che un modello di embedding impara dagli esempi — coppie di testi simili e diversi — e che, dopo abbastanza esempi, lo spazio del significato emerge da solo. Ma abbiamo sorvolato su come funziona questo "imparare". Cos'è che cambia dentro, concretamente? Dove "vive" quello che il modello ha imparato? E, soprattutto: quando lo modifichiamo, cosa stiamo toccando davvero?
 
@@ -127,7 +127,7 @@ La domanda non è "quale tecnica è migliore?" ma "quale problema stai risolvend
 4. Cos'è l'overfitting, e come si riconosce guardando le curve di training?
 5. Un'azienda vuole che il suo assistente risponda sempre in italiano formale, senza emoji. Fine-tuning o RAG?
 6. Un'azienda vuole che il suo assistente sappia rispondere sulle specifiche tecniche dei prodotti in catalogo, aggiornate ogni settimana. Fine-tuning o RAG?
-7. *(anticipazione)* Nella griglia di decisione della lezione 1.7, ci sono quattro opzioni: RAG, fine-tuning, prompt engineering, context engineering. Basandoti su questa lezione, in che situazioni escluderesti subito il fine-tuning?
+7. *(anticipazione)* Nella griglia di decisione della lezione 1.10, ci sono quattro opzioni: RAG, fine-tuning, prompt engineering, context engineering. Basandoti su questa lezione, in che situazioni escluderesti subito il fine-tuning?
 
 ---
 

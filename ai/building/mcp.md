@@ -1,20 +1,20 @@
 ---
 id: mcp
 title: MCP — lo standard per collegare i tool
-sidebar_position: 5
+sidebar_position: 7
 ---
 
 # MCP — Model Context Protocol
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 1.5</span>
+  <span>Lezione 1.7</span>
   <span>~8 min di lettura</span>
 </div>
 
 <p class="lesson-lead">MCP risolve il problema di collegare modelli, tool e dati in modo standardizzato — come fece USB per le periferiche. Non è un framework AI: è un protocollo di trasporto. A maggio 2026 non è più "uno standard emergente": è infrastruttura di settore, donata da Anthropic alla Linux Foundation a dicembre 2025 con OpenAI, Google e Microsoft come co-sponsor.</p>
 
-Nella lezione 1.4 hai visto che gli agenti hanno bisogno di tool — funzioni che il modello può richiedere di eseguire. Il problema pratico che emergeva subito: come colleghi quegli strumenti al modello? Storicamente, ogni framework, ogni provider, ogni azienda inventava il suo protocollo. Risultato: integrazioni fragili, non riusabili, da riscrivere ogni volta che cambiavi modello o framework.
+Nella lezione 1.5 hai visto che gli agenti hanno bisogno di tool — funzioni che il modello può richiedere di eseguire. Il problema pratico che emergeva subito: come colleghi quegli strumenti al modello? Storicamente, ogni framework, ogni provider, ogni azienda inventava il suo protocollo. Risultato: integrazioni fragili, non riusabili, da riscrivere ogni volta che cambiavi modello o framework.
 
 **MCP — Model Context Protocol** — risolve questa frammentazione con uno standard aperto: un protocollo unico che qualsiasi modello può usare per parlare con qualsiasi tool o fonte dati, senza integrazioni su misura. Scrivi un "server MCP" per la tua fonte una volta, e lo usano tutti i client compatibili.
 
@@ -140,4 +140,4 @@ Pratica conseguenza per chi costruisce ora: **MCP non è una scommessa**. Invest
 
 ## Prossima lezione
 
-**1.6 Decision drill — Costruire.** Hai ora tutti i mattoni della Parte 1. Prima di passare alla griglia di decisione sistematica (1.7), un esercizio da architetto: dati vincoli reali di budget, latenza e tipo di dati, scegli l'architettura e giustifica ogni scelta.
+**1.8 Decision drill — Costruire.** Hai ora tutti i mattoni della Parte 1. Prima di passare alla griglia di decisione sistematica (1.10), un esercizio da architetto: dati vincoli reali di budget, latenza e tipo di dati, scegli l'architettura e giustifica ogni scelta.

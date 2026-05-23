@@ -1,7 +1,7 @@
 {
-  "label": "1 — Networking & sicurezza",
+  "label": "1 Networking & sicurezza",
   "position": 5,
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "link": null
 }

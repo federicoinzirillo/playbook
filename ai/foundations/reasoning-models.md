@@ -70,7 +70,7 @@ La regola di base è semplice: **i reasoning models guadagnano dove c'è un prob
 
 **Codice complesso.** Non l'autocomplete di una funzione di 5 righe — quella la fa benissimo il modello diretto e in un quinto del tempo. Parliamo di: refactoring multi-file, debugging di problemi non banali, planning di un'implementazione che tocca pezzi diversi del sistema. Un reasoning model davanti a un bug oscuro esplora ipotesi, le scarta, ne prova altre — esattamente come fa un sviluppatore senior, solo a velocità di token.
 
-**Planning multi-step.** Pianificare la risoluzione di un task in 10-20 sotto-passi, scegliere quali tool chiamare e in che ordine, anticipare cosa fare se un passo fallisce. Nei sistemi agentici della lezione 1.4, mettere un reasoning model come *planner* a inizio loop e un modello diretto come *esecutore* dei singoli passi è il pattern che sta diventando standard nel 2026.
+**Planning multi-step.** Pianificare la risoluzione di un task in 10-20 sotto-passi, scegliere quali tool chiamare e in che ordine, anticipare cosa fare se un passo fallisce. Nei sistemi agentici della lezione 1.5, mettere un reasoning model come *planner* a inizio loop e un modello diretto come *esecutore* dei singoli passi è il pattern che sta diventando standard nel 2026.
 
 **Analisi di documenti tecnici densi.** Confronto di contratti, analisi di policy, estrazione di vincoli da un capitolato. Qui il valore non è nella lunghezza dell'output ma nella *qualità del ragionamento sui vincoli incrociati*. Un modello diretto tende a perdere costraint sparsi; un reasoning model li tiene insieme.
 
@@ -84,7 +84,7 @@ La regola di base è semplice: **i reasoning models guadagnano dove c'è un prob
 
 **Classificazione e routing.** "Questa richiesta utente è di tipo A, B o C?" — un modello piccolo diretto, magari un classificatore tradizionale (vedi lezione 0.4), batte qualsiasi reasoning model per latenza, costo e accuratezza pratica. Usare un reasoning model qui è una caricatura.
 
-**Estrazione strutturata semplice.** "Da questa email tira fuori nome, data, importo." Function calling su un modello diretto (lezione 1.3) è la risposta. Il reasoning model non aggiunge segnale.
+**Estrazione strutturata semplice.** "Da questa email tira fuori nome, data, importo." Function calling su un modello diretto (lezione 1.4) è la risposta. Il reasoning model non aggiunge segnale.
 
 **Generazione creativa libera.** Scrivere un racconto, una poesia, un nome di prodotto. Non c'è "la risposta giusta" da verificare — il reasoning interno non ha contro cosa rimbalzare. A volte i reasoning models su task creativi vengono perfino *peggio*, perché iper-correggono verso risposte conservative.
 
@@ -141,7 +141,7 @@ I provider stanno pubblicando guide al prompting specifiche per i loro reasoning
 | Il pensiero sbagliato | Come stanno le cose |
 |---|---|
 | "Sono più intelligenti dei modelli normali" | Non in senso generale. Sono **specializzati nel ragionare meglio** su task verificabili. Su scrittura creativa o conversazione fluida un modello diretto può batterli. |
-| "Eliminano le allucinazioni" | No. Riducono certi tipi di errore (matematica sbagliata, codice che non gira) ma su fatti del mondo possono comunque inventare con sicurezza. Vedi lezione 3.3. |
+| "Eliminano le allucinazioni" | No. Riducono certi tipi di errore (matematica sbagliata, codice che non gira) ma su fatti del mondo possono comunque inventare con sicurezza. Vedi lezione 3.4. |
 | "Sostituiscono i modelli diretti" | No, li **affiancano**. L'architettura giusta usa entrambi: cascade o router. |
 | "Il ragionamento visibile è il ragionamento vero" | Quando un provider ti mostra un riassunto del ragionamento, è una *sintesi a posteriori*, non i token interni reali. Non fare debugging sui riassunti. |
 | "Più reasoning budget = sempre meglio" | No, c'è un punto di rendimenti decrescenti. Su task semplici, alzare il budget non cambia nulla; su task difficili, dopo una certa soglia la qualità si flat. |

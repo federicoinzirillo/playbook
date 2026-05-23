@@ -1,13 +1,13 @@
 ---
 title: "Context engineering: cosa mettere nel contesto, a scala"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Context engineering: cosa mettere nel contesto, a scala
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 1.2</span>
+  <span>Lezione 1.3</span>
   <span>~11 min di lettura</span>
 </div>
 
@@ -63,7 +63,7 @@ La somma deve stare nel limite. In pratica, si fissa un budget per categoria: "s
 
 ## Context engineering per gli agenti
 
-In un sistema agentico (lezione 1.4), il contesto cresce a ogni passo: ogni tool call aggiunge risultati, ogni turno di ragionamento aggiunge testo. Senza gestione, dopo pochi passi il contesto è pieno o costosissimo.
+In un sistema agentico (lezione 1.5), il contesto cresce a ogni passo: ogni tool call aggiunge risultati, ogni turno di ragionamento aggiunge testo. Senza gestione, dopo pochi passi il contesto è pieno o costosissimo.
 
 Le strategie pratiche:
 
@@ -119,4 +119,4 @@ Le strategie pratiche:
 
 ## Prossima lezione
 
-**1.3 Structured output e function calling.** Finora hai imparato come portare informazioni al modello. Il passo successivo è usare quello che il modello produce — non come testo libero, ma come struttura che il tuo sistema può consumare direttamente.
+**1.4 Structured output e function calling.** Finora hai imparato come portare informazioni al modello. Il passo successivo è usare quello che il modello produce — non come testo libero, ma come struttura che il tuo sistema può consumare direttamente.

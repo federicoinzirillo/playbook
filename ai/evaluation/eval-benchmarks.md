@@ -1,19 +1,19 @@
 ---
 title: Eval benchmarks e dataset — il vocabolario
-sidebar_position: 6
+sidebar_position: 1
 ---
 
 # Eval benchmarks e dataset — il vocabolario
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 3.6</span>
+  <span>Lezione 3.1</span>
   <span>~12 min di lettura</span>
 </div>
 
 <p class="lesson-lead">I nomi dei benchmark — MMLU, GPQA, SWE-bench, MTEB — sono il vocabolario che senti in ogni release di provider. Sapere cosa misurano davvero, perché sono compromessi, e quando ignorarli per costruirsi un golden dataset interno è il salto da "leggo le slide del provider" a "decido col cervello".</p>
 
-Nelle lezioni 3.1, 3.2, 3.3, 3.4 hai visto *come* valutare: LLM-as-judge, observability, allucinazioni, comportamento agentico. Quel come si applica al tuo sistema. Questa pagina copre l'altro lato della valutazione: i **benchmark pubblici** — i numeri che ogni nuovo modello sbandiera nelle release, e che il settore usa come moneta comune. Sapere cosa significano davvero ti rende meno influenzabile dal marketing e più rapido nelle scelte.
+Questa pagina apre la Parte 3 con il vocabolario che serve per tutto il resto. Nelle lezioni successive vedrai *come* valutare con gli strumenti concreti: LLM-as-judge (3.2), observability (3.3), gestione delle allucinazioni (3.4), valutazione del comportamento agentico (3.5). Quel come richiede di sapere già cosa sono i benchmark e il golden dataset — è il motivo per cui questa lezione viene prima.
 
 Il punto da fissare subito, e che torna fino in fondo: **i benchmark pubblici sono un segnale rumoroso, non una verità.** Sono utili per orientarsi, scartare candidati, monitorare trend di mercato. Sono inutili (anzi, fuorvianti) per decidere quale modello mettere sul *tuo* task specifico. Per quello serve un'altra cosa: il golden dataset interno, costruito sui tuoi dati reali.
 
@@ -63,7 +63,7 @@ Una mappa minima dei nomi che incrocerai ogni settimana. Non è un elenco esaust
 
 **TruthfulQA.** Domande progettate per indurre il modello in *false comuni* (miti, errori popolari). Misura quanto un modello "ripete cazzate plausibili" tipiche di internet. Saturato dai modelli moderni ma istruttivo come idea di design.
 
-**HaluEval, HalluLens.** Benchmark dedicati alle **allucinazioni** (vedi lezione 3.3). Misurano quanto il modello inventa fatti su domande di conoscenza specifica. Sono in evoluzione rapida.
+**HaluEval, HalluLens.** Benchmark dedicati alle **allucinazioni** (vedi lezione 3.4). Misurano quanto il modello inventa fatti su domande di conoscenza specifica. Sono in evoluzione rapida.
 
 ## La contamination: perché i benchmark mentono
 
@@ -116,7 +116,7 @@ Questa è la skill più sottovalutata della valutazione applicativa, e quella ch
 - L'output **atteso** o, se ci sono più output validi, una **rubrica** di criteri per giudicare.
 - (Opzionale) Una motivazione di *perché* quella è la risposta giusta.
 
-La rubrica conta più della "risposta giusta" per task aperti. "Rispondi nel tono X, includi i punti A, B, C, non rivelare informazioni Y" è una rubrica utilizzabile da un LLM-as-judge (lezione 3.1) e da un revisore umano.
+La rubrica conta più della "risposta giusta" per task aperti. "Rispondi nel tono X, includi i punti A, B, C, non rivelare informazioni Y" è una rubrica utilizzabile da un LLM-as-judge (lezione 3.2) e da un revisore umano.
 
 **Train / eval / hold-out.** Anche se non fai fine-tuning, separa il dataset in tre parti:
 - **Eval set** (~70%): quello che usi per misurare i candidati e confrontarli.
@@ -154,7 +154,7 @@ Una nota tecnica utile per non lasciarsi ingannare dai numeri.
 
 **Maj@k (majority vote).** Generi k risposte, prendi quella più frequente. Per task con varianza alta. Usato spesso nei reasoning models su matematica: maj@64 può essere 5-10 punti sopra pass@1.
 
-**Score di un giudice (LLM-as-judge).** Un modello giudice valuta la risposta su una rubrica e dà un punteggio. Più flessibile dei metodi sopra, ma con i bias del giudice (vedi 3.1). Per benchmark soggettivi (qualità di una risposta, fluency, helpfulness) è spesso l'unico modo praticabile.
+**Score di un giudice (LLM-as-judge).** Un modello giudice valuta la risposta su una rubrica e dà un punteggio. Più flessibile dei metodi sopra, ma con i bias del giudice (vedi 3.2). Per benchmark soggettivi (qualità di una risposta, fluency, helpfulness) è spesso l'unico modo praticabile.
 
 **Elo score (Chatbot Arena).** I modelli giocano "partite" a coppie, decise da voti umani. Il punteggio Elo si aggiorna come negli scacchi. Pro: misura preferenze umane reali. Contro: dominato da fattori superficiali (verbosità, tono cortese), poco discriminante per task tecnici.
 
@@ -179,7 +179,7 @@ Cosa portare a casa: **lo stesso modello su lo stesso benchmark può avere punte
 
 <span class="badge-stato evoluzione">In evoluzione</span> **I benchmark specifici** (SWE-bench, AIME, GPQA, MTEB). I leader cambiano ogni anno: alcuni saturano, escono nuovi. Aspettati che il vocabolario di base cambi per il 30% ogni 12-18 mesi.
 
-<span class="badge-stato evoluzione">In evoluzione</span> **τ-bench, ARC-AGI-2 e i benchmark agentici**. La valutazione agentica è giovane (vedi 3.4); i benchmark che ci provano sono ancora in cerca di stabilità metodologica.
+<span class="badge-stato evoluzione">In evoluzione</span> **τ-bench, ARC-AGI-2 e i benchmark agentici**. La valutazione agentica è giovane (vedi 3.5); i benchmark che ci provano sono ancora in cerca di stabilità metodologica.
 
 <span class="badge-stato legacy">Legacy</span> **MMLU, HumanEval, MATH** come strumenti discriminanti. Citati per continuità storica, ma saturi e contaminati. Non basarci scelte.
 
@@ -234,4 +234,4 @@ Cosa portare a casa: **lo stesso modello su lo stesso benchmark può avere punte
 
 ## Prossima lezione
 
-Hai chiuso quasi tutta la Parte 3: come si valuta un singolo output (3.1), un sistema in produzione (3.2), le allucinazioni (3.3), il comportamento agentico (3.4), e ora il vocabolario dei benchmark pubblici e il metodo del golden dataset interno (3.6). Il **decision drill 3.5** ti farà esercitare il giudizio su scenari realistici di valutazione. Dopo, la Parte 4 entra nella sicurezza: prompt injection, sicurezza agentica strutturale, privacy, governance.
+Hai aperto la Parte 3 con il vocabolario. Il **3.2 LLM-as-judge** ti dà il primo strumento concreto: come costruire un golden dataset su misura per il tuo sistema, scegliere i criteri di valutazione, e far giudicare un modello in modo calibrato. Da lì in avanti: observability (3.3), allucinazioni (3.4), valutazione agentica (3.5), e il drill finale (3.6). Dopo la Parte 3, la Parte 4 entra nella sicurezza: prompt injection, sicurezza agentica strutturale, privacy, governance.

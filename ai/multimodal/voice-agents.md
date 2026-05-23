@@ -57,7 +57,7 @@ flowchart LR
   T -. risultati .-> S
 ```
 
-Il modello rimane un agente: durante la conversazione può chiamare tool (cercare sul web, consultare un database, mandare un'email — vedi lezione 1.4), e il risultato torna nel modello per essere "parlato" all'utente. Solo che tutto succede *durante* la conversazione, senza pause innaturali.
+Il modello rimane un agente: durante la conversazione può chiamare tool (cercare sul web, consultare un database, mandare un'email — vedi lezione 1.5), e il risultato torna nel modello per essere "parlato" all'utente. Solo che tutto succede *durante* la conversazione, senza pause innaturali.
 
 ## Il problema delle interruzioni
 

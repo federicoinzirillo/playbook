@@ -1,7 +1,7 @@
 {
-  "label": "5 — AWS pratica",
+  "label": "5 AWS pratica",
   "position": 9,
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "link": null
 }

@@ -167,6 +167,15 @@ details > summary {
   font-weight: 500;
 }
 
+/* --- Sidebar: frecce più piccole ---------------------------------------- */
+
+.menu__caret::before,
+.menu__link--sublist-caret::after {
+  width: 0.9rem;
+  height: 0.9rem;
+  background-size: 0.9rem 0.9rem;
+}
+
 /* --- Footer: trasparente, integrato nella pagina ------------------------ */
 
 .footer {

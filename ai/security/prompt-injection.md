@@ -63,7 +63,7 @@ Le categorie 2025, in ordine:
 
 **LLM08:2025 — Vector and Embedding Weaknesses** (NUOVA). Vulnerabilità specifiche dei sistemi RAG: *vector store poisoning* (un attaccante inietta contenuto malevolo nel DB vettoriale che verrà recuperato in query legittime), *insufficient access controls* sui vector store che permettono leakage tra tenant, *embedding inversion* (ricostruzione del testo dal vettore). Lega direttamente alla lezione 1.1: il retrieval che non valida la fonte è una superficie d'attacco.
 
-**LLM09:2025 — Misinformation** (rinominata, era "Overreliance" nel 2023). La 2025 sposta il focus: il rischio non è solo che gli utenti si fidino troppo, è che il modello *generi e propaghi* attivamente disinformazione. Aggancio diretto alla lezione 3.3.
+**LLM09:2025 — Misinformation** (rinominata, era "Overreliance" nel 2023). La 2025 sposta il focus: il rischio non è solo che gli utenti si fidino troppo, è che il modello *generi e propaghi* attivamente disinformazione. Aggancio diretto alla lezione 3.4.
 
 **LLM10:2025 — Unbounded Consumption** (era "Model Denial of Service" nel 2023, espansa). Include il classico DoS (prompt che fanno bruciare compute) ma anche i runaway cost in produzione: query che innescano costi esplosivi senza un guardrail. Rate limit, output token cap, e budget alert sono i guardrail.
 

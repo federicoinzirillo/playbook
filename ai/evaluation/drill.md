@@ -1,13 +1,13 @@
 ---
 title: "Decision drill — Valutazione"
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Decision drill — Valutazione
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 3.5</span>
+  <span>Lezione 3.6</span>
   <span>~20 min (incluso il tempo di lavoro)</span>
 </div>
 
@@ -72,7 +72,7 @@ Massimo 5 criteri. Sopra i 6 il giudice perde il filo e i punteggi diventano cor
 
 ## Scenario B — Agente con tool per analisi finanziaria
 
-**Contesto.** Stessa società del drill 1.6 (assistente finanziario): un agente che, data una domanda di analisi, recupera dati da CRM e DB finanziario, fa calcoli, e produce un report. È in pre-rilascio. Il problema: il team ha provato 30 query "tipiche" e le risposte finali sembrano corrette, ma quando si guardano i log, l'agente a volte usa il tool sbagliato o chiama lo stesso tool 4-5 volte di fila prima di azzeccare i parametri. Il responsabile vuole capire se l'agente è pronto, e cosa monitorare in produzione. Volume previsto: 200 analisi al giorno, ciascuna con potenzialmente decine di tool call.
+**Contesto.** Stessa società del drill 1.8 (assistente finanziario): un agente che, data una domanda di analisi, recupera dati da CRM e DB finanziario, fa calcoli, e produce un report. È in pre-rilascio. Il problema: il team ha provato 30 query "tipiche" e le risposte finali sembrano corrette, ma quando si guardano i log, l'agente a volte usa il tool sbagliato o chiama lo stesso tool 4-5 volte di fila prima di azzeccare i parametri. Il responsabile vuole capire se l'agente è pronto, e cosa monitorare in produzione. Volume previsto: 200 analisi al giorno, ciascuna con potenzialmente decine di tool call.
 
 **Cosa ti viene chiesto.** Progetta la pipeline di eval agentica. Quali metriche misuri (oltre task completion), come costruisci gli scenari di test, come usi un giudice di traiettoria, cosa scatta in produzione. Cosa fai del problema "i loop sui parametri" che il team ha già notato.
 
@@ -81,7 +81,7 @@ Massimo 5 criteri. Sopra i 6 il giudice perde il filo e i punteggi diventano cor
 
 **Cosa avrebbe nominato un senior:**
 
-**Le metriche di traiettoria sono essenziali.** Task completion da sola non basta: il team ha già visto che le risposte finali "sembrano corrette" mentre la traiettoria è inefficiente. Le metriche multi-dimensionali della 3.4:
+**Le metriche di traiettoria sono essenziali.** Task completion da sola non basta: il team ha già visto che le risposte finali "sembrano corrette" mentre la traiettoria è inefficiente. Le metriche multi-dimensionali della 3.5:
 - *Task completion* (obiettivo raggiunto, sì/no/parziale)
 - *Tool selection accuracy* (a ogni step, il tool scelto era il più adatto?)
 - *Tool call correctness* (i parametri erano giusti dato lo stato?)
@@ -100,7 +100,7 @@ Per ogni scenario: traiettoria attesa (sequenza minima di tool call) e anti-trai
 **Giudice di traiettoria per i casi non scriptabili.** Le analisi su query libere ("trova trend nei clienti enterprise dell'ultimo anno") non hanno una traiettoria attesa univoca. Lì usi un giudice LLM con criteri di traiettoria (logica della sequenza, pertinenza dei tool, gestione errori, completamento). Pattern pratico: riassumi i risultati dei tool prima di passarli al giudice — i raw output del DB sono megabyte; al giudice basta il summary rilevante.
 
 **Indagine specifica sui loop sui parametri.** Il team l'ha già notato. Diagnosi: probabilmente l'agente non ha abbastanza esempi few-shot di chiamate corrette, o la descrizione dei tool è ambigua sui parametri. Contromisure:
-- Validazione dei parametri *prima* della chiamata, nel codice (lezione 1.3): se l'agente passa un periodo invalido, intercetti e restituisci un errore strutturato all'agente prima di chiamare il tool
+- Validazione dei parametri *prima* della chiamata, nel codice (lezione 1.4): se l'agente passa un periodo invalido, intercetti e restituisci un errore strutturato all'agente prima di chiamare il tool
 - Limit esplicito al numero di retry per tool (es. max 2 retry sullo stesso tool prima di trasferire a umano)
 - Logging del numero di retry per tool nel trace, alert se >2 in produzione
 
@@ -129,9 +129,9 @@ Per ogni scenario: traiettoria attesa (sequenza minima di tool call) e anti-trai
 
 I drill allenano il giudizio, non lo valutano. Torna alla lezione dove il punto mancante è trattato:
 
-- Costruzione del golden dataset, criteri, calibrazione del giudice → **3.1 LLM-as-judge**
-- Trace, metriche di latenza/costo, prompt versioning, eval online → **3.2 Observability**
-- Hallucination rate, citation enforcement, contromisure che reggono e quelle che no → **3.3 Gestire le allucinazioni**
-- Metriche di traiettoria, test scriptati, sandbox, giudice di traiettoria → **3.4 Valutare agenti**
-- Structured output per validazione → **1.3 Structured output**
-- Controllo di flusso e guardrail fuori dai prompt → **1.4 Agenti**
+- Costruzione del golden dataset, criteri, calibrazione del giudice → **3.2 LLM-as-judge**
+- Trace, metriche di latenza/costo, prompt versioning, eval online → **3.3 Observability**
+- Hallucination rate, citation enforcement, contromisure che reggono e quelle che no → **3.4 Gestire le allucinazioni**
+- Metriche di traiettoria, test scriptati, sandbox, giudice di traiettoria → **3.5 Valutare agenti**
+- Structured output per validazione → **1.4 Structured output**
+- Controllo di flusso e guardrail fuori dai prompt → **1.5 Agenti**

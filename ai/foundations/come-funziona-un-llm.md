@@ -101,7 +101,7 @@ Capire come funziona una cosa vuol dire anche sapere come **non** funziona. Quat
 | "Sa tutto quello che c'è in rete" | No, sa fino al suo **cut-off**, e non come pagine da consultare ma come intuizioni statistiche. Non ha la fonte in tasca. |
 | "Più temperature = più intelligente" | No, più temperature = più **vario**, non più giusto. Spesso è pure il contrario. |
 
-> **Il punto da tenere stretto per tutta la guida** — Un LLM **non recupera fatti, predice testo plausibile.** Ecco perché può dire con assoluta sicurezza cose completamente false — le chiamiamo **allucinazioni** (lezione 3.3). Una frase falsa, per lui, può essere una sequenza di parole perfettamente probabile. Non sta sbagliando un test di memoria: sta facendo benissimo il suo unico lavoro, prevedere parole plausibili. **Plausibile non vuol dire vero**, e tenere separate le due cose è metà del mestiere di chi costruisce con gli LLM.
+> **Il punto da tenere stretto per tutta la guida** — Un LLM **non recupera fatti, predice testo plausibile.** Ecco perché può dire con assoluta sicurezza cose completamente false — le chiamiamo **allucinazioni** (lezione 3.4). Una frase falsa, per lui, può essere una sequenza di parole perfettamente probabile. Non sta sbagliando un test di memoria: sta facendo benissimo il suo unico lavoro, prevedere parole plausibili. **Plausibile non vuol dire vero**, e tenere separate le due cose è metà del mestiere di chi costruisce con gli LLM.
 
 ---
 

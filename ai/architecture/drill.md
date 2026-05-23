@@ -45,8 +45,8 @@ sidebar_position: 3
 **Archetipo:** **RAG conversazionale**. Il task è Q&A su corpus interno, non azioni — non serve un agente. Pipeline pura sarebbe troppo rigida (gli utenti faranno follow-up). RAG conversazionale con storia limitata è la scelta giusta.
 
 **Rischi:**
-- **Qualità delle risposte su documenti fiscali tecnici.** Mitigazione: golden dataset di 30-50 domande tipiche scritte con un fiscalista, eval suite (lezione 3.1) prima di lanciare.
-- **Allucinazione su normativa.** Mitigazione: faithfulness check (lezione 3.3), citazione obbligatoria delle fonti, prompt di sistema che istruisce "se non sei sicuro, dillo".
+- **Qualità delle risposte su documenti fiscali tecnici.** Mitigazione: golden dataset di 30-50 domande tipiche scritte con un fiscalista, eval suite (lezione 3.2) prima di lanciare.
+- **Allucinazione su normativa.** Mitigazione: faithfulness check (lezione 3.4), citazione obbligatoria delle fonti, prompt di sistema che istruisce "se non sei sicuro, dillo".
 - **Documentazione che cambia.** Le circolari fiscali si aggiornano. Mitigazione: pipeline di re-indicizzazione, almeno settimanale.
 - **Adozione bassa.** Spesso il rischio più grosso. Mitigazione: workshop di introduzione, raccolta feedback dalla prima settimana.
 

@@ -21,7 +21,7 @@ Servono tre livelli sovrapposti. Coprono problemi di natura diversa, con strumen
 
 **Monitoring operativo.** Il classico: uptime, latenza, error rate, throughput, utilizzo GPU. Questo strato risponde a "il sistema sta rispondendo?". Lo gestisci con gli stessi strumenti del resto del software (Prometheus, Grafana, Datadog, OpenTelemetry). Non è specifico dell'AI, ma per i sistemi LLM serve aggiungere metriche su TTFT (lezione 6.1), token consumati, hit rate della cache.
 
-**Monitoring di qualità.** L'output continua ad avere il livello di qualità atteso? Questo strato non risponde a "è giù?" ma a "fa ancora bene il suo lavoro?". Si appoggia su LLM-as-judge (lezione 3.1) e su segnali utente. È lo strato che cattura il degrado silenzioso.
+**Monitoring di qualità.** L'output continua ad avere il livello di qualità atteso? Questo strato non risponde a "è giù?" ma a "fa ancora bene il suo lavoro?". Si appoggia su LLM-as-judge (lezione 3.2) e su segnali utente. È lo strato che cattura il degrado silenzioso.
 
 **Monitoring del drift.** Cosa sta cambiando — nelle query degli utenti, nei dati recuperati, nei risultati? Il drift è il cambiamento graduale delle distribuzioni rispetto al baseline. Anche se ogni singola richiesta sembra ok, lo spostamento aggregato segnala che il sistema sta operando in un regime diverso da quello per cui era stato calibrato.
 
@@ -39,7 +39,7 @@ Il dilemma centrale: valutare la qualità in produzione costa. Mandare ogni risp
 - **Faithfulness** (su sistemi RAG) — la risposta è coerente con i documenti recuperati? Un calo qui significa che il modello sta "andando per conto suo" più del solito.
 - **Relevance** — la risposta affronta davvero la domanda? Cala quando le query degli utenti si spostano fuori dal dominio coperto.
 - **Hallucination rate** — frequenza di affermazioni non supportate dai documenti recuperati o dalla ground truth.
-- **Format compliance** — quando l'output deve avere uno schema (lezione 1.3), quante volte lo rispetta?
+- **Format compliance** — quando l’output deve avere uno schema (lezione 1.4), quante volte lo rispetta?
 
 **Segnali utente impliciti.** Spesso più affidabili di quelli espliciti. Thumbs up/down sono usati raramente. Ma "l'utente ha riformulato la stessa domanda entro 30 secondi" è un segnale forte che la risposta non andava bene. "L'utente ha chiuso la conversazione subito dopo la risposta" lo stesso. "L'utente ha copiato negli appunti l'output strutturato" è un segnale positivo. Vanno loggati e aggregati.
 
@@ -59,7 +59,7 @@ Quattro tipi di drift, ognuno con sintomi e cause diverse.
 
 **Drift del modello.** Il provider ha aggiornato il modello sotto il tuo naso. Non è teorico — è successo con ogni provider major più volte (la transizione GPT-4o → GPT-5 a febbraio 2026 ha rotto sistemi che non avevano pinato la versione). Sintomo: cambiano lo stile, la lunghezza media, il comportamento sui prompt borderline. Come ti difendi: pin sulla versione del modello quando possibile (`claude-opus-4-7-20260415` invece di `claude-opus-4`, o `gpt-5.4-2026-04-24` invece di `gpt-5.4`), eval suite che gira a ogni update annunciato.
 
-**Drift di obiettivo.** Il business vuole che il sistema faccia ora cose leggermente diverse da quelle per cui è stato calibrato. Sintomo: il PM dice "perché non risponde mai a X?". Non è un bug, è un drift nei requisiti. Come si gestisce: review periodica dei criteri di valutazione (lezione 3.1), non solo del sistema.
+**Drift di obiettivo.** Il business vuole che il sistema faccia ora cose leggermente diverse da quelle per cui è stato calibrato. Sintomo: il PM dice "perché non risponde mai a X?". Non è un bug, è un drift nei requisiti. Come si gestisce: review periodica dei criteri di valutazione (lezione 3.2), non solo del sistema.
 
 I primi tre si rilevano con metriche; il quarto solo con conversazioni con chi usa il sistema.
 

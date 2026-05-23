@@ -1,14 +1,14 @@
 ---
 id: llm-as-judge
 title: Valutare con LLM-as-judge
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # LLM-as-judge — misurare la qualità del testo
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 3.1</span>
+  <span>Lezione 3.2</span>
   <span>~13 min di lettura</span>
 </div>
 
@@ -78,7 +78,7 @@ Output in JSON:
 }}""")
 ```
 
-Tre scelte non negoziabili in questo prompt. **Criteri espliciti**, non "è buona?": un giudice a cui chiedi "è buona?" ti dà un voto che riflette la sua intuizione, non il tuo bisogno. **Motivazione prima del punteggio**: un giudice che spiega ragiona meglio di uno che spara un numero — è chain-of-thought (lezione 0.5) applicato alla valutazione. **Output strutturato** (lezione 1.3): JSON con schema preciso, perché il codice deve poter aggregare i punteggi su centinaia di casi.
+Tre scelte non negoziabili in questo prompt. **Criteri espliciti**, non "è buona?": un giudice a cui chiedi "è buona?" ti dà un voto che riflette la sua intuizione, non il tuo bisogno. **Motivazione prima del punteggio**: un giudice che spiega ragiona meglio di uno che spara un numero — è chain-of-thought (lezione 0.5) applicato alla valutazione. **Output strutturato** (lezione 1.4): JSON con schema preciso, perché il codice deve poter aggregare i punteggi su centinaia di casi.
 
 ## I criteri: scegli quelli giusti per il tuo task
 
@@ -88,7 +88,7 @@ I criteri non sono universali. Cambiano per task:
 
 **Per un chatbot di supporto:** *Correttezza* (l'informazione è giusta?), *Tono* (è coerente col brand?), *Azionabilità* (l'utente può fare qualcosa con la risposta?), *Sicurezza* (evita consigli rischiosi su domande sensibili?).
 
-**Per un agente con tool:** sono altri (vedi lezione 3.4 — la traiettoria, non il singolo output).
+**Per un agente con tool:** sono altri (vedi lezione 3.5 — la traiettoria, non il singolo output).
 
 La regola: **pochi criteri ben definiti battono molti criteri vaghi**. 3-4 criteri ortogonali (che misurano cose diverse) sono il punto dolce. Sopra i 6 il giudice perde il filo e i punteggi diventano correlati.
 

@@ -119,7 +119,7 @@ sidebar_position: 5
 - **Pipeline di feedback chiusa**: i casi negativi del CSM finiscono in un dataset che alimenta l'eval suite.
 
 **Prevenzione futura:**
-La domanda chiave per il post-mortem: "quale segnale avrebbe permesso di accorgersene due mesi fa invece che ora?". Probabilmente: monitoring di qualità su sample (LLM-as-judge anche solo settimanale) + eval suite triggered su ogni update annunciato dal provider. La lezione 3.1 e la 6.3 messe in pratica fin dall'inizio.
+La domanda chiave per il post-mortem: "quale segnale avrebbe permesso di accorgersene due mesi fa invece che ora?". Probabilmente: monitoring di qualità su sample (LLM-as-judge anche solo settimanale) + eval suite triggered su ogni update annunciato dal provider. La lezione 3.2 e la 6.3 messe in pratica fin dall'inizio.
 
 **Trappole:**
 - Trattare i thumbs come unica metrica — coverage 1-3%, bias forte, segnale debole.

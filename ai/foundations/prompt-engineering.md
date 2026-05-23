@@ -65,7 +65,7 @@ I prompt in produzione raramente sono una riga. Un prompt strutturato ben fatto 
 
 **Contesto ed esempi** — il materiale su cui lavorare, più eventuali esempi few-shot.
 
-L'ordine conta. Mettere le istruzioni all'inizio del prompt, prima del materiale lungo, le fa "pesare" di più nell'attenzione del modello. Un'istruzione importante sepolta in fondo a un contesto di 10.000 token rischia di non essere rispettata — un fenomeno chiamato "lost in the middle" che la lezione 1.2 (context engineering) analizza in dettaglio.
+L'ordine conta. Mettere le istruzioni all'inizio del prompt, prima del materiale lungo, le fa "pesare" di più nell'attenzione del modello. Un'istruzione importante sepolta in fondo a un contesto di 10.000 token rischia di non essere rispettata — un fenomeno chiamato "lost in the middle" che la lezione 1.3 (context engineering) analizza in dettaglio.
 
 ```mermaid
 flowchart TD
@@ -97,7 +97,7 @@ Il prompt engineering non è onnipotente. Ci sono scenari in cui non arriva dove
 
 **Comportamento garantito su tutti i casi.** Il prompt riduce la varianza ma non la elimina. Se hai bisogno di comportamento deterministico al 100%, il modello non è lo strumento giusto — o serve un livello di validazione programmatica sull'output.
 
-**Task complessi su contesti molto lunghi.** Con context window grandi, le istruzioni all'inizio del prompt possono "svanire" per effetto del degrado di attenzione nel mezzo. È il problema che la lezione 1.2 affronta: a un certo punto, decidere cosa metti nel contesto è un lavoro a sé rispetto a come formuli le istruzioni.
+**Task complessi su contesti molto lunghi.** Con context window grandi, le istruzioni all'inizio del prompt possono "svanire" per effetto del degrado di attenzione nel mezzo. È il problema che la lezione 1.3 affronta: a un certo punto, decidere cosa metti nel contesto è un lavoro a sé rispetto a come formuli le istruzioni.
 
 ## Cosa il prompt engineering non è
 

@@ -1,13 +1,13 @@
 ---
 title: Gestire le allucinazioni
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Gestire le allucinazioni
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 3.3</span>
+  <span>Lezione 3.4</span>
   <span>~13 min di lettura</span>
 </div>
 
@@ -39,7 +39,7 @@ Non elimina le allucinazioni, ma le rende:
 2. **Verificabili** — la fonte è lì, qualcuno (o un controllo automatico) può verificarla.
 3. **Diagnosticabili** — se il modello sbaglia, vedi se è perché la fonte era sbagliata o perché non l'ha rispettata.
 
-Il sistema più comune di grounding lo conosci: si chiama **RAG** (lezione 1.1). I documenti rilevanti nel contesto + istruzione esplicita di basarsi solo su quelli. Ma il grounding va oltre RAG — vale ogni volta che fornisci al modello una fonte di verità: un risultato di un tool (lezione 1.3), una tabella di dati, una specifica tecnica passata nel prompt.
+Il sistema più comune di grounding lo conosci: si chiama **RAG** (lezione 1.1). I documenti rilevanti nel contesto + istruzione esplicita di basarsi solo su quelli. Ma il grounding va oltre RAG — vale ogni volta che fornisci al modello una fonte di verità: un risultato di un tool (lezione 1.4), una tabella di dati, una specifica tecnica passata nel prompt.
 
 ## Le quattro contromisure che reggono
 
@@ -51,7 +51,7 @@ RAG da solo non basta: il modello può ricevere i chunk giusti e produrre comunq
 
 In pratica:
 
-- Output con structured output (lezione 1.3): la risposta è un oggetto con `risposta` + `citazioni: [chunk_id, ...]`
+- Output con structured output (lezione 1.4): la risposta è un oggetto con `risposta` + `citazioni: [chunk_id, ...]`
 - Il prompt dice al modello: "Per ogni affermazione, indica il chunk_id da cui viene. Se l'informazione non è nei chunk, scrivi 'Non disponibile nelle fonti'."
 - Il codice valida che ogni chunk_id citato sia effettivamente tra quelli passati nel prompt — se il modello inventa un chunk_id che non esiste, lo scarti.
 
@@ -98,11 +98,11 @@ Tre interventi che girano nei tutorial e in produzione tengono molto meno di que
 
 Una mitigazione che non puoi misurare non sai se funziona. La pratica standard:
 
-1. **Golden dataset** (lezione 3.1) con casi noti di "trabocchetto" — domande dove la risposta corretta è "non lo so" o richiede informazioni specifiche che non sono nel contesto.
+1. **Golden dataset** (lezione 3.2) con casi noti di "trabocchetto" — domande dove la risposta corretta è "non lo so" o richiede informazioni specifiche che non sono nel contesto.
 2. **Criterio "fedeltà" nel giudice** — il giudice valuta se la risposta è ancorata al contesto o ha inventato qualcosa.
 3. **Metrica dedicata: hallucination rate** = (risposte che il giudice marca come "infedeli al contesto" o "fattualmente sbagliate") / (totale risposte).
 
-Trackare questa metrica nel tempo, agganciata al tracing (lezione 3.2), è il modo per accorgersi prima che lo veda un cliente.
+Trackare questa metrica nel tempo, agganciata al tracing (lezione 3.3), è il modo per accorgersi prima che lo veda un cliente.
 
 <details>
 <summary>Sotto il cofano: perché il "self-check" del modello funziona poco</summary>
@@ -133,7 +133,7 @@ Per questo le contromisure forti sono *esterne* al modello: validazione nel codi
 2. Cos'è il grounding e perché RAG ne è l'esempio principale?
 3. Come trasformi il problema "il modello è affidabile?" in "il modello cita le fonti che ha visto?" — passo a passo.
 4. Tre interventi che *sembrano* risolvere le allucinazioni ma in pratica funzionano meno del previsto. Quali e perché.
-5. Come misureresti il tasso di allucinazione di un sistema in produzione, sfruttando quello che hai visto nelle lezioni 3.1 e 3.2?
+5. Come misureresti il tasso di allucinazione di un sistema in produzione, sfruttando quello che hai visto nelle lezioni 3.2 e 3.3?
 6. Un assistente legale produce una citazione di legge inesistente. Quali contromisure metti, in che ordine?
 7. *(anticipazione)* Hai un agente che usa tool. Un'allucinazione in un agente non è solo "una frase sbagliata" — può tradursi in un'azione sbagliata. Come cambia la natura del problema?
 

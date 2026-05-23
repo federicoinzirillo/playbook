@@ -1,19 +1,19 @@
 ---
-title: Agenti e orchestrazione
-sidebar_position: 4
+title: Agenti semplici — tool calling e ReAct
+sidebar_position: 5
 ---
 
-# Agenti e orchestrazione
+# Agenti semplici — tool calling e ReAct
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 1.4</span>
+  <span>Lezione 1.5</span>
   <span>~13 min di lettura</span>
 </div>
 
 <p class="lesson-lead">Un agente è un LLM in un loop che decide, agisce e osserva i risultati — ripetutamente, fino al completamento del task. Il loop cambia radicalmente la complessità del sistema: ogni passo è un'inferenza, ogni errore si propaga, e il controllo di flusso non va mai nei prompt.</p>
 
-Nella lezione 1.3 hai visto che il function calling permette al modello di dichiarare di voler chiamare una funzione, che il codice esegue. Un'unica chiamata, un'unica decisione. Un **agente** estende questo in un loop: il modello decide cosa fare, il codice lo esegue, il risultato torna al modello, il modello decide di nuovo — e così via fino al completamento del task.
+Nella lezione 1.4 hai visto che il function calling permette al modello di dichiarare di voler chiamare una funzione, che il codice esegue. Un'unica chiamata, un'unica decisione. Un **agente** estende questo in un loop: il modello decide cosa fare, il codice lo esegue, il risultato torna al modello, il modello decide di nuovo — e così via fino al completamento del task.
 
 Sembra un piccolo passo. È un cambiamento architetturale enorme, perché introduce **autonomia**: il modello non risponde una sola volta, ma pianifica e si adatta a ogni passo. Con l'autonomia arrivano i benefici — task più complessi, meno bisogno di istruzioni esplicite per ogni passo — e i problemi: errori che si propagano, costi che esplodono, comportamenti difficili da prevedere.
 
@@ -42,7 +42,7 @@ L'LLM non "sa" quale sarà il passo successivo prima di ragionare. Ad ogni itera
 
 Poi osserva il risultato (**Observation**) e ricomincia il ciclo.
 
-Il vantaggio di rendere il ragionamento esplicito è che è ispezionabile — puoi vedere cosa sta "pensando" l'agente ad ogni passo, il che è fondamentale per il debug e per la valutazione (lezione 3.4). Il costo: ogni pensiero è token generati, quindi più lento e più costoso di un'azione diretta.
+Il vantaggio di rendere il ragionamento esplicito è che è ispezionabile — puoi vedere cosa sta "pensando" l'agente ad ogni passo, il che è fondamentale per il debug e per la valutazione (lezione 3.5). Il costo: ogni pensiero è token generati, quindi più lento e più costoso di un'azione diretta.
 
 <details>
 <summary>Chain-of-thought negli agenti</summary>
@@ -113,7 +113,7 @@ Il triangolo qualità-latenza-costo (lezione 5.3) si applica in modo particolarm
 | "Un agente è più intelligente di un LLM" | È un LLM con tool in un loop. L'intelligenza è la stessa; la capacità di agire è estesa. |
 | "Il controllo di flusso va nel prompt" | No: nel prompt va il giudizio, nel codice il controllo. I prompt non garantiscono il comportamento. |
 | "Multi-agent = sempre meglio di un singolo agente" | Più complessità, più costo, più punti di fallimento. Si usa quando ci sono vantaggi concreti di specializzazione o parallelismo. |
-| "Gli agenti sono affidabili come il codice deterministico" | Sono probabilistici: possono sbagliare passo, andare in loop, interrompere prima del completamento. Si valutano diversamente (lezione 3.4). |
+| "Gli agenti sono affidabili come il codice deterministico" | Sono probabilistici: possono sbagliare passo, andare in loop, interrompere prima del completamento. Si valutano diversamente (lezione 3.5). |
 
 ---
 
@@ -154,4 +154,4 @@ Il triangolo qualità-latenza-costo (lezione 5.3) si applica in modo particolarm
 
 ## Prossima lezione
 
-**1.5 MCP — Model Context Protocol.** Hai agenti che usano tool. Il problema pratico è come collegare quegli strumenti al modello in modo standardizzato e riusabile — senza dover riscrivere l'integrazione per ogni combinazione di modello e tool. MCP è la risposta dello standard.
+**1.7 MCP — Model Context Protocol.** Hai agenti che usano tool. Il problema pratico è come collegare quegli strumenti al modello in modo standardizzato e riusabile — senza dover riscrivere l'integrazione per ogni combinazione di modello e tool. MCP è la risposta dello standard.

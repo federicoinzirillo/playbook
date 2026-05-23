@@ -17,7 +17,7 @@ Il triangolo qualità-latenza-costo non è una metafora vaga. È il frame che ap
 
 ## I tre assi
 
-**Qualità** — quanto la risposta è corretta, utile, aderente all'intenzione dell'utente. Si misura con eval (lezione 3.1), non a occhio in produzione. La qualità dipende principalmente da: scelta del modello, ricchezza del contesto, qualità del retrieval, prompt engineering.
+**Qualità** — quanto la risposta è corretta, utile, aderente all'intenzione dell'utente. Si misura con eval (lezione 3.2), non a occhio in produzione. La qualità dipende principalmente da: scelta del modello, ricchezza del contesto, qualità del retrieval, prompt engineering.
 
 **Latenza** — il tempo che l'utente aspetta. Si misura in due punti: TTFT (time to first token — quando arriva la prima parola) e latenza totale (quando la risposta è completa). Dipende da: modello (i modelli grandi sono più lenti), lunghezza dell'output, numero di iterazioni agentiche, overhead dell'orchestratore, latenza di rete.
 

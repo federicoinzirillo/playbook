@@ -112,7 +112,7 @@ Il flusso è quasi sempre lo stesso: query → retrieval → contesto → modell
 
 **Quando usarlo:** chatbot di supporto, assistenti su documentazione, sistemi di Q&A su knowledge base.
 
-**Punti di forza:** copertura ampia, attributione delle fonti, costo prevedibile, valutazione gestibile (lezione 3.3).
+**Punti di forza:** copertura ampia, attributione delle fonti, costo prevedibile, valutazione gestibile (lezione 3.4).
 
 **Limiti:** non può eseguire azioni, non integra naturalmente con sistemi transazionali, fatica su domande che richiedono ragionamento multi-step.
 
@@ -124,7 +124,7 @@ Il modello decide quali tool chiamare, in che ordine, fino a un risultato. L'orc
 
 **Punti di forza:** flessibilità altissima, copre casi che le pipeline non possono.
 
-**Limiti:** imprevedibile, difficile da testare e valutare (lezione 3.4), costoso (molte chiamate al modello per richiesta), va difeso con cura (lezione 4.2).
+**Limiti:** imprevedibile, difficile da testare e valutare (lezione 3.5), costoso (molte chiamate al modello per richiesta), va difeso con cura (lezione 4.2).
 
 **La realtà:** i sistemi produttivi seri raramente sono "puri". Sono ibridi — una pipeline che a un certo punto chiama un piccolo agente per un sotto-task, un RAG che attiva un agente solo quando l'utente chiede esplicitamente un'azione. Il bravo architetto sceglie l'archetipo giusto al livello giusto, non tutto in un colpo.
 

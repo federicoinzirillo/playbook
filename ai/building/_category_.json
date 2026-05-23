@@ -1,7 +1,7 @@
 {
-  "label": "1 — Costruire sistemi LLM",
+  "label": "1 Costruire sistemi LLM",
   "position": 4,
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "link": null
 }

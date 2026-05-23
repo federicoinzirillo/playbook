@@ -1,19 +1,19 @@
 ---
 title: Valutare il comportamento agentico end-to-end
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Valutare il comportamento agentico end-to-end
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 3.4</span>
+  <span>Lezione 3.5</span>
   <span>~14 min di lettura</span>
 </div>
 
-<p class="lesson-lead">Un agente non è un singolo output, è una traiettoria. Può produrre ogni singola risposta plausibile e fallire come processo: tool sbagliato, loop, obiettivo raggiunto per la strada sbagliata, o mancato pur "suonando bene". Valutare un agente è il buco che si sta allargando più in fretta nel settore — perché il metodo della lezione 3.1, fatto sul token finale, qui non basta più.</p>
+<p class="lesson-lead">Un agente non è un singolo output, è una traiettoria. Può produrre ogni singola risposta plausibile e fallire come processo: tool sbagliato, loop, obiettivo raggiunto per la strada sbagliata, o mancato pur "suonando bene". Valutare un agente è il buco che si sta allargando più in fretta nel settore — perché il metodo della lezione 3.2, fatto sul token finale, qui non basta più.</p>
 
-Nella lezione 1.4 hai costruito agenti. Nella 3.1 hai imparato a giudicare singole risposte. Adesso le due cose si scontrano: un agente fa 8 chiamate, usa 4 tool, riconsidera, riprova, e infine produce una risposta finale. Quella risposta finale può essere perfettamente plausibile *e essere stata raggiunta nel modo sbagliato*. Ha aggiornato il database del cliente giusto, oppure quello di un cliente con nome simile? Ha cancellato il file che voleva, o anche un altro? L'ultimo token non te lo dice. Te lo dice la *traiettoria*.
+Nella lezione 1.5 hai costruito agenti. Nella 3.2 hai imparato a giudicare singole risposte. Adesso le due cose si scontrano: un agente fa 8 chiamate, usa 4 tool, riconsidera, riprova, e infine produce una risposta finale. Quella risposta finale può essere perfettamente plausibile *e essere stata raggiunta nel modo sbagliato*. Ha aggiornato il database del cliente giusto, oppure quello di un cliente con nome simile? Ha cancellato il file che voleva, o anche un altro? L'ultimo token non te lo dice. Te lo dice la *traiettoria*.
 
 ## Perché l'output finale non basta
 
@@ -99,9 +99,9 @@ Tre cose che la sandbox abilita:
 
 ## Continuous evaluation in produzione
 
-Tutto quello sopra è eval offline (lezione 3.1) applicato agli agenti — dataset, scenari, sandbox. In produzione la valutazione **non si ferma al rilascio**, perché agenti reali incontrano casi che il golden set non ha previsto.
+Tutto quello sopra è eval offline (lezione 3.2) applicato agli agenti — dataset, scenari, sandbox. In produzione la valutazione **non si ferma al rilascio**, perché agenti reali incontrano casi che il golden set non ha previsto.
 
-Pattern tipico, agganciato all'observability (lezione 3.2):
+Pattern tipico, agganciato all’observability (lezione 3.3):
 
 - Ogni run dell'agente in produzione produce un trace completo (sequenza di tool call, input/output di ognuno, output finale)
 - Un sottoinsieme dei trace viene fatto valutare dal giudice di traiettoria
@@ -140,7 +140,7 @@ La regola attuale: **non fidarti dei benchmark pubblici al 100%**, perché il tu
 1. Tre fallimenti tipici di un agente che la valutazione del singolo output finale non cattura. Quali?
 2. Cinque dimensioni che insieme misurano il comportamento agentico. Nominale e spiega cosa cattura ciascuna.
 3. Cos'è un test scenario scriptato, e qual è il suo limite principale?
-4. Come si applica il pattern LLM-as-judge (lezione 3.1) a una *traiettoria* invece che a una singola risposta?
+4. Come si applica il pattern LLM-as-judge (lezione 3.2) a una *traiettoria* invece che a una singola risposta?
 5. Perché serve una sandbox per testare un agente con tool, e cosa abilita rispetto al test in produzione?
 6. Hai un agente che fa customer support con accesso a tool di lettura ordini e modifica indirizzi. Quali metriche di traiettoria pesi di più, e perché?
 7. *(anticipazione)* L'agente di customer support a un certo punto modifica l'indirizzo del cliente sbagliato. La sicurezza dell'agente non è solo "prompt injection sull'input": cos'è la *catena di azioni* come superficie d'attacco?

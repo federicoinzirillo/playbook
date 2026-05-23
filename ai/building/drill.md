@@ -1,13 +1,13 @@
 ---
 title: Decision Drill — Costruire sistemi LLM
-sidebar_position: 6
+sidebar_position: 8
 ---
 
 # Decision drill — Costruire sistemi LLM
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 1.6</span>
+  <span>Lezione 1.8</span>
   <span>~20 min (incluso il tempo di lavoro)</span>
 </div>
 
@@ -107,7 +107,7 @@ Hai costruito il vocabolario della Parte 1: RAG, context engineering, structured
 Normale: i drill allenano il giudizio, non lo valutano. Torna alla lezione dove il punto mancante è trattato:
 
 - Chunking e retrieval → **1.1 RAG**
-- Budget contesto e "lost in the middle" → **1.2 Context engineering**
-- Structured output e output verificabile → **1.3 Structured output**
-- Scelte architetturali agente singolo vs multi-agent → **1.4 Agenti**
+- Budget contesto e "lost in the middle" → **1.3 Context engineering**
+- Structured output e output verificabile → **1.4 Structured output**
+- Scelte architetturali agente singolo vs multi-agent → **1.5-1.6 Agenti**
 - Sicurezza del tool calling → **4.1 Prompt injection**, **4.2 Sicurezza agentica**

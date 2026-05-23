@@ -166,5 +166,5 @@ Il RAG classico tratta i documenti come sacchi di chunk indipendenti. Ma alcune 
 
 ## Prossima lezione
 
-**1.2 Context engineering: cosa mettere nel contesto, a scala.** Ora sai come recuperare i pezzi giusti. La prossima domanda è: una volta che li hai, come decidi cosa mettere davvero nel prompt? Con context window da 128k token, la tentazione è "metto tutto" — ma il costo cresce, e l'attenzione del modello decade nel mezzo. Context engineering è la risposta.
+**1.3 Context engineering: cosa mettere nel contesto, a scala.** Ora sai come recuperare i pezzi giusti. La prossima domanda è: una volta che li hai, come decidi cosa mettere davvero nel prompt? Con context window da 128k token, la tentazione è "metto tutto" — ma il costo cresce, e l'attenzione del modello decade nel mezzo. Context engineering è la risposta.
 

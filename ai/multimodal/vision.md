@@ -80,7 +80,7 @@ Per task di video understanding ad alto volume (sorveglianza, analisi di contenu
 
 ## Agentic browsing: vision come interfaccia per gli agenti
 
-Una capacità esplosa nel 2025-26 è l'**agentic browsing** — agenti che operano su un browser come farebbe un umano, vedendo screenshot e producendo coordinate di click e testo da digitare. GPT-5.4 ha la *computer use* nativa, Claude Mythos Preview è in cima ai benchmark WebArena (68.7% ad apr 2026), Google ha Project Mariner. È vision, ma applicata in modo nuovo: invece di descrivere un'immagine, il modello la usa come *stato* di un loop agentico (lezione 1.4).
+Una capacità esplosa nel 2025-26 è l'**agentic browsing** — agenti che operano su un browser come farebbe un umano, vedendo screenshot e producendo coordinate di click e testo da digitare. GPT-5.4 ha la *computer use* nativa, Claude Mythos Preview è in cima ai benchmark WebArena (68.7% ad apr 2026), Google ha Project Mariner. È vision, ma applicata in modo nuovo: invece di descrivere un'immagine, il modello la usa come *stato* di un loop agentico (lezione 1.5).
 
 Il pattern: lo screenshot va al modello → il modello produce un'azione strutturata (`click(x=150, y=320)`, `type("hello@example.com")`, `scroll_down(300)`) → il sistema esegue l'azione → nuovo screenshot → ripeti. Cambia la natura dei tool: invece di API parametriche, sono primitive UI generiche che funzionano su qualsiasi sito senza integrazione dedicata.
 

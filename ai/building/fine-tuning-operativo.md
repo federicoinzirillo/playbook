@@ -1,19 +1,19 @@
 ---
 title: Fine-tuning operativo — LoRA, QLoRA, DPO
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 # Fine-tuning operativo — LoRA, QLoRA, DPO
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 1.8</span>
+  <span>Lezione 1.9</span>
   <span>~14 min di lettura</span>
 </div>
 
-<p class="lesson-lead">La 1.7 ti ha insegnato quando NON fare fine-tuning. Questa ti insegna come farlo quando serve davvero. Nel 2026 il fine-tuning non è più "ri-addestrare un modello da zero": è un'operazione chirurgica e relativamente economica, ma piena di trappole.</p>
+<p class="lesson-lead">La 1.10 ti farà esercitare la griglia di decisione. Questa ti insegna come farlo quando serve davvero. Nel 2026 il fine-tuning non è più "ri-addestrare un modello da zero": è un'operazione chirurgica e relativamente economica, ma piena di trappole.</p>
 
-Nella lezione 1.7 hai imparato una griglia di decisione: serve uno *stile* o una *conoscenza*? Se è conoscenza aggiornabile, RAG. Se è stile, comportamento, formato, tono — allora forse fine-tuning. La parola chiave è "forse", perché tra il "forse fine-tuning" e il "ho un modello fine-tuned in produzione che porta valore" c'è una distanza che si misura in trappole. Questa lezione è la mappa di quelle trappole.
+Nella lezione 1.10 imparerai una griglia di decisione: serve uno *stile* o una *conoscenza*? Se è conoscenza aggiornabile, RAG. Se è stile, comportamento, formato, tono — allora forse fine-tuning. La parola chiave è "forse", perché tra il "forse fine-tuning" e il "ho un modello fine-tuned in produzione che porta valore" c'è una distanza che si misura in trappole. Questa lezione è la mappa di quelle trappole.
 
 Il punto da fissare subito: nel 2026 **fare fine-tuning non è più riservato a chi ha cluster di GPU**. Tecniche come LoRA e QLoRA hanno reso possibile affinare un modello da decine di miliardi di parametri su una **singola GPU consumer**, con qualche ora di compute e qualche centinaio di euro di costo cloud. Questo cambia le decisioni: cose che 18 mesi fa erano "no, troppo costoso" oggi sono fattibili.
 
@@ -86,7 +86,7 @@ Nel 2023-2024 sono usciti **DPO** (Direct Preference Optimization) e poi **ORPO*
 
 **Quando usare DPO/ORPO al posto di SFT puro:**
 - Hai task dove la qualità è *comparativa* (quale risposta suona meglio), non solo binaria (corretto/sbagliato).
-- Hai modi semplici per generare coppie di preferenze: due risposte del modello base, un umano sceglie la migliore. Oppure due risposte e un giudice automatico (LLM-as-judge, lezione 3.1) che le ordina.
+- Hai modi semplici per generare coppie di preferenze: due risposte del modello base, un umano sceglie la migliore. Oppure due risposte e un giudice automatico (LLM-as-judge, lezione 3.2) che le ordina.
 - SFT da solo ti porta vicino al risultato ma manca il "polish" finale di registro/tono.
 
 La pipeline tipica è ibrida: prima un SFT su un dataset di esempi positivi per portare il modello vicino al territorio giusto, poi un DPO su un dataset più piccolo di coppie per affinare le preferenze. È il pattern industriale del 2025-26.
@@ -157,7 +157,7 @@ Spesso sì, e qui sta uno dei guadagni più interessanti del fine-tuning nel 202
 
 La trappola che sentirai citare: questo guadagno è specifico al tuo task. Sul task generico il modello grosso resta superiore. Il fine-tuning ti compra **specializzazione a costo basso**, non capacità generale a costo basso.
 
-Riferimento alla griglia 1.7: "vuoi uno *stile/comportamento* specifico, ad alta frequenza, che giustifica il costo di training? Fine-tuning. Vuoi *fatti aggiornabili*? RAG. I due non si sostituiscono — spesso si combinano: fine-tuning per il formato + RAG per i fatti."
+Riferimento alla griglia 1.10: "vuoi uno *stile/comportamento* specifico, ad alta frequenza, che giustifica il costo di training? Fine-tuning. Vuoi *fatti aggiornabili*? RAG. I due non si sostituiscono — spesso si combinano: fine-tuning per il formato + RAG per i fatti."
 
 ## Cosa NON è il fine-tuning
 

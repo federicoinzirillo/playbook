@@ -95,7 +95,7 @@ Non sono "open-weight piccoli" e basta — sono una scelta architetturale divers
 - **Costo a scala estrema.** Quando hai miliardi di chiamate al mese (es. classificazione di ticket interni, smistamento di email), il costo per token di un SLM self-hosted è 10-50x inferiore al frontier. Conviene appena hai il volume.
 - **Edge / contesti offline.** Aerei, navi, siti industriali con rete intermittente. Il sistema deve funzionare comunque.
 
-Il prezzo da pagare è in **qualità**. Un SLM da 3B parametri non ragiona come Claude 4 o GPT-5. Per compiti generalisti aperti perde di brutto. Ma per **task narrow ben definiti** — classificazione, estrazione strutturata (lezione 1.3), retrieval routing, parsing — un SLM ben fine-tunato (lezione 1.8) può eguagliare un frontier al 5% del costo. Il pattern che funziona: **SLM fine-tunato sul task specifico**, non SLM generalista usato a caso.
+Il prezzo da pagare è in **qualità**. Un SLM da 3B parametri non ragiona come Claude 4 o GPT-5. Per compiti generalisti aperti perde di brutto. Ma per **task narrow ben definiti** — classificazione, estrazione strutturata (lezione 1.4), retrieval routing, parsing — un SLM ben fine-tunato (lezione 1.9) può eguagliare un frontier al 5% del costo. Il pattern che funziona: **SLM fine-tunato sul task specifico**, non SLM generalista usato a caso.
 
 **Prerequisito tecnico**: la **quantizzazione** (lezione 5.2). Un SLM "vero" gira quantizzato in 4-bit o 8-bit (formati: GGUF per llama.cpp, AWQ, GPTQ). Un Llama 3.2 3B quantizzato sta in 2 GB e gira su un MacBook Pro a 30-50 token/s. Senza quantizzazione l'SLM smette di essere "small" praticamente.
 

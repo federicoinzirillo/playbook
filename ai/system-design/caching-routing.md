@@ -109,7 +109,7 @@ flowchart TD
 
 Il check di qualità può essere:
 - **Validatore strutturale** — se l'output deve essere JSON valido o codice che compila, il fail è oggettivo.
-- **LLM-as-judge leggero** — un modello giudice (vedi lezione 3.1) dà uno score "questa risposta è soddisfacente?".
+- **LLM-as-judge leggero** — un modello giudice (vedi lezione 3.2) dà uno score "questa risposta è soddisfacente?".
 - **Signal di self-doubt** — il modello stesso, prompt-ato a dichiarare la sua confidence, ammette "non sono sicuro".
 - **Score di calibrazione** — la probabilità che il modello assegna al token finale; bassa confidence interna come segnale.
 
