@@ -20,7 +20,7 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 
 ## Stato delle pagine
 
-> **Parti 0, 1, 2, 3, 4 e 5 scritte** (39 lezioni). Tutte le altre sezioni sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
+> **Parti 0, 1, 2, 3, 4, 5 e 6 scritte** (46 lezioni). Tutte le altre sezioni sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
 
 ### 0 — Fondamenta
 - [0.1 Cosa significa cloud](./foundations/cosa-significa-cloud.md) — scritta
@@ -74,13 +74,13 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 - [5.9 Decision drill — Deploy RAG su AWS](./cloud-for-ai/drill.md) — scritta
 
 ### 6 — Operations
-- [6.1 FinOps: il cloud costa in modi sorprendenti](./operations/finops.md) — bozza
-- [6.2 Monitoring e incident response](./operations/monitoring-incident.md) — bozza
-- [6.3 Distributed tracing e observability avanzata](./operations/distributed-tracing.md) — bozza
-- [6.4 Sicurezza in produzione](./operations/sicurezza-produzione.md) — bozza
-- [6.5 Resilienza e disaster recovery](./operations/resilienza-dr.md) — bozza
-- [6.6 Compliance enterprise](./operations/compliance-enterprise.md) — bozza
-- [6.7 Decision drill — I costi sono raddoppiati](./operations/drill.md) — bozza
+- [6.1 FinOps: il cloud costa in modi sorprendenti](./operations/finops.md) — scritta
+- [6.2 Monitoring e incident response](./operations/monitoring-incident.md) — scritta
+- [6.3 Distributed tracing e observability avanzata](./operations/distributed-tracing.md) — scritta
+- [6.4 Sicurezza in produzione](./operations/sicurezza-produzione.md) — scritta
+- [6.5 Resilienza e disaster recovery](./operations/resilienza-dr.md) — scritta
+- [6.6 Compliance enterprise](./operations/compliance-enterprise.md) — scritta
+- [6.7 Decision drill — I costi sono raddoppiati](./operations/drill.md) — scritta
 
 ### 7 — Sintesi
 - [7.1 Reference architecture cloud](./capstone/reference-architecture-cloud.md) — bozza
@@ -96,4 +96,4 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 
 ## Totale
 
-**49 lezioni** distribuite su 9 parti. Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md). La Parte 8 è opzionale — traccia per chi punta ad AI Cloud Solution Architect.
+**49 lezioni** distribuite su 9 parti. **46 scritte**, 3 placeholder (Parte 7). Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md). La Parte 8 è opzionale — traccia per chi punta ad AI Cloud Solution Architect.
