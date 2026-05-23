@@ -3,7 +3,7 @@ title: Syllabus
 sidebar_position: 2
 ---
 
-# Syllabus — Cloud + AI Engineer (concetti universali → AWS)
+# Syllabus — Concetti Universali e AWS
 
 > Programma per passare da full-stack a **Cloud + AI engineer applicativo**. Stesso metodo della
 > guida AI: apprendimento attivo (richiamo a memoria, spacing, micro-interleaving), badge di stato,
@@ -17,7 +17,33 @@ sidebar_position: 2
 
 ---
 
-## ⚠️ LEGGI PRIMA: cosa EVITARE (verificato 2026)
+## Traguardi e rientro
+
+> Pensato per chi studia a sprazzi: il problema non è capire, è il **costo di rientro** dopo un vuoto.
+
+**Due traguardi "uscita con dignità".** Se a un certo punto molli, questi sono i punti in cui hai
+comunque qualcosa di reale in mano — non un percorso a metà, ma una competenza spendibile:
+- **Fine Parte 1 = so come funziona il cloud e posso ragionare su un'architettura di base.** Già
+  spendibile in qualsiasi team che usa cloud — sai leggere una VPC, sai perché il traffico non passa,
+  sai chi ha accesso a cosa.
+- **Fine Parte 4 = so deployare un sistema reale su AWS con IaC.** Il salto da "funziona dalla
+  console" a "ho l'infrastruttura versionata, riproducibile, automatizzata". È il portfolio minimo
+  che passa il filtro dei colloqui cloud.
+
+Tutto il resto è di più — ma se ti fermi a uno di questi due, non hai sprecato niente.
+
+**Log di rientro.** A fine di **ogni** sessione, scrivi due righe in un file dedicato: *dove sono
+ora / la prossima cosa è X*. Al rientro apri quel file e nei primi 5 minuti sai cosa fare, senza
+rileggere appunti né ricostruire il contesto. Nel cloud è ancora più importante che nell'AI:
+terminali aperti, risorse accese, configurazioni a metà. Il log ti salva anche dalla bolletta.
+
+**Rito di rientro dopo un vuoto lungo.** La prima sessione dopo una pausa di 1-2 settimane **non
+è teoria**: è aggiungere una cosa piccola al progetto in corso. Rideploya, tocca la console,
+fai girare la pipeline. Il filo torna dalle mani.
+
+---
+
+## Cosa evitare (verificato 2026)
 I dati 2026 sono concordi su dove i principianti sprecano tempo. Evita questi, ti risparmi mesi:
 
 - **Kubernetes troppo presto.** Il 70-80% dei ruoli K8s sono senior. Studiane i *concetti* (cosa
@@ -36,7 +62,7 @@ I dati 2026 sono concordi su dove i principianti sprecano tempo. Evita questi, t
   senza cert non passa i filtri automatici dei recruiter. Servono **entrambi**, ma nella stanza
   del colloquio contano più i progetti.
 
-## ⚠️ Cloud + AI in alternanza
+## Cloud e AI in alternanza
 Stai studiando Cloud e AI in alternanza. Funziona SOLO a blocchi: chiudi un'unità di un dominio
 (lezione + pratica) prima di passare all'altro. **Mai due fronti aperti lo stesso giorno.**
 Sinergia: il cloud è il pezzo che avevi tagliato dall'AI. Un sistema AI gira *su* cloud — i due
@@ -222,8 +248,10 @@ Non sono l'obiettivo, ma passano i filtri dei recruiter. L'ordine giusto:
 1. **Cloud Practitioner** (opzionale, per principianti assoluti; dà spesso un voucher sconto) — segnale debole da solo.
 2. **Solutions Architect Associate (SAA-C03)** — la cert col **ROI più alto**, quella che compare
    in più job description e copre la gamma più ampia di pattern. Timeline tipica: 4-6 settimane. È *la* cert da avere.
-3. **Developer Associate (DVA-C02)** — per il tuo profilo (sviluppatore): serverless, CI/CD,
-   Lambda, API Gateway, DynamoDB. Mappa diretta a job da developer.
+3. **Machine Learning Engineer Associate (MLA-C01)** — nuova (lanciata 2024), costruita apposta
+   per il profilo AI + cloud: deployment, MLOps, inferenza scalabile, SageMaker, Bedrock. Per chi
+   punta all'AI Cloud SA è la terza cert naturale dopo SAA, molto più centrata del vecchio Developer
+   Associate. Timeline tipica: 3-4 settimane da SAA.
 Due-tre cert è il "sweet spot". Le Professional vengono molto dopo, se mai.
 
 ## Progetto che evolve (un solo sistema che cresce)

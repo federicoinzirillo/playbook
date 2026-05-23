@@ -20,22 +20,22 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 
 ## Stato delle pagine
 
-> Tutte le pagine sono attualmente **bozze placeholder**: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
+> **Parte 0 e Parte 1 scritte** (11 lezioni). Tutte le altre sezioni sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
 
 ### 0 — Fondamenta
-- [0.1 Cosa significa cloud](./foundations/cosa-significa-cloud.md) — bozza
-- [0.2 IaaS, PaaS, SaaS](./foundations/iaas-paas-saas.md) — bozza
-- [0.3 Le risorse fondamentali](./foundations/risorse-fondamentali.md) — bozza
-- [0.4 Regioni, zone, geografia](./foundations/regioni-zone-geografia.md) — bozza
-- [0.5 Persistenza dei dati: SQL, NoSQL, oggetti, vector](./foundations/data-layer.md) — bozza
-- [0.6 Linux essenziale per cloud](./foundations/linux-essenziale.md) — bozza
+- [0.1 Cosa significa cloud](./foundations/cosa-significa-cloud.md) — scritta
+- [0.2 IaaS, PaaS, SaaS](./foundations/iaas-paas-saas.md) — scritta
+- [0.3 Le risorse fondamentali](./foundations/risorse-fondamentali.md) — scritta
+- [0.4 Regioni, zone, geografia](./foundations/regioni-zone-geografia.md) — scritta
+- [0.5 Persistenza dei dati: SQL, NoSQL, oggetti, vector](./foundations/data-layer.md) — scritta
+- [0.6 Linux essenziale per cloud](./foundations/linux-essenziale.md) — scritta
 
 ### 1 — Networking & sicurezza
-- [1.1 Networking nel cloud](./networking-security/networking.md) — bozza
-- [1.2 DNS, TLS, Load Balancing, CDN](./networking-security/dns-tls-lb-cdn.md) — bozza
-- [1.3 Identity e permessi (IAM concettuale)](./networking-security/identity-iam.md) — bozza
-- [1.4 Segreti, chiavi, dati sensibili](./networking-security/segreti-chiavi.md) — bozza
-- [1.5 Decision drill — Networking & accessi](./networking-security/drill.md) — bozza
+- [1.1 Networking nel cloud](./networking-security/networking.md) — scritta
+- [1.2 DNS, TLS, Load Balancing, CDN](./networking-security/dns-tls-lb-cdn.md) — scritta
+- [1.3 Identity e permessi (IAM concettuale)](./networking-security/identity-iam.md) — scritta
+- [1.4 Segreti, chiavi, dati sensibili](./networking-security/segreti-chiavi.md) — scritta
+- [1.5 Decision drill — Networking & accessi](./networking-security/drill.md) — scritta
 
 ### 2 — Compute & runtime
 - [2.1 Container](./compute/container.md) — bozza
