@@ -20,7 +20,7 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 
 ## Stato delle pagine
 
-> **Parte 0 e Parte 1 scritte** (11 lezioni). Tutte le altre sezioni sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
+> **Parti 0, 1, 2 e 3 scritte** (22 lezioni). Tutte le altre sezioni sono placeholder: il sidebar mostra la struttura completa del syllabus, ma il contenuto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
 
 ### 0 — Fondamenta
 - [0.1 Cosa significa cloud](./foundations/cosa-significa-cloud.md) — scritta
@@ -38,19 +38,19 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 - [1.5 Decision drill — Networking & accessi](./networking-security/drill.md) — scritta
 
 ### 2 — Compute & runtime
-- [2.1 Container](./compute/container.md) — bozza
-- [2.2 Orchestrazione e Kubernetes (concetti)](./compute/kubernetes-concetti.md) — bozza
-- [2.3 VM vs Container vs Serverless](./compute/vm-container-serverless.md) — bozza
-- [2.4 Async ed event-driven](./compute/async-event-driven.md) — bozza
-- [2.5 API design per servizi cloud](./compute/api-design.md) — bozza
-- [2.6 Dati in movimento — batch, streaming, CDC](./compute/dati-movimento.md) — bozza
-- [2.7 Decision drill — Dove far girare la mia app](./compute/drill.md) — bozza
+- [2.1 Container](./compute/container.md) — scritta
+- [2.2 Orchestrazione e Kubernetes (concetti)](./compute/kubernetes-concetti.md) — scritta
+- [2.3 VM vs Container vs Serverless](./compute/vm-container-serverless.md) — scritta
+- [2.4 Async ed event-driven](./compute/async-event-driven.md) — scritta
+- [2.5 API design per servizi cloud](./compute/api-design.md) — scritta
+- [2.6 Dati in movimento](./compute/dati-movimento.md) — scritta
+- [2.7 Decision drill — Dove far girare la mia app](./compute/drill.md) — scritta
 
 ### 3 — IaC & automazione
-- [3.1 Infrastructure as Code (Terraform)](./iac-automation/iac-terraform.md) — bozza
-- [3.2 Policy-as-code e governance dell'infra](./iac-automation/policy-as-code.md) — bozza
-- [3.3 CI/CD nel cloud](./iac-automation/cicd.md) — bozza
-- [3.4 Decision drill — Cosa automatizzare](./iac-automation/drill.md) — bozza
+- [3.1 Infrastructure as Code](./iac-automation/iac-terraform.md) — scritta
+- [3.2 Policy-as-code e governance dell'infra](./iac-automation/policy-as-code.md) — scritta
+- [3.3 CI/CD nel cloud](./iac-automation/cicd.md) — scritta
+- [3.4 Decision drill — Cosa automatizzare](./iac-automation/drill.md) — scritta
 
 ### 4 — AWS pratica
 - [4.1 Orientarsi in AWS](./aws/orientarsi-aws.md) — bozza
