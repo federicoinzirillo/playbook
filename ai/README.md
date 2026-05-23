@@ -1,10 +1,10 @@
 ---
-title: Indice
+title: Indice AI
 slug: /
 sidebar_position: 1
 ---
 
-# Indice
+# Indice — AI Playbook
 
 Guida di studio sull'AI applicativa moderna. Niente laurea richiesta: questo campo premia chi capisce i concetti e i trade-off, non chi ha un titolo. L'obiettivo è portarti dal "sento parole che non capisco" al "so di cosa si parla, so decidere, so costruire l'essenziale".
 
@@ -48,6 +48,7 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 - [2.5 Multimodale vs pipeline separate](./multimodal/multimodale-vs-pipeline.md) — scritta
 - [2.6 Decision drill — Multimodale](./multimodal/drill.md) — scritta
 - [2.7 Voice agents in tempo reale](./multimodal/voice-agents.md) — scritta
+- [2.8 Video generation](./multimodal/video-generation.md) — bozza
 
 ### 3 — Valutare e rendere affidabile
 - [3.1 LLM-as-judge](./evaluation/llm-as-judge.md) — scritta
@@ -76,7 +77,8 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 - [6.1 Serving e inference](./production/serving.md) — scritta
 - [6.2 Costi e FinOps a runtime](./production/costi-finops.md) — scritta
 - [6.3 Monitoring e drift in produzione](./production/monitoring.md) — scritta
-- [6.4 Decision drill — Produzione](./production/drill.md) — scritta
+- [6.4 Rollout sicuro: canary, A/B e shadow traffic per LLM](./production/rollout-canary-ab.md) — bozza
+- [6.5 Decision drill — Produzione](./production/drill.md) — scritta
 
 ### 7 — Architettura e sintesi
 - [7.1 Reference architecture](./architecture/reference-architecture.md) — scritta

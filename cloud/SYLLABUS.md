@@ -80,7 +80,9 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
 - **1.1 Networking nel cloud** ⊳ 0.3 — reti virtuali, subnet, IP pubblici/privati, gateway, firewall.
 - **1.2 DNS, TLS, Load Balancing, CDN** ⊳ 1.1 — come gli utenti raggiungono il tuo sistema: nomi, certificati, distribuzione del traffico, cache di bordo. Concetti universali che precedono ogni servizio managed (Route 53, ALB, CloudFront).
 - **1.3 Identity e permessi (IAM concettuale)** ⊳ 0.1 — "chi può fare cosa su quale risorsa".
-  Concetto di sicurezza n.1 del cloud. Principio del **least privilege**.
+  Concetto di sicurezza n.1 del cloud. Principio del **least privilege**. Include **Zero Trust** e
+  **mTLS** per autenticazione service-to-service: non fidarsi della rete interna, ogni chiamata
+  va autenticata. Service mesh come incarnazione del principio (Istio, AWS App Mesh, Linkerd).
 - **1.4 Segreti, chiavi, dati sensibili** ⊳ 1.3 — credenziali fuori dal codice (↔ sicurezza guida AI).
 - **1.5 Decision drill — Networking & accessi**
 
@@ -93,16 +95,25 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
   Sapere *quando* serve (e quando no) vale più che saperlo amministrare.
 - **2.3 VM vs Container vs Serverless** ⊳ 2.1 — lo spettro di astrazione. Il decision drill
   centrale: serverless per workload spiky/event-driven e poca ops; container/K8s per traffico
-  sostenuto, stateful, controllo fine. Cold start, vendor lock-in, costi a confronto.
+  sostenuto, stateful, controllo fine. Cold start, vendor lock-in, costi a confronto. Include
+  **edge compute** (Cloudflare Workers, Lambda@Edge, CloudFront Functions): quando il deploy
+  globale a bassa latenza vince, trade-off V8 isolate vs container, limiti di runtime.
 - **2.4 Async ed event-driven** ⊳ 2.3 — quando una richiesta sincrona NON è la risposta giusta: code, pub/sub, event bus, idempotenza. Concetto universale prima dei nomi (SQS/SNS/EventBridge in 4.x).
 - **2.5 API design per servizi cloud** ⊳ 2.3 — REST vs GraphQL, versioning, paginazione, rate limiting, idempotenza, autenticazione. L'interfaccia conta più del runtime.
 - **2.6 Decision drill — Dove far girare la mia app** (caso reale con vincoli di traffico/budget)
 
 ## PARTE 3 — Infrastructure as Code & automazione (universale)
 - **3.1 IaC: infrastruttura come codice** ⊳ 2.3 — perché non si clicca più nelle console:
-  riproducibilità, versioning, revisione. **Terraform** come standard (multi-cloud).
-- **3.2 CI/CD nel cloud** ⊳ 3.1 — pipeline di deploy automatico, esteso all'infrastruttura.
-- **3.3 Decision drill — Cosa automatizzare e cosa no**
+  riproducibilità, versioning, revisione. **Terraform** come standard (multi-cloud). Le
+  alternative consapevoli del 2026: **Pulumi** (IaC in linguaggi general-purpose), **OpenTofu**
+  (fork OSS dopo il cambio di licenza Terraform 2023), **AWS CDK** (TypeScript/Python che compila
+  a CloudFormation). Terraform resta standard, ma sapere quando le altre vincono è parte del lavoro.
+- **3.2 Policy-as-code e governance dell'infra** ⊳ 3.1 — il giorno-2 dell'IaC. Le regole
+  organizzative ("nessun bucket S3 pubblico", "tutti i volumi cifrati") espresse come codice
+  eseguibile, non come PDF: **OPA/Conftest, Sentinel, Checkov, tfsec, Terrascan**. **Drift detection**
+  (accorgersi che la console è stata toccata a mano). **GitOps** come pattern di chiusura del cerchio.
+- **3.3 CI/CD nel cloud** ⊳ 3.1 — pipeline di deploy automatico, esteso all'infrastruttura.
+- **3.4 Decision drill — Cosa automatizzare e cosa no**
 
 ## PARTE 4 — AWS: dal concetto alla pratica (specifico)
 *Scegli il provider e diventi spendibile. I concetti 0-3 ora hanno un nome.*
@@ -110,11 +121,15 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
 - **4.1 Orientarsi in AWS** — console, regioni, **IAM** (= 1.2 in AWS), **billing e budget alert**
   (impostali SUBITO: l'errore #1 dei principianti è la bolletta a sorpresa).
 - **4.2 Compute** ⊳ 4.1, 2.3 — EC2 (VM), ECS/Fargate (container gestiti), **Lambda** (serverless).
-- **4.3 Storage e database** ⊳ 4.1, 0.3 — S3 (oggetti), EBS (blocchi), RDS/DynamoDB.
-- **4.4 Networking** ⊳ 4.1, 1.1 — VPC, subnet, security group, API Gateway.
-- **4.5 IaC su AWS** ⊳ 4.1, 3.1 — Terraform (preferibile) o CloudFormation/CDK.
-- **4.6 Observability** ⊳ 4.1 — CloudWatch: log, metriche, alert.
-- **4.7 Decision drill — Progetta una piccola architettura AWS serverless**
+- **4.3 Messaggistica ed eventi su AWS** ⊳ 4.1, 2.4 — **SQS** (code FIFO/standard, DLQ),
+  **SNS** (pub/sub fan-out), **EventBridge** (event bus con regole di routing e schema registry),
+  **Step Functions** (orchestrazione di workflow con stato). Pattern: fan-out SNS→SQS, idempotenza,
+  retry con backoff, poison pill→DLQ. È il "secondo piano" della 2.4 universale.
+- **4.4 Storage e database** ⊳ 4.1, 0.3 — S3 (oggetti), EBS (blocchi), RDS/DynamoDB.
+- **4.5 Networking** ⊳ 4.1, 1.1 — VPC, subnet, security group, API Gateway.
+- **4.6 IaC su AWS** ⊳ 4.1, 3.1 — Terraform (preferibile) o CloudFormation/CDK.
+- **4.7 Observability** ⊳ 4.1 — CloudWatch: log, metriche, alert.
+- **4.8 Decision drill — Progetta una piccola architettura AWS serverless**
   (es. URL shortener: Lambda + API Gateway + DynamoDB + IAM least-privilege + CloudWatch —
   il progetto-tipo che i colloqui 2026 vogliono vedere)
 
@@ -131,12 +146,18 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
   <span class="badge-stato evoluzione">In evoluzione</span> qui K8s torna rilevante anche per
   non-senior: GPU scheduling, batch job, inference scalabile. Concetti + quando serve.
 - **5.6 Architettura di un sistema AI in produzione su cloud** ⊳ tutto + Parti 5-6 guida AI —
-  la sintesi: dove vivono retrieval, modello, guardrail, observability su infra reale.
+  la sintesi: dove vivono retrieval, modello, guardrail, observability su infra reale. Include
+  il pattern **LLM gateway** (LiteLLM, Portkey, Helicone) come componente di sistema: dove vive
+  (in front di Bedrock o di un endpoint self-hosted), cosa fa (routing multi-modello, caching,
+  rate limit, budget), perché conta. Cross-ref a 5.6 AI (caching semantico + model routing).
 - **5.7 Decision drill — Deploya il RAG della guida AI su AWS**
 
 ## PARTE 6 — Operations, costi, sicurezza in produzione
 - **6.1 FinOps: il cloud costa in modi sorprendenti** ⊳ 4.1 — controllo spesa, gli errori che
-  svuotano la carta (istanze dimenticate accese, NAT Gateway, traffico in uscita).
+  svuotano la carta (istanze dimenticate accese, NAT Gateway, traffico in uscita). Include la
+  dimensione **sostenibilità e carbon-aware FinOps**: emissioni come asse di costo (AWS Customer
+  Carbon Footprint Tool, scheduling carbon-aware delle workload spostabili), è entrato nelle slide
+  enterprise nel 2025-26.
 - **6.2 Monitoring e incident response** ⊳ 4.6 — il giorno-2: alert sensati, cosa guardare quando
   qualcosa si rompe alle 3 di notte.
 - **6.3 Distributed tracing e observability avanzata** ⊳ 6.2 — quando il sistema è fatto di tanti pezzi (microservizi, async, LLM call): tracing end-to-end, correlazione log/metriche/trace, SLO e error budget.

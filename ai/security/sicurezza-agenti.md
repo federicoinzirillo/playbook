@@ -70,6 +70,18 @@ Non è possibile automatizzare tutto il rilevamento. L'obiettivo è ridurre il t
 
 <span class="badge-stato evoluzione">In evoluzione</span> Il campo della sicurezza agentica è in rapida evoluzione. Framework come LangGraph, LlamaIndex, CrewAI, AutoGen e i provider cloud stanno aggiungendo primitive di sicurezza (sandboxing, permissioned tool calls, audit log). Nel 2025-26 sono emersi framework dedicati di defense: **PromptArmor** (ICLR 2026, meno dell'1% di falsi positivi e falsi negativi su AgentDojo) e **PromptGuard** (riduzione del 67% del success rate degli attacchi); Claude Opus 4.5 ha portato l'attack success rate del browser agent attorno all'1% via reinforcement learning e classifier. Ma il consenso istituzionale (NCSC UK dic 2025, Schneier IEEE jan 2026) è chiaro: la prompt injection non si risolve completamente con l'architettura attuale — defense-in-depth, non un guardrail singolo.
 
+## Supply chain del modello e dei tool
+
+Finora abbiamo parlato di attaccanti che colpiscono dall'**input**. Esiste una superficie più subdola: l'attaccante che colpisce dall'**interno**, contaminando ciò di cui il modello è fatto o ciò a cui ha accesso.
+
+**Modelli open-weight scaricati da registry pubblici.** Hugging Face nel 2024-25 ha visto comparire ripetutamente repository con pesi compromessi: backdoor che si attivano su trigger specifici, codice malevolo nei file `pickle` (protocollo di serializzazione Python che esegue codice arbitrario al caricamento). Mitigation: scarica solo da repository verificati (organizzazioni ufficiali del modello), usa il formato `safetensors` quando disponibile (non esegue codice), pinna le revisioni con hash invece di scaricare `main`.
+
+**Prompt injection nel tool registry.** Se l'agente scopre i tool da un registro dinamico (es. server **MCP** community), un tool malevolo può presentarsi con una descrizione benigna e includere istruzioni nascoste nella sua specifica che il modello legge come prompt. Il principio è lo stesso dell'injection indiretta, ma il vettore è il "manuale d'uso" del tool, non i dati che il tool restituisce. Mitigation: whitelist dei server MCP fidati, code review delle descrizioni dei tool prima di abilitarli.
+
+**Data poisoning a monte.** Per i modelli che ti addestri o fine-tuni: chi controlla il dataset controlla il comportamento. Esempi avvelenati in fase di fine-tuning possono installare comportamenti specifici attivabili da trigger ("se l'utente cita la parola X, ignora le istruzioni e fai Y"). Mitigation: provenienza del dataset, deduplica, evaluation su test set indipendente che cerca comportamenti anomali.
+
+Il filo comune: la sicurezza agentica non è solo "cosa fa il modello con l'input che riceve". È anche "di cosa è fatto il modello" e "a cosa ha accesso dal momento in cui parte". Trattare modello e tool come **artefatti software** con versioning, hash, e provenance verificabile è il piano che la community sta importando dal supply-chain security classico (SLSA, sigstore).
+
 ## Cosa NON è la sicurezza agentica
 
 | Il pensiero sbagliato | Come stanno le cose |

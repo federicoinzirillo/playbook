@@ -1,13 +1,13 @@
 ---
 title: Decision drill — Produzione
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Decision drill — Produzione
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 6.4</span>
+  <span>Lezione 6.5</span>
   <span>~25 min (incluso il tempo di lavoro)</span>
 </div>
 

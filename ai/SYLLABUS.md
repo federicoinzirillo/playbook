@@ -152,6 +152,11 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
   soglia degli ~800ms percepiti. Perché la pipeline STT→LLM→TTS non basta, modelli speech-to-speech
   nativi (Realtime API, Gemini Live), gestione delle interruzioni (barge-in, turn detection),
   vincoli di rete mobile. Quando NON usarlo.
+- **2.8 Video generation: cosa sa fare, costi, quando usarlo** ⊳ 2.1 —
+  <span class="badge-stato evoluzione">In evoluzione</span> Sora, Veo, Runway, Kling: capability
+  reali al 2026, modello di costo (pagamento al secondo di output, latenza in minuti), casi d'uso
+  seri (mockup, b-roll, formazione, advertising) vs theatre da demo. Limiti: coerenza temporale,
+  controllo fine, fisica plausibile. Quando NON usarlo.
 
 ## PARTE 3 — Valutare e rendere affidabile
 *Ciò che separa una demo da un sistema serio. In interleaving con Parte 1.*
@@ -223,7 +228,11 @@ sistema è già live e qualcosa va storto.*
 - **6.3 Monitoring e drift in produzione** ⊳ 3.2, 6.1 — non il *cosa loggare per valutare* (3.2)
   ma il **giorno-2**: il degrado che emerge dopo settimane, gli alert operativi, l'incident response
   quando la qualità cala in modo silenzioso.
-- **6.4 Decision drill — Produzione** (es. "il sistema funziona ma i costi sono raddoppiati: cosa
+- **6.4 Rollout sicuro: canary, A/B e shadow traffic per LLM** ⊳ 6.1, 6.3, 3.1 — cambiare modello,
+  prompt o pipeline in produzione senza far scoppiare tutto. Canary (5%→25%→100%) con rollback
+  automatico legato alle metriche di 6.3, A/B per scelte qualitative (quale prompt converte di più),
+  shadow traffic per confronto a costo controllato. La "regressione" è qualitativa, non binaria.
+- **6.5 Decision drill — Produzione** (es. "il sistema funziona ma i costi sono raddoppiati: cosa
   indaghi e in che ordine")
 
 ## PARTE 7 — Architettura e sintesi

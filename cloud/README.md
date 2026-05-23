@@ -6,17 +6,17 @@ sidebar_position: 1
 
 # Indice — Cloud Playbook
 
-Percorso di studio per passare da full-stack a **Cloud + AI engineer applicativo**. Stesso metodo della guida AI: organizzato per **problema da risolvere**, non per servizio (i servizi cambiano nome, i problemi restano). Strategia: prima i **concetti universali** (parti 0-3), poi **AWS** dove diventi spendibile (parti 4-7).
+Guida di studio sul cloud applicativo moderno. Organizzata per **problema da risolvere**, non per servizio: i servizi cambiano nome, i problemi restano.
 
-Va letto in alternanza con l'**[AI Playbook](pathname:///ai)**: il cloud è il pezzo che chiude la guida AI — un sistema AI gira *su* cloud, e i due percorsi convergono nel capstone finale.
+Va letto in parallelo con l'**[AI Playbook](pathname:///ai)** — stessa voce, stessa struttura.
 
 ## Come è fatta
 
-Organizzata per problema, non per tecnologia. Per l'ordine di studio con i prerequisiti, vedi **[SYLLABUS](./SYLLABUS.md)**. Le regole di scrittura stanno in `AGENTS.md` alla root del repo (condiviso con l'AI Playbook).
+Per l'ordine di studio con i prerequisiti, vedi **[SYLLABUS](./SYLLABUS.md)**. Le regole di scrittura stanno in `AGENTS.md` alla root del repo.
 
 ## Come studiarla
 
-Stesso metodo dell'AI Playbook: leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a memoria**; rivedi il giorno dopo le risposte incerte. Nel cloud i progetti contano ancora più che altrove — alterna sempre lezione + pratica.
+Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a memoria**; rivedi il giorno dopo le risposte incerte. È lo sforzo di recuperare a memoria che fa imparare davvero.
 
 ## Stato delle pagine
 
@@ -47,17 +47,19 @@ Stesso metodo dell'AI Playbook: leggi una lezione, poi **chiudi la pagina e fai 
 
 ### 3 — IaC & automazione
 - [3.1 Infrastructure as Code (Terraform)](./iac-automation/iac-terraform.md) — bozza
-- [3.2 CI/CD nel cloud](./iac-automation/cicd.md) — bozza
-- [3.3 Decision drill — Cosa automatizzare](./iac-automation/drill.md) — bozza
+- [3.2 Policy-as-code e governance dell'infra](./iac-automation/policy-as-code.md) — bozza
+- [3.3 CI/CD nel cloud](./iac-automation/cicd.md) — bozza
+- [3.4 Decision drill — Cosa automatizzare](./iac-automation/drill.md) — bozza
 
 ### 4 — AWS pratica
 - [4.1 Orientarsi in AWS](./aws/orientarsi-aws.md) — bozza
 - [4.2 Compute (EC2, ECS/Fargate, Lambda)](./aws/compute.md) — bozza
-- [4.3 Storage e database](./aws/storage-database.md) — bozza
-- [4.4 Networking su AWS](./aws/networking-aws.md) — bozza
-- [4.5 IaC su AWS](./aws/iac-aws.md) — bozza
-- [4.6 Observability (CloudWatch)](./aws/observability.md) — bozza
-- [4.7 Decision drill — Architettura AWS serverless](./aws/drill.md) — bozza
+- [4.3 Messaggistica ed eventi (SQS, SNS, EventBridge, Step Functions)](./aws/messaggistica-eventi.md) — bozza
+- [4.4 Storage e database](./aws/storage-database.md) — bozza
+- [4.5 Networking su AWS](./aws/networking-aws.md) — bozza
+- [4.6 IaC su AWS](./aws/iac-aws.md) — bozza
+- [4.7 Observability (CloudWatch)](./aws/observability.md) — bozza
+- [4.8 Decision drill — Architettura AWS serverless](./aws/drill.md) — bozza
 
 ### 5 — Cloud per l'AI
 - [5.1 GPU nel cloud](./cloud-for-ai/gpu-cloud.md) — bozza
@@ -82,4 +84,4 @@ Stesso metodo dell'AI Playbook: leggi una lezione, poi **chiudi la pagina e fai 
 
 ## Totale
 
-**42 lezioni** distribuite su 8 parti. Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md).
+**44 lezioni** distribuite su 8 parti. Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md).

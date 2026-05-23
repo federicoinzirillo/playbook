@@ -45,7 +45,7 @@ Ordine dei blocchi (NESSUN emoji nei titoli di sezione — prosa pulita):
 3. **Idea in una frase + ancora mentale** — il cuore del concetto in una riga + analogia, integrata nel discorso (non in un box separato).
 4. **Corpo — i mattoni** — i concetti sviluppati in prosa narrativa profonda. Una sotto-sezione (H2) per ogni mattone. Dettagli su voce e profondità in §5.
 5. **Approfondimento a click** — per i termini che presuppongono prerequisiti: il termine corretto + una riga minima autosufficiente nel flusso, poi un blocco `<details>` espandibile per chi vuole scendere. Chi sa salta, chi non sa apre. NON introdurre nel blocco altri termini che richiederebbero a loro volta una spiegazione: rimanda quelli alla loro lezione.
-6. **Mermaid** — SOLO se la struttura è visiva. Saltabile su lezioni che non lo richiedono.
+6. **Mermaid** — SOLO se la struttura è visiva. Saltabile su lezioni che non lo richiedono. Per il Cloud Playbook (Parti 1, 2, 4, 5, 7) è quasi obbligatorio nelle lezioni architetturali: vedi `prompts/scrivi-lezione-cloud.md` per il vocabolario di icone AWS, l'uso di `architecture-beta` e il pattern "cost-diagram" per FinOps.
 7. **Sotto il cofano** — NON opzionale quando c'è una formula o un algoritmo dietro. Prima la matematica/algoritmo VERO (formula corretta, termini esatti), POI la traduzione intuitiva (cosa SIGNIFICA, non "salta la matematica"). Vedi §5.
 8. **Cosa NON è** — tabella "pensiero sbagliato → come stanno le cose". Vedi 0.1 e 0.2 come riferimento.
 9. **Cosa dura / cosa evitare** — dove serve, con i badge di stato (§4). Isola il deperibile.
