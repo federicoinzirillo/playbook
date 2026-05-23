@@ -1,5 +1,6 @@
 ---
 title: Decision drill — Architettura
+sidebar_label: "7.3 Decision drill"
 sidebar_position: 3
 ---
 

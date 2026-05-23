@@ -1,5 +1,6 @@
 ---
 title: Identity e permessi (IAM concettuale)
+sidebar_label: "1.3 Identity e IAM"
 sidebar_position: 3
 ---
 

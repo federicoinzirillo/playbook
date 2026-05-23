@@ -1,5 +1,6 @@
 ---
 title: Reference architecture cloud
+sidebar_label: "8.1 Reference architecture"
 sidebar_position: 1
 ---
 

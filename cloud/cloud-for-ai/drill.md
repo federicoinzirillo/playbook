@@ -1,5 +1,6 @@
 ---
 title: Decision drill — Deploy RAG su AWS
+sidebar_label: "6.9 Decision drill"
 sidebar_position: 9
 ---
 

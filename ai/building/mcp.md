@@ -1,6 +1,7 @@
 ---
 id: mcp
 title: MCP — lo standard per collegare i tool
+sidebar_label: "1.7 MCP"
 sidebar_position: 7
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Quando multimodale, quando pipeline separate
+sidebar_label: "2.6 Multimodale vs pipeline"
 sidebar_position: 6
 ---
 
@@ -7,7 +8,7 @@ sidebar_position: 6
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 2.5</span>
+  <span>Lezione 2.6</span>
   <span>~9 min di lettura</span>
 </div>
 

@@ -1,5 +1,6 @@
 ---
 title: Cosa significa cloud
+sidebar_label: "0.1 Cosa significa cloud"
 sidebar_position: 1
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Costi e FinOps a runtime
+sidebar_label: "6.2 Costi e FinOps"
 sidebar_position: 2
 ---
 

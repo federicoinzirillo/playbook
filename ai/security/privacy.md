@@ -1,5 +1,6 @@
 ---
 title: Privacy e data residency
+sidebar_label: "4.3 Privacy"
 sidebar_position: 3
 ---
 

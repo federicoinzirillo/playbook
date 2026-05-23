@@ -1,5 +1,6 @@
 ---
 title: "Sicurezza agentica: la superficie d'attacco comportamentale"
+sidebar_label: "4.2 Sicurezza agentica"
 sidebar_position: 2
 ---
 

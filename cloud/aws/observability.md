@@ -1,5 +1,6 @@
 ---
 title: Observability (CloudWatch)
+sidebar_label: "5.7 Observability AWS"
 sidebar_position: 7
 ---
 

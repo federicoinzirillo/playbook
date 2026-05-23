@@ -1,5 +1,6 @@
 ---
 title: Embedding e spazi vettoriali
+sidebar_label: "0.2 Embedding"
 sidebar_position: 2
 ---
 

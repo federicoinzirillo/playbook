@@ -1,5 +1,6 @@
 ---
 title: Come funziona un LLM
+sidebar_label: "0.1 Come funziona un LLM"
 sidebar_position: 1
 ---
 

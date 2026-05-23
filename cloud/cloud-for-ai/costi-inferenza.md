@@ -1,5 +1,6 @@
 ---
 title: Ottimizzare i costi di inferenza
+sidebar_label: "6.3 Costi di inferenza"
 sidebar_position: 3
 ---
 

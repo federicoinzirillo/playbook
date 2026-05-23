@@ -1,5 +1,6 @@
 ---
 title: Eval benchmarks e dataset — il vocabolario
+sidebar_label: "3.1 Eval benchmarks"
 sidebar_position: 1
 ---
 

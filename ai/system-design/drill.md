@@ -1,5 +1,6 @@
 ---
 title: Decision drill — System design
+sidebar_label: "5.5 Decision drill"
 sidebar_position: 5
 ---
 

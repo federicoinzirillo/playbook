@@ -1,5 +1,6 @@
 ---
 title: Servizi AI gestiti vs self-hosted
+sidebar_label: "6.2 Gestiti vs self-hosted"
 sidebar_position: 2
 ---
 

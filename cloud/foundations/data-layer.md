@@ -1,5 +1,6 @@
 ---
 title: "Persistenza dei dati: SQL, NoSQL, oggetti, vector"
+sidebar_label: "0.5 Persistenza dei dati"
 sidebar_position: 5
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Decision drill — Valutazione"
+sidebar_label: "3.6 Decision drill"
 sidebar_position: 6
 ---
 

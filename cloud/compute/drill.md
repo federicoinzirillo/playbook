@@ -1,5 +1,6 @@
 ---
 title: Decision drill — Dove far girare la mia app
+sidebar_label: "2.6 Decision drill"
 sidebar_position: 6
 ---
 

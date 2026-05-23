@@ -1,5 +1,6 @@
 ---
 title: Networking nel cloud
+sidebar_label: "1.1 Networking nel cloud"
 sidebar_position: 1
 ---
 

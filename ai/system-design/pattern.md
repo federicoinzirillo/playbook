@@ -1,5 +1,6 @@
 ---
 title: Pattern di sistema
+sidebar_label: "5.2 Pattern di sistema"
 sidebar_position: 2
 ---
 

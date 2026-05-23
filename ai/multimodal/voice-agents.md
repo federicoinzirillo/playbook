@@ -1,5 +1,6 @@
 ---
 title: Voice agents in tempo reale
+sidebar_label: "2.8 Voice agents"
 sidebar_position: 8
 ---
 
@@ -7,7 +8,7 @@ sidebar_position: 8
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 2.7</span>
+  <span>Lezione 2.8</span>
   <span>~11 min di lettura</span>
 </div>
 

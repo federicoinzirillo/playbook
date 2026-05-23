@@ -1,5 +1,6 @@
 ---
 title: IaaS, PaaS, SaaS
+sidebar_label: "0.2 IaaS, PaaS, SaaS"
 sidebar_position: 2
 ---
 

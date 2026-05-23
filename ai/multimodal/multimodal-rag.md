@@ -1,5 +1,6 @@
 ---
 title: Multimodal RAG
+sidebar_label: "2.3 Multimodal RAG"
 sidebar_position: 3
 ---
 

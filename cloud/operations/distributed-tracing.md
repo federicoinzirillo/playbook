@@ -1,5 +1,6 @@
 ---
 title: Distributed tracing e observability avanzata
+sidebar_label: "7.3 Distributed tracing"
 sidebar_position: 3
 ---
 

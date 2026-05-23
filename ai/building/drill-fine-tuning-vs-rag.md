@@ -1,5 +1,6 @@
 ---
 title: Decision drill — Fine-tuning vs RAG vs prompt engineering vs context engineering
+sidebar_label: "1.10 FT vs RAG — drill"
 sidebar_position: 10
 ---
 

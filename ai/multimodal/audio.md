@@ -1,5 +1,6 @@
 ---
 title: Audio e speech
+sidebar_label: "2.4 Audio e speech"
 sidebar_position: 4
 ---
 
@@ -7,7 +8,7 @@ sidebar_position: 4
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 2.3</span>
+  <span>Lezione 2.4</span>
   <span>~9 min di lettura</span>
 </div>
 

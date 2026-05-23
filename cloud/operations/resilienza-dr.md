@@ -1,5 +1,6 @@
 ---
 title: Resilienza e disaster recovery
+sidebar_label: "7.5 Resilienza e DR"
 sidebar_position: 5
 ---
 

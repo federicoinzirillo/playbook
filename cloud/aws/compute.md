@@ -1,5 +1,6 @@
 ---
 title: Compute (EC2, ECS/Fargate, Lambda)
+sidebar_label: "5.2 Compute AWS"
 sidebar_position: 2
 ---
 

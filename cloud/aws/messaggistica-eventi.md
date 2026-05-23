@@ -1,5 +1,6 @@
 ---
 title: "Messaggistica ed eventi su AWS: SQS, SNS, EventBridge, Step Functions"
+sidebar_label: "5.3 Messaggistica ed eventi"
 sidebar_position: 3
 ---
 

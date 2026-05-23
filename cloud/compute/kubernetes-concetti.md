@@ -1,5 +1,6 @@
 ---
 title: Orchestrazione e Kubernetes (concetti)
+sidebar_label: "2.2 Kubernetes (concetti)"
 sidebar_position: 2
 ---
 

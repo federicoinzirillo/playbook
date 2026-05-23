@@ -1,5 +1,6 @@
 ---
 title: Caching e CDN strategies
+sidebar_label: "6.4 Caching e CDN"
 sidebar_position: 4
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Async ed event-driven
+sidebar_label: "2.4 Async ed event-driven"
 sidebar_position: 4
 ---
 

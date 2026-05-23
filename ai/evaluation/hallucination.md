@@ -1,5 +1,6 @@
 ---
 title: Gestire le allucinazioni
+sidebar_label: "3.4 Allucinazioni"
 sidebar_position: 4
 ---
 

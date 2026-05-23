@@ -1,5 +1,6 @@
 ---
 title: Infrastructure as Code
+sidebar_label: "4.1 Infrastructure as Code"
 sidebar_position: 1
 ---
 

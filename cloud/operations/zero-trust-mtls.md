@@ -1,5 +1,6 @@
 ---
 title: Zero Trust e mTLS service-to-service
+sidebar_label: "7.6 Zero Trust e mTLS"
 sidebar_position: 6
 ---
 

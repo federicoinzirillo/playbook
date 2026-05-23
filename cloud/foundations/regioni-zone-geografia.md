@@ -1,5 +1,6 @@
 ---
 title: Regioni, zone, geografia
+sidebar_label: "0.4 Regioni, zone, geografia"
 sidebar_position: 4
 ---
 

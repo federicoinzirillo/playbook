@@ -1,5 +1,6 @@
 ---
 title: DNS, TLS, Load Balancing, CDN
+sidebar_label: "1.2 DNS, TLS, LB, CDN"
 sidebar_position: 2
 ---
 

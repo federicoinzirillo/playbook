@@ -1,6 +1,7 @@
 ---
 id: llm-as-judge
 title: Valutare con LLM-as-judge
+sidebar_label: "3.2 LLM-as-judge"
 sidebar_position: 2
 ---
 

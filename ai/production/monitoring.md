@@ -1,5 +1,6 @@
 ---
 title: Monitoring e drift in produzione
+sidebar_label: "6.3 Monitoring"
 sidebar_position: 3
 ---
 

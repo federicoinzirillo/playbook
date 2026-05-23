@@ -1,5 +1,6 @@
 ---
 title: Sicurezza in produzione
+sidebar_label: "7.4 Sicurezza in produzione"
 sidebar_position: 4
 ---
 

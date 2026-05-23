@@ -1,5 +1,6 @@
 ---
 title: Come funziona il multimodale
+sidebar_label: "2.1 Come funziona il multimodale"
 sidebar_position: 1
 ---
 

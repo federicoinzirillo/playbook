@@ -1,5 +1,6 @@
 ---
 title: Orientarsi in AWS
+sidebar_label: "5.1 Orientarsi in AWS"
 sidebar_position: 1
 ---
 

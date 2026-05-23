@@ -1,5 +1,6 @@
 ---
 title: Retrieval avanzato
+sidebar_label: "1.2 Retrieval avanzato"
 sidebar_position: 2
 ---
 

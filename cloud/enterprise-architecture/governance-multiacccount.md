@@ -1,5 +1,6 @@
 ---
 title: Governance multi-account
+sidebar_label: "9.2 Governance multi-account"
 sidebar_position: 2
 ---
 

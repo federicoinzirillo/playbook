@@ -1,5 +1,6 @@
 ---
 title: Training pipeline gestiti
+sidebar_label: "6.8 Training pipeline"
 sidebar_position: 8
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Le risorse fondamentali
+sidebar_label: "0.3 Le risorse fondamentali"
 sidebar_position: 3
 ---
 

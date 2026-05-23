@@ -1,5 +1,6 @@
 ---
 title: Anatomia di un sistema AI
+sidebar_label: "5.1 Anatomia del sistema"
 sidebar_position: 1
 ---
 

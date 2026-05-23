@@ -1,5 +1,6 @@
 ---
 title: VM vs Container vs Serverless
+sidebar_label: "2.3 VM vs Container vs Serverless"
 sidebar_position: 3
 ---
 

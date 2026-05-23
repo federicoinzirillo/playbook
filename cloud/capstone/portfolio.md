@@ -1,5 +1,6 @@
 ---
 title: Il portfolio che fa assumere
+sidebar_label: "8.3 Portfolio"
 sidebar_position: 3
 ---
 

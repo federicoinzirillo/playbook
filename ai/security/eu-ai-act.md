@@ -1,5 +1,6 @@
 ---
 title: EU AI Act e governance
+sidebar_label: "4.4 EU AI Act"
 sidebar_position: 4
 ---
 

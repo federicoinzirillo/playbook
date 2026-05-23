@@ -1,5 +1,6 @@
 ---
 title: Decision drill — Networking & accessi
+sidebar_label: "1.5 Decision drill"
 sidebar_position: 5
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Decision drill — Produzione
+sidebar_label: "6.5 Decision drill"
 sidebar_position: 5
 ---
 

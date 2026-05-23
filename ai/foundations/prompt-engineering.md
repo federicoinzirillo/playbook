@@ -1,5 +1,6 @@
 ---
 title: Prompt engineering come disciplina
+sidebar_label: "0.5 Prompt engineering"
 sidebar_position: 5
 ---
 

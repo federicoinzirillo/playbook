@@ -1,5 +1,6 @@
 ---
 title: "Rollout sicuro: canary, A/B e shadow traffic per LLM"
+sidebar_label: "6.4 Rollout sicuro"
 sidebar_position: 4
 ---
 

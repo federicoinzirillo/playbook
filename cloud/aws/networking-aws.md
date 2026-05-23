@@ -1,5 +1,6 @@
 ---
 title: Networking su AWS
+sidebar_label: "5.5 Networking AWS"
 sidebar_position: 5
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Decision drill — Landing zone enterprise"
+sidebar_label: "9.6 Decision drill"
 sidebar_position: 6
 ---
 

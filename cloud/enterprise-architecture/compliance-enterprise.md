@@ -1,5 +1,6 @@
 ---
 title: Compliance enterprise
+sidebar_label: "9.4 Compliance enterprise"
 sidebar_position: 4
 ---
 

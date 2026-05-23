@@ -1,5 +1,6 @@
 ---
 title: Orchestrazione multi-agent
+sidebar_label: "1.6 Orchestrazione multi-agent"
 sidebar_position: 6
 ---
 

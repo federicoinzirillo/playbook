@@ -1,5 +1,6 @@
 ---
 title: Migrazione e modernizzazione
+sidebar_label: "9.3 Migrazione e modernizzazione"
 sidebar_position: 3
 ---
 

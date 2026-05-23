@@ -1,5 +1,6 @@
 ---
 title: Architettura di un sistema AI in produzione
+sidebar_label: "6.6 Architettura sistema AI"
 sidebar_position: 6
 ---
 

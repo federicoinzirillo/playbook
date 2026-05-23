@@ -1,5 +1,6 @@
 ---
 title: API design per servizi cloud
+sidebar_label: "2.5 API design"
 sidebar_position: 5
 ---
 

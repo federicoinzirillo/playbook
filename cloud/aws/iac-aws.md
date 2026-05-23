@@ -1,5 +1,6 @@
 ---
 title: IaC su AWS
+sidebar_label: "5.6 IaC su AWS"
 sidebar_position: 6
 ---
 

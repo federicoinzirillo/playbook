@@ -1,5 +1,6 @@
 ---
 title: "Observability: tracing, costi, latenza"
+sidebar_label: "3.3 Observability"
 sidebar_position: 3
 ---
 

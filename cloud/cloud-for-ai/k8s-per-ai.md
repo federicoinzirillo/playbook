@@ -1,5 +1,6 @@
 ---
 title: Kubernetes per workload AI
+sidebar_label: "6.5 Kubernetes per AI"
 sidebar_position: 5
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Vision: cosa sa fare l'AI sulle immagini"
+sidebar_label: "2.2 Vision"
 sidebar_position: 2
 ---
 

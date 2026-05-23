@@ -1,5 +1,6 @@
 ---
 title: AWS Well-Architected Framework
+sidebar_label: "9.1 Well-Architected"
 sidebar_position: 1
 ---
 

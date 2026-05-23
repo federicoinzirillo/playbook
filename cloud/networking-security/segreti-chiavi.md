@@ -1,5 +1,6 @@
 ---
 title: Segreti, chiavi, dati sensibili
+sidebar_label: "1.4 Segreti e chiavi"
 sidebar_position: 4
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Il triangolo qualità-latenza-costo
+sidebar_label: "5.3 Il triangolo QLC"
 sidebar_position: 3
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Linux essenziale per cloud
+sidebar_label: "0.6 Linux essenziale"
 sidebar_position: 6
 ---
 

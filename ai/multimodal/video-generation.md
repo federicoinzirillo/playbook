@@ -1,5 +1,6 @@
 ---
 title: "Video generation: cosa sa fare, costi, quando usarlo"
+sidebar_label: "2.9 Video generation"
 sidebar_position: 9
 ---
 
@@ -7,7 +8,7 @@ sidebar_position: 9
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">Bozza</span>
-  <span>Lezione 2.8</span>
+  <span>Lezione 2.9</span>
 </div>
 
 > Lezione in arrivo. Vedi il [SYLLABUS](/ai/SYLLABUS), punto 2.8.

@@ -1,5 +1,6 @@
 ---
 title: Concetti ML che servono a chiunque
+sidebar_label: "0.3 Concetti ML"
 sidebar_position: 3
 ---
 

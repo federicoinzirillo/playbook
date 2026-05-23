@@ -1,5 +1,6 @@
 ---
 title: Monitoring e incident response
+sidebar_label: "7.2 Monitoring e incident"
 sidebar_position: 2
 ---
 

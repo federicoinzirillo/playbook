@@ -1,5 +1,6 @@
 ---
 title: Capstone — sistema end-to-end su AWS
+sidebar_label: "8.2 Capstone"
 sidebar_position: 2
 ---
 

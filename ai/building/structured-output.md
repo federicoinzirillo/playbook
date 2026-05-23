@@ -1,5 +1,6 @@
 ---
 title: Structured output e function calling
+sidebar_label: "1.4 Structured output"
 sidebar_position: 4
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Prompt injection e OWASP LLM Top 10
+sidebar_label: "4.1 Prompt injection"
 sidebar_position: 1
 ---
 

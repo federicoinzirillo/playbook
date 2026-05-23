@@ -1,5 +1,6 @@
 ---
 title: Caching semantico e model routing
+sidebar_label: "5.6 Caching e routing"
 sidebar_position: 6
 ---
 

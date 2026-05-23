@@ -1,5 +1,6 @@
 ---
 title: Decision drill — URL shortener su AWS
+sidebar_label: "5.8 Decision drill"
 sidebar_position: 8
 ---
 

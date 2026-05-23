@@ -1,5 +1,6 @@
 ---
 title: I dati come spina dorsale
+sidebar_label: "5.4 I dati"
 sidebar_position: 4
 ---
 

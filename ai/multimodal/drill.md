@@ -1,5 +1,6 @@
 ---
 title: Decision drill — Multimodale
+sidebar_label: "2.7 Decision drill"
 sidebar_position: 7
 ---
 
@@ -7,7 +8,7 @@ sidebar_position: 7
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 2.6</span>
+  <span>Lezione 2.7</span>
   <span>~20 min (incluso il tempo di lavoro)</span>
 </div>
 

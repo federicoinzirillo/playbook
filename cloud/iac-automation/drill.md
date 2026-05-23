@@ -1,5 +1,6 @@
 ---
 title: Decision drill — Cosa automatizzare
+sidebar_label: "4.4 Decision drill"
 sidebar_position: 4
 ---
 

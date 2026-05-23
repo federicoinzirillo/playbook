@@ -1,5 +1,6 @@
 ---
 title: Decision drill — Sicurezza e governance
+sidebar_label: "4.5 Decision drill"
 sidebar_position: 5
 ---
 

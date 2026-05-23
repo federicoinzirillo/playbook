@@ -1,5 +1,6 @@
 ---
 title: Generazione di immagini (diffusion models)
+sidebar_label: "2.5 Generazione di immagini"
 sidebar_position: 5
 ---
 
@@ -7,7 +8,7 @@ sidebar_position: 5
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 2.4</span>
+  <span>Lezione 2.5</span>
   <span>~10 min di lettura</span>
 </div>
 

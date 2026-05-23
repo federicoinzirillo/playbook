@@ -1,5 +1,6 @@
 ---
 title: Agenti semplici — tool calling e ReAct
+sidebar_label: "1.5 Agenti semplici"
 sidebar_position: 5
 ---
 

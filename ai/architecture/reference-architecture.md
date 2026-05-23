@@ -1,5 +1,6 @@
 ---
 title: Reference architecture
+sidebar_label: "7.1 Reference architecture"
 sidebar_position: 1
 ---
 

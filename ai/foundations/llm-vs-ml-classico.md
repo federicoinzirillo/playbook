@@ -1,5 +1,6 @@
 ---
 title: "LLM vs ML classico: quando NON usare la GenAI"
+sidebar_label: "0.4 LLM vs ML classico"
 sidebar_position: 4
 ---
 

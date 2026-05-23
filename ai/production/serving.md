@@ -1,5 +1,6 @@
 ---
 title: Serving e inference
+sidebar_label: "6.1 Serving e inference"
 sidebar_position: 1
 ---
 

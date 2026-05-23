@@ -1,5 +1,6 @@
 ---
 title: "Context engineering: cosa mettere nel contesto, a scala"
+sidebar_label: "1.3 Context engineering"
 sidebar_position: 3
 ---
 

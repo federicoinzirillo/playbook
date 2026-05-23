@@ -1,5 +1,6 @@
 ---
 title: Decision drill — I costi sono raddoppiati
+sidebar_label: "7.7 Decision drill"
 sidebar_position: 7
 ---
 

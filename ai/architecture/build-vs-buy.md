@@ -1,5 +1,6 @@
 ---
 title: Build vs buy, proprietari vs open-weight
+sidebar_label: "7.2 Build vs buy"
 sidebar_position: 2
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Decision Drill — Costruire sistemi LLM
+sidebar_label: "1.8 Decision drill"
 sidebar_position: 8
 ---
 

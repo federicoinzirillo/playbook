@@ -1,5 +1,6 @@
 ---
 title: Reasoning models — quando il pensiero costa, e quando vale
+sidebar_label: "0.6 Reasoning models"
 sidebar_position: 6
 ---
 

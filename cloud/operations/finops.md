@@ -1,5 +1,6 @@
 ---
 title: "FinOps: il cloud costa in modi sorprendenti"
+sidebar_label: "7.1 FinOps"
 sidebar_position: 1
 ---
 

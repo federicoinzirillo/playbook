@@ -1,5 +1,6 @@
 ---
 title: CI/CD nel cloud
+sidebar_label: "4.3 CI/CD nel cloud"
 sidebar_position: 3
 ---
 

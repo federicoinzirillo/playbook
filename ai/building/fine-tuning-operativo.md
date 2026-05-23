@@ -1,5 +1,6 @@
 ---
 title: Fine-tuning operativo — LoRA, QLoRA, DPO
+sidebar_label: "1.9 Fine-tuning operativo"
 sidebar_position: 9
 ---
 

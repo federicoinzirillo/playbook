@@ -1,5 +1,6 @@
 ---
 title: Policy-as-code e governance dell'infra
+sidebar_label: "4.2 Policy-as-code"
 sidebar_position: 2
 ---
 

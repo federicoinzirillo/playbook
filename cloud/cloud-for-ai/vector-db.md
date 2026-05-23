@@ -1,5 +1,6 @@
 ---
 title: Vector database managed vs self-hosted
+sidebar_label: "6.7 Vector database"
 sidebar_position: 7
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Multi-cloud awareness
+sidebar_label: "9.5 Multi-cloud awareness"
 sidebar_position: 5
 ---
 

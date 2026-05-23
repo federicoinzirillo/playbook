@@ -1,5 +1,6 @@
 ---
 title: Valutare il comportamento agentico end-to-end
+sidebar_label: "3.5 Valutare agenti"
 sidebar_position: 5
 ---
 

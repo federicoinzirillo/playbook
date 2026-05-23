@@ -1,5 +1,6 @@
 ---
 title: RAG — dare conoscenza al modello
+sidebar_label: "1.1 RAG"
 sidebar_position: 1
 ---
 

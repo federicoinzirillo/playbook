@@ -1,5 +1,6 @@
 ---
 title: GPU nel cloud
+sidebar_label: "6.1 GPU nel cloud"
 sidebar_position: 1
 ---
 
