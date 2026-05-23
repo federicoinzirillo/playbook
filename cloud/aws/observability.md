@@ -7,7 +7,7 @@ sidebar_position: 7
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 4.7</span>
+  <span>Lezione 5.7</span>
   <span>~11 min di lettura</span>
 </div>
 
@@ -148,4 +148,4 @@ Il vantaggio: non modifichi il codice Lambda per pubblicare una metrica — la e
 
 ## Prossima lezione
 
-L'ultima lezione della Parte 4 è un decision drill completo: URL shortener su AWS da zero — architettura, IAM, costi, monitoring. Il tipo di esercizio che compare nei colloqui per ruoli cloud nel 2026.
+L'ultima lezione della Parte 5 è un decision drill completo: URL shortener su AWS da zero — architettura, IAM, costi, monitoring. Il tipo di esercizio che compare nei colloqui per ruoli cloud nel 2026.

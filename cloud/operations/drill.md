@@ -7,7 +7,7 @@ sidebar_position: 7
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 6.7</span>
+  <span>Lezione 7.7</span>
   <span>~10 min di lettura</span>
 </div>
 
@@ -144,4 +144,4 @@ Il secondo commento: il fatto che il costo sia raddoppiato esattamente in coinci
 
 ## Prossima lezione
 
-La Parte 6 è completa. La Parte 7 è la sintesi: una reference architecture cloud, il capstone end-to-end su AWS con IaC, e il portfolio che fa assumere. Il lavoro fatto fin qui — foundations, networking, compute, IaC, AWS, AI, operations — converge in un unico artefatto da mostrare.
+La Parte 7 è completa. La Parte 8 è la sintesi: una reference architecture cloud, il capstone end-to-end su AWS con IaC, e il portfolio che fa assumere. Il lavoro fatto fin qui — foundations, networking, compute, dati in movimento, IaC, AWS, AI, operations — converge in un unico artefatto da mostrare.

@@ -7,13 +7,13 @@ sidebar_position: 7
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 5.7</span>
+  <span>Lezione 6.7</span>
   <span>~11 min di lettura</span>
 </div>
 
 <p class="lesson-lead">Non esiste il "miglior vector database". Esiste quello giusto per il tuo caso — corpus size, query al secondo, budget, infrastruttura già presente. Questa lezione ti dà la mappa per scegliere senza dover provare tutti.</p>
 
-Nella lezione 5.6 hai visto il vector store come componente del layer di retrieval. Ora entriamo nel dettaglio: cosa sono queste opzioni, cosa le differenzia davvero, e come scegliere.
+Nella lezione 6.6 hai visto il vector store come componente del layer di retrieval. Ora entriamo nel dettaglio: cosa sono queste opzioni, cosa le differenzia davvero, e come scegliere.
 
 ## Cosa fa un vector database
 

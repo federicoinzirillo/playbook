@@ -7,7 +7,7 @@ sidebar_position: 3
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 3.3</span>
+  <span>Lezione 4.3</span>
   <span>~12 min di lettura</span>
 </div>
 
@@ -166,4 +166,4 @@ Tool: LaunchDarkly, Flagsmith (open source), AWS AppConfig. Il rischio: i flag s
 
 ## Prossima lezione
 
-Hai IaC, policy automatiche e pipeline CI/CD. La prossima lezione è il decision drill della Parte 3: scenari reali su cosa automatizzare, come strutturare la pipeline e dove mettere i guard rail.
+Hai IaC, policy automatiche e pipeline CI/CD. La prossima lezione è il decision drill della Parte 4: scenari reali su cosa automatizzare, come strutturare la pipeline e dove mettere i guard rail.

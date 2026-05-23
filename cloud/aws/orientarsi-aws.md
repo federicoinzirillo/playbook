@@ -7,19 +7,19 @@ sidebar_position: 1
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 4.1</span>
+  <span>Lezione 5.1</span>
   <span>~12 min di lettura</span>
 </div>
 
 <p class="lesson-lead">AWS ha oltre 200 servizi. Il trucco non è impararli tutti — è capire come sono organizzati, dove trovare quello che cerchi, e impostare subito i guardrail che evitano la bolletta shock.</p>
 
-Le Parti 0–3 ti hanno dato i concetti universali. Da qui in poi li ancoriamo ad AWS: i concetti hanno un nome, una console, un prezzo. Non cambiano le idee — cambiano le etichette.
+Le Parti 0–4 ti hanno dato i concetti universali. Da qui in poi li ancoriamo ad AWS: i concetti hanno un nome, una console, un prezzo. Non cambiano le idee — cambiano le etichette.
 
 Il **principio guida di questa lezione**: prima i fondamentali operativi (account, IAM, billing) — poi i servizi. Chi apre AWS per la prima volta e inizia a cliccare su EC2 ha già saltato i tre step che gli costeranno cari nelle prossime settimane.
 
 ## La console, le regioni, e dove ti trovi
 
-Appena accedi ad AWS, la prima cosa che vede l'occhio è la **Console di gestione** (*AWS Management Console*) — un'interfaccia web da cui puoi accedere a tutti i servizi. È utile per esplorare e capire; non è lo strumento per lavorare davvero (per quello c'è la CLI e Terraform, vedi Parte 3).
+Appena accedi ad AWS, la prima cosa che vede l'occhio è la **Console di gestione** (*AWS Management Console*) — un'interfaccia web da cui puoi accedere a tutti i servizi. È utile per esplorare e capire; non è lo strumento per lavorare davvero (per quello c'è la CLI e Terraform, vedi Parte 4).
 
 In alto a destra c'è un selettore di regione — es. `eu-west-1` (Irlanda), `us-east-1` (Virginia del Nord). Questo è il concetto di **regione** che hai visto in 0.4: ogni risorsa che crei (una VM, un bucket, una coda) esiste in una regione specifica. Se crei un'istanza EC2 in `us-east-1` e poi selezioni `eu-west-1`, quella istanza non appare. **Il 90% dei "dov'è finita la mia risorsa?" dipende da questo.**
 
@@ -106,9 +106,9 @@ aws s3 ls
 aws lambda invoke --function-name mia-funzione output.json
 ```
 
-Con Terraform (Parte 3) la usi indirettamente — Terraform parla con AWS tramite le stesse credenziali che configuri con `aws configure`. Per il lavoro quotidiano, `aws configure` con un utente IAM con permessi limitati (o meglio, con un profilo SSO) è il punto di partenza.
+Con Terraform (Parte 4) la usi indirettamente — Terraform parla con AWS tramite le stesse credenziali che configuri con `aws configure`. Per il lavoro quotidiano, `aws configure` con un utente IAM con permessi limitati (o meglio, con un profilo SSO) è il punto di partenza.
 
-**Mai mettere access key e secret nel codice o in un repository.** Il bot che scansiona GitHub alla ricerca di chiavi AWS è reale e la bolletta arriva in ore. Le chiavi vanno in variabili d'ambiente o, meglio, si usa IAM Role con OIDC nelle pipeline CI/CD (vedi 3.3).
+**Mai mettere access key e secret nel codice o in un repository.** Il bot che scansiona GitHub alla ricerca di chiavi AWS è reale e la bolletta arriva in ore. Le chiavi vanno in variabili d'ambiente o, meglio, si usa IAM Role con OIDC nelle pipeline CI/CD (vedi 4.3).
 
 ## La mappa dei servizi
 

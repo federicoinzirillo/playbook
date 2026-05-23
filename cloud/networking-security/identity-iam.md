@@ -92,17 +92,7 @@ flowchart TD
 
 *Deny esplicito batte tutto. In assenza di Allow esplicito, la risposta è sempre Deny. Non esiste "Allow implicito".*
 
-## Zero Trust e mTLS per i servizi
-
-Fino a qui IAM governa l'accesso alle *API AWS*: chi può creare un'istanza EC2, leggere un bucket S3, invocare una Lambda. Ma nel tuo sistema hai anche servizi che parlano tra loro — microservizio A chiama microservizio B — e qui entra in gioco un principio diverso.
-
-**Zero Trust** è il modello per cui non ci si fida della rete interna. In un'architettura tradizionale, tutto ciò che era dentro il perimetro di rete (il data center, il VPC) veniva considerato "sicuro". Zero Trust dice: non fidarti mai, verifica sempre, indipendentemente da dove viene la richiesta. Anche se servizio A e servizio B sono nello stesso VPC, ogni chiamata deve essere autenticata e autorizzata.
-
-**mTLS** (*mutual TLS*) è la realizzazione tecnica più comune di Zero Trust per le comunicazioni service-to-service. Nel TLS normale solo il server presenta un certificato. In mTLS entrambi i lati lo fanno: il server verifica l'identità del client, il client verifica quella del server. Risultato: solo servizi con certificati validi possono comunicare tra loro, anche se qualcuno ha compromesso la rete interna.
-
-Un **service mesh** (Istio, AWS App Mesh, Linkerd) è l'infrastruttura che gestisce mTLS in modo trasparente: inietta un proxy sidecar accanto a ogni servizio, e quel proxy gestisce certificati, rotazione, mTLS, retry, circuit breaking, e telemetria — senza che il codice applicativo sappia niente. Il codice fa HTTP normale, il proxy si occupa del resto.
-
-Per sistemi più semplici su AWS senza service mesh, le alternative sono: **IAM Auth + SigV4** (per chiamate servizio-to-servizio AWS-native), o **API Gateway + JWT** per API esposte ai client.
+> **Service-to-service auth (Zero Trust, mTLS, service mesh).** IAM governa l'accesso alle *API AWS*. Quando hai microservizi che parlano tra loro nello stesso VPC, serve un livello diverso — autenticare ogni chiamata indipendentemente dalla rete. Lo vediamo in [7.6 — Zero Trust e mTLS service-to-service](../operations/zero-trust-mtls.md), perché è un tema di produzione, non di basi di sicurezza.
 
 ## Cosa non è
 
@@ -110,7 +100,6 @@ Per sistemi più semplici su AWS senza service mesh, le alternative sono: **IAM 
 |---|---|
 | "IAM User è il modo normale per far girare codice su AWS" | IAM Role è il modo corretto per qualsiasi processo automatico. Access key permanenti nel codice sono il vettore di leak più comune e più devastante. |
 | "Least privilege significa AWSReadOnlyAccess" | Least privilege significa solo i permessi necessari per quel task specifico. `ReadOnlyAccess` su tutto l'account è ancora eccessivo per una Lambda che legge da un solo bucket. |
-| "Zero Trust significa eliminare il VPC" | Zero Trust è un principio di autenticazione e autorizzazione, non una topologia di rete. Hai ancora il VPC e le sue protezioni; in più, ogni chiamata è autenticata indipendentemente da dove viene. |
 | "Una policy con Action: * è comoda in sviluppo, poi si sistema" | Le policy permissive in sviluppo finiscono in produzione più spesso di quanto si pensi. Imposta least privilege fin dall'inizio nei contesti critici — IAM Access Analyzer aiuta a verificarlo. |
 
 ## Verifica di comprensione
@@ -122,8 +111,7 @@ Per sistemi più semplici su AWS senza service mesh, le alternative sono: **IAM 
 3. Come fa una Lambda a ottenere le credenziali AWS senza access key nel codice?
 4. Descrivi il meccanismo di valutazione delle policy: cosa batte cosa?
 5. Cosa fa un Permission Boundary e quando lo usi?
-6. Cosa significa mTLS e in cosa differisce da TLS normale?
-7. *(anticipazione)* La tua Lambda deve leggere da S3 e scrivere su DynamoDB. Scrivi a parole (non in JSON) la policy IAM minimale che le servirebbe.
+6. *(anticipazione)* La tua Lambda deve leggere da S3 e scrivere su DynamoDB. Scrivi a parole (non in JSON) la policy IAM minimale che le servirebbe.
 
 ## Glossario della lezione
 
@@ -136,9 +124,6 @@ Per sistemi più semplici su AWS senza service mesh, le alternative sono: **IAM 
 - **Least privilege**: principio per cui ogni principal ha solo i permessi strettamente necessari.
 - **IAM Access Analyzer**: tool che rileva permessi inutilizzati analizzando i log CloudTrail.
 - **Permission boundary**: cap massimo ai permessi di un'identità, indipendentemente dalle policy attaccate.
-- **Zero Trust**: modello di sicurezza per cui ogni richiesta va autenticata, indipendentemente dalla provenienza di rete.
-- **mTLS** (*Mutual TLS*): estensione di TLS in cui entrambi i lati presentano un certificato.
-- **Service mesh**: infrastruttura di proxy sidecar che gestisce mTLS, retry e telemetria in modo trasparente.
 
 ## Per approfondire
 

@@ -7,7 +7,7 @@ sidebar_position: 4
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 6.4</span>
+  <span>Lezione 7.4</span>
   <span>~13 min di lettura</span>
 </div>
 
@@ -165,4 +165,4 @@ Se usi container (ECS, EKS, Lambda container images), la superficie d'attacco in
 
 ## Prossima lezione
 
-Hai chiuso il tema sicurezza. La 6.5 affronta la resilienza: non solo "il sistema è sicuro" ma "il sistema sopravvive a un guasto" — RPO, RTO, failover multi-AZ, chaos engineering, e i concetti che il business chiede e l'engineer deve saper ragionare prima che succeda il guasto vero.
+Hai chiuso il tema sicurezza. La 7.5 affronta la resilienza: non solo "il sistema è sicuro" ma "il sistema sopravvive a un guasto" — RPO, RTO, failover multi-AZ, chaos engineering, e i concetti che il business chiede e l'engineer deve saper ragionare prima che succeda il guasto vero.

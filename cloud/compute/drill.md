@@ -1,19 +1,19 @@
 ---
 title: Decision drill — Dove far girare la mia app
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 # Decision drill — Dove far girare la mia app
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 2.7</span>
+  <span>Lezione 2.6</span>
   <span>~10 min di lettura</span>
 </div>
 
 <p class="lesson-lead">Quattro scenari reali con vincoli di traffico, budget e team. Ogni scenario ha una risposta difendibile — e una trappola comune in cui i junior cadono.</p>
 
-Questa lezione non introduce nuovi concetti. Prende quelli delle lezioni 2.1–2.6 e li mette sotto pressione con scenari realistici: budget, traffico, struttura del team, requisiti di latenza. L'obiettivo è allenare il giudizio, non la memoria.
+Questa lezione non introduce nuovi concetti. Prende quelli delle lezioni 2.1–2.5 e li mette sotto pressione con scenari realistici: budget, traffico, struttura del team, requisiti di latenza. L'obiettivo è allenare il giudizio, non la memoria.
 
 Prima di guardare le griglie di valutazione, prova a rispondere da solo. La verifica attiva fissa più di qualsiasi rilettura.
 
@@ -132,4 +132,4 @@ Prima di guardare le griglie di valutazione, prova a rispondere da solo. La veri
 
 ## Prossima parte
 
-Hai completato la Parte 2: compute, container, K8s, serverless, async, API design, streaming. Ora è il momento di tradurre questi concetti in infrastruttura dichiarativa: la Parte 3 copre IaC — Infrastructure as Code — con Terraform e gli strumenti che rendono il cloud riproducibile e auditabile.
+Hai completato la Parte 2: compute, container, K8s, serverless, async, API design. La **Parte 3** apre il capitolo *Dati in movimento* — batch vs streaming, log distribuiti, event sourcing, CDC: una scelta di architettura dei dati che blocca se fatta tardi, da capire prima di passare all'IaC.

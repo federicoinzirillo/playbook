@@ -7,7 +7,7 @@ sidebar_position: 1
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 6.1</span>
+  <span>Lezione 7.1</span>
   <span>~14 min di lettura</span>
 </div>
 
@@ -43,7 +43,7 @@ La mossa: non mettere il NAT Gateway finché non ne hai davvero bisogno. Le Lamb
 
 La trappola più classica. Accendi un'istanza EC2 per un test, finisci il test, chiudi il terminale. L'istanza resta lì, con le sue $0.096/ora (`m5.large`, us-east-1 al 2026), finché non vai a spegnerla esplicitamente. Su un conto con più utenti o più team, questo accade regolarmente — e le istanze dimenticate si accumulano.
 
-La difesa: **AWS Cost Anomaly Detection** (un servizio che impara il profilo di spesa normale e segnala deviazioni significative) più **budget alert** configurati sull'account subito, prima di toccare qualsiasi risorsa. La lezione 4.1 lo ripete fin dall'inizio: è il primo gesto che fai su un account AWS, non l'ultimo.
+La difesa: **AWS Cost Anomaly Detection** (un servizio che impara il profilo di spesa normale e segnala deviazioni significative) più **budget alert** configurati sull'account subito, prima di toccare qualsiasi risorsa. La lezione 5.1 lo ripete fin dall'inizio: è il primo gesto che fai su un account AWS, non l'ultimo.
 
 ### Snapshot e volumi EBS orfani
 

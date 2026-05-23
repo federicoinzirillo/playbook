@@ -7,7 +7,7 @@ sidebar_position: 2
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">Bozza</span>
-  <span>Lezione 8.2</span>
+  <span>Lezione 9.2</span>
 </div>
 
-> Lezione in arrivo. Vedi il [SYLLABUS](/cloud/SYLLABUS), punto 8.2.
+> Lezione in arrivo. Vedi il [SYLLABUS](/cloud/SYLLABUS), punto 9.2.

@@ -7,11 +7,11 @@ sidebar_position: 9
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 5.9</span>
+  <span>Lezione 6.9</span>
   <span>~14 min di lettura</span>
 </div>
 
-<p class="lesson-lead">Tutto quello che hai imparato nella Parte 5 si applica qui. Lo scenario ha vincoli reali — budget, latenza, volume — e non c'è una risposta unica. Allenati a decidere e giustificare prima di leggere la valutazione.</p>
+<p class="lesson-lead">Tutto quello che hai imparato nella Parte 6 si applica qui. Lo scenario ha vincoli reali — budget, latenza, volume — e non c'è una risposta unica. Allenati a decidere e giustificare prima di leggere la valutazione.</p>
 
 ---
 
@@ -160,4 +160,4 @@ Non è necessario aver trovato tutto. L'obiettivo è il ragionamento: hai identi
 
 ## Prossima tappa
 
-Hai completato la Parte 5 — Cloud per l'AI. Il prossimo blocco (Parte 6) copre le operazioni in produzione: monitoring avanzato, incident response, SRE per sistemi AI. Oppure puoi saltare alla Parte 7 (Enterprise Architecture) se il tuo obiettivo è la visione d'insieme prima di scendere nei dettagli operativi.
+Hai completato la Parte 6 — Cloud per l'AI. Il prossimo blocco (Parte 7) copre le operazioni in produzione: monitoring avanzato, incident response, SRE per sistemi AI. Oppure puoi saltare alla Parte 9 (Architettura enterprise) se il tuo obiettivo è la visione d'insieme prima di scendere nei dettagli operativi.

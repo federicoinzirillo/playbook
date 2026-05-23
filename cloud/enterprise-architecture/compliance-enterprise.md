@@ -1,13 +1,13 @@
 ---
 title: Compliance enterprise
-sidebar_position: 6
+sidebar_position: 4
 ---
 
 # Compliance enterprise
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 6.6</span>
+  <span>Lezione 9.4</span>
   <span>~11 min di lettura</span>
 </div>
 
@@ -69,7 +69,7 @@ I requisiti tecnici HIPAA per l'infrastruttura cloud:
 
 **AWS Config** — il servizio che registra la configurazione di ogni risorsa AWS nel tempo e valuta se rispetta le regole definite. Può rilevare automaticamente che un bucket S3 è diventato pubblico, che un security group ha una regola non conforme, che un'istanza RDS non ha la cifratura abilitata. I **Config Rules** sono valutazioni automatiche che puoi legare a standard come CIS AWS o HIPAA.
 
-**AWS CloudTrail** — già citato in 6.4: ogni chiamata API loggata. Per la compliance è obbligatorio e deve coprire tutte le regioni, con log archiviati su S3 e retention di almeno un anno nella maggior parte degli standard.
+**AWS CloudTrail** — già citato in 7.4: ogni chiamata API loggata. Per la compliance è obbligatorio e deve coprire tutte le regioni, con log archiviati su S3 e retention di almeno un anno nella maggior parte degli standard.
 
 **AWS Audit Manager** — servizio che automatizza la raccolta di evidenze per audit. Mappa i controlli AWS ai framework di compliance (SOC 2, ISO 27001, HIPAA, PCI DSS) e raccoglie automaticamente prove da CloudTrail, Config, Security Hub. Riduce drasticamente il lavoro manuale di preparazione audit.
 
@@ -153,4 +153,4 @@ I requisiti minimi per un audit trail affidabile:
 
 ## Prossima lezione
 
-Chiusa la Parte 6. La 6.7 è il decision drill: un scenario reale in cui i costi sono raddoppiati — cosa indaghi, in che ordine, e quali voci controlli prima. È il tipo di domanda che arriva in un colloquio cloud o in una retrospettiva post-spike di spesa.
+I controlli tecnici di compliance — audit trail, cifratura, accesso minimo — vivono dentro un'infrastruttura *governata*. La **9.5** copre la consapevolezza **multi-cloud**: come si parla con un cliente che ha già Azure o GCP, come si mappano i concetti tra provider, e quando una strategia multi-cloud è una scelta tecnica vs politica.

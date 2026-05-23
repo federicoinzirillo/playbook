@@ -68,7 +68,7 @@ Questa operazione si chiama **Approximate Nearest Neighbor search** (*ANN*), e i
 - **Amazon OpenSearch** con k-NN: per chi già usa OpenSearch per search/log.
 - **Pinecone**, **Weaviate**, **Qdrant**: vector database specializzati, fully managed, ottimizzati per questa operazione.
 
-Il trade-off build/managed per i vector database lo tratteremo nella lezione 5.7 della guida Cloud. La decisione da capire ora è *perché esistono* — e perché un SQL normale non basta: la 0.5 è il prerequisito per capire RAG nella guida AI.
+Il trade-off build/managed per i vector database lo tratteremo nella lezione 6.7 della guida Cloud. La decisione da capire ora è *perché esistono* — e perché un SQL normale non basta: la 0.5 è il prerequisito per capire RAG nella guida AI.
 
 <details>
 <summary>Perché la ricerca vettoriale non si fa con un indice B-tree</summary>

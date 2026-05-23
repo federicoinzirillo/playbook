@@ -7,13 +7,13 @@ sidebar_position: 6
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 4.6</span>
+  <span>Lezione 5.6</span>
   <span>~11 min di lettura</span>
 </div>
 
-<p class="lesson-lead">Terraform, CloudFormation, CDK — tre modi per descrivere l'infrastruttura AWS come codice. I principi li hai visti in 3.1. Qui vedi come si traducono in pratica su AWS, con le differenze reali che contano quando scegli.</p>
+<p class="lesson-lead">Terraform, CloudFormation, CDK — tre modi per descrivere l'infrastruttura AWS come codice. I principi li hai visti in 4.1. Qui vedi come si traducono in pratica su AWS, con le differenze reali che contano quando scegli.</p>
 
-Sei già arrivato qui avendo visto Terraform in modo generale (3.1). Questa lezione non ripete i concetti — li ancora su AWS: come si configura il provider AWS, quali risorse Terraform gestisce meglio, dove CloudFormation è inevitabile, e quando CDK è la scelta giusta.
+Sei già arrivato qui avendo visto Terraform in modo generale (4.1). Questa lezione non ripete i concetti — li ancora su AWS: come si configura il provider AWS, quali risorse Terraform gestisce meglio, dove CloudFormation è inevitabile, e quando CDK è la scelta giusta.
 
 ## Il provider AWS di Terraform
 
@@ -190,4 +190,4 @@ Il segnale più forte del 2026: Terraform (o OpenTofu) resta lo standard de fact
 
 ## Prossima lezione
 
-Hai l'infrastruttura deployata con IaC. L'ultima lezione tecnica della Parte 4 copre CloudWatch — come sai se il sistema funziona, come ricevi alert quando si rompe, e come navighi i log a 3 di notte durante un incident.
+Hai l'infrastruttura deployata con IaC. L'ultima lezione tecnica della Parte 5 copre CloudWatch — come sai se il sistema funziona, come ricevi alert quando si rompe, e come navighi i log a 3 di notte durante un incident.

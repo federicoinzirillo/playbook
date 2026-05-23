@@ -7,7 +7,7 @@ sidebar_position: 4
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 3.4</span>
+  <span>Lezione 4.4</span>
   <span>~10 min di lettura</span>
 </div>
 
@@ -102,4 +102,4 @@ Questa lezione applica IaC, policy-as-code e CI/CD a situazioni concrete. Prova 
 
 ## Prossima parte
 
-Hai completato la Parte 3 — IaC, policy-as-code, CI/CD. Ora il quadro concettuale è completo. La Parte 4 traduce tutto questo in AWS concreto: i servizi specifici con i loro nomi, le loro console, i loro prezzi. Terraform con provider AWS, SQS/SNS/EventBridge, RDS/DynamoDB/S3, ECS/Lambda con API Gateway — i concetti delle Parti 0-3 con un'etichetta AWS sopra.
+Hai completato la Parte 4 — IaC, policy-as-code, CI/CD. Ora il quadro concettuale è completo. La Parte 5 traduce tutto questo in AWS concreto: i servizi specifici con i loro nomi, le loro console, i loro prezzi. Terraform con provider AWS, SQS/SNS/EventBridge, RDS/DynamoDB/S3, ECS/Lambda con API Gateway — i concetti delle Parti 0-4 con un'etichetta AWS sopra.

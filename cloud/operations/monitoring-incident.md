@@ -7,7 +7,7 @@ sidebar_position: 2
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 6.2</span>
+  <span>Lezione 7.2</span>
   <span>~12 min di lettura</span>
 </div>
 
@@ -23,7 +23,7 @@ L'observability — la capacità di capire lo stato interno di un sistema dai su
 
 **I log** sono eventi testuali con un timestamp. "Utente 42 ha fatto login", "query fallita su DB con errore X", "Lambda ha esaurito la memoria": sono i fatti grezzi di quello che è successo, nel momento in cui è successo. I log ti dicono *cosa è successo* — ma recuperarli e filtrarli su volumi grandi ha un costo. Sono il nastro del giornale di bordo.
 
-**Le trace** — che vedremo in dettaglio nella lezione 6.3 — sono la mappa di come una singola richiesta ha attraversato i vari pezzi del sistema. Per ora: le trace rispondono alla domanda "dove ha impiegato il tempo questa richiesta?". Ne parliamo nella 6.3 perché richiedono il concetto di sistema distribuito.
+**Le trace** — che vedremo in dettaglio nella lezione 7.3 — sono la mappa di come una singola richiesta ha attraversato i vari pezzi del sistema. Per ora: le trace rispondono alla domanda "dove ha impiegato il tempo questa richiesta?". Ne parliamo nella 7.3 perché richiedono il concetto di sistema distribuito.
 
 In AWS il servizio che unifica metriche e log è **Amazon CloudWatch**. È il punto di partenza pratico di ogni monitoring su AWS.
 
@@ -105,8 +105,8 @@ L'**error budget** è la conseguenza pratica: se il tuo SLO è 99,9% di disponib
 |---|---|
 | "Più log conservo, meglio sto" | I log costano e vanno filtrati. Log inutili seppelliscono quelli utili. Il valore è nei log strutturati e indicizzati, non nel volume grezzo. Imposta retention adeguata per tipo di log. |
 | "Un alert per ogni metrica è un sistema robusto" | Alert fatigue è il vero nemico. Pochi alert precisi, ognuno con un runbook, valgono più di cento soglie generiche che suonano di continuo. |
-| "Il monitoring risolve i problemi" | Il monitoring li *rileva*. Risolvere richiede runbook, architettura resiliente (lezione 6.5), e post-mortem blameless che imparano dagli incidenti. |
-| "CloudWatch basta per tutto" | CloudWatch basta per la maggior parte dei casi AWS. Per sistemi distribuiti complessi o multi-cloud, strumenti come Datadog, Grafana o OpenTelemetry offrono correlazione e tracing più avanzati — li vediamo nella 6.3. |
+| "Il monitoring risolve i problemi" | Il monitoring li *rileva*. Risolvere richiede runbook, architettura resiliente (lezione 7.5), e post-mortem blameless che imparano dagli incidenti. |
+| "CloudWatch basta per tutto" | CloudWatch basta per la maggior parte dei casi AWS. Per sistemi distribuiti complessi o multi-cloud, strumenti come Datadog, Grafana o OpenTelemetry offrono correlazione e tracing più avanzati — li vediamo nella 7.3. |
 
 ## Verifica di comprensione
 
@@ -151,4 +151,4 @@ L'**error budget** è la conseguenza pratica: se il tuo SLO è 99,9% di disponib
 
 ## Prossima lezione
 
-Hai gli strumenti per monitorare un sistema singolo. La 6.3 affronta la sfida successiva: quando il sistema è fatto di decine di microservizi che si chiamano tra loro — e una richiesta attraversa sei hop prima di rispondere — come tracci il percorso e capisci dove si è perso il tempo?
+Hai gli strumenti per monitorare un sistema singolo. La 7.3 affronta la sfida successiva: quando il sistema è fatto di decine di microservizi che si chiamano tra loro — e una richiesta attraversa sei hop prima di rispondere — come tracci il percorso e capisci dove si è perso il tempo?

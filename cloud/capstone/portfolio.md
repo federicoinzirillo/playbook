@@ -7,7 +7,7 @@ sidebar_position: 3
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 7.3</span>
+  <span>Lezione 8.3</span>
   <span>~10 min di lettura</span>
 </div>
 
@@ -54,7 +54,7 @@ Non servono dieci progetti. Servono tre, fatti bene, con un arco narrativo chiar
 
 **Progetto 2 — RAG assistant su AWS**: il capstone di questa guida. ECS/Fargate + OpenSearch o pgvector + Bedrock/endpoint self-hosted + ElastiCache semantic cache + S3 + CloudWatch alarms. È il progetto che dimostra la sinergia Cloud + AI — la competenza più richiesta nel 2026. Terraform completo, CI/CD su GitHub Actions. Tempo: una-due settimane.
 
-**Progetto 3 — Reference architecture con IaC (opzionale)**: un repo che implementa la reference architecture della lezione 7.1 in Terraform modulare, con due ambienti (dev/prod) e documentazione delle decisioni architetturali. Non deve girare in produzione 24/7 — serve come "archivio di ragionamento" per il colloquio. Dimostra maturità da architetto.
+**Progetto 3 — Reference architecture con IaC (opzionale)**: un repo che implementa la reference architecture della lezione 8.1 in Terraform modulare, con due ambienti (dev/prod) e documentazione delle decisioni architetturali. Non deve girare in produzione 24/7 — serve come "archivio di ragionamento" per il colloquio. Dimostra maturità da architetto.
 
 Due progetti sono già sufficienti per passare la maggior parte dei colloqui cloud/AI del 2026. Il terzo distingue chi vuole il ruolo senior.
 
@@ -172,4 +172,4 @@ La SAA-C03 ti dà il vocabolario e la credibilità. Il progetto dimostra che sai
 
 ## Prossima lezione
 
-Hai completato i sette blocchi del Cloud Playbook. Se vuoi andare oltre — verso ruoli da Solution Architect senior o enterprise — la Parte 8 copre i quattro temi che nei colloqui SA chiedono sempre: Well-Architected Framework, governance multi-account, migrazione di sistemi legacy, e consapevolezza multi-cloud.
+Hai completato gli otto blocchi del Cloud Playbook. Se vuoi andare oltre — verso ruoli da Solution Architect senior o enterprise — la Parte 9 copre i cinque temi che nei colloqui SA chiedono sempre: Well-Architected Framework, governance multi-account, migrazione di sistemi legacy, compliance enterprise, e consapevolezza multi-cloud.

@@ -7,13 +7,13 @@ sidebar_position: 5
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 6.5</span>
+  <span>Lezione 7.5</span>
   <span>~12 min di lettura</span>
 </div>
 
 <p class="lesson-lead">Un sistema affidabile non è quello che non si rompe mai. È quello che, quando si rompe, si riprende in tempi accettabili senza perdere dati critici.</p>
 
-La sicurezza (6.4) difende dall'esterno. La resilienza difende dall'interno: hardware che cede, bug che corrompono dati, regione AWS che ha un'interruzione, deploy che va storto. Questi eventi capitano — su scala abbastanza grande, è quasi certo che capiteranno. La domanda non è "se" ma "quanto tempo per tornare operativi" e "quanti dati perdiamo".
+La sicurezza (7.4) difende dall'esterno. La resilienza difende dall'interno: hardware che cede, bug che corrompono dati, regione AWS che ha un'interruzione, deploy che va storto. Questi eventi capitano — su scala abbastanza grande, è quasi certo che capiteranno. La domanda non è "se" ma "quanto tempo per tornare operativi" e "quanti dati perdiamo".
 
 ## RPO e RTO: il vocabolario del business
 
@@ -142,4 +142,4 @@ La scelta dipende dal business case. Non esiste la strategia "giusta" in assolut
 
 ## Prossima lezione
 
-Hai coperto resilienza e continuità operativa. La 6.6 chiude la Parte 6 con una dimensione che sempre più spesso entra nei contratti: la compliance enterprise — cosa chiedono SOC 2, ISO 27001 e HIPAA all'infrastruttura cloud, e come predisporla senza diventare un compliance officer.
+Hai coperto resilienza e continuità operativa. La **7.6** affronta il principio di sicurezza che cambia tutto in produzione moderna: **Zero Trust e mTLS service-to-service**. Non fidarti della rete interna, autentica ogni chiamata, anche tra microservizi nello stesso VPC.

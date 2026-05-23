@@ -7,7 +7,7 @@ sidebar_position: 5
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 4.5</span>
+  <span>Lezione 5.5</span>
   <span>~12 min di lettura</span>
 </div>
 

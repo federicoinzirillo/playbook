@@ -7,13 +7,13 @@ sidebar_position: 4
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 5.4</span>
+  <span>Lezione 6.4</span>
   <span>~11 min di lettura</span>
 </div>
 
 <p class="lesson-lead">Il caching non è una sola cosa — è uno stack di livelli. Ognuno taglia una fetta diversa di latenza e costo. Capire quale livello attivare e dove è la differenza tra un sistema AI scalabile e uno che va bene solo in demo.</p>
 
-Nella lezione 5.3 hai visto semantic cache e prompt caching come leve di costo. Qui andiamo più in profondità: ogni livello dello stack, come si implementa su AWS, e quando non cachare è la scelta giusta.
+Nella lezione 6.3 hai visto semantic cache e prompt caching come leve di costo. Qui andiamo più in profondità: ogni livello dello stack, come si implementa su AWS, e quando non cachare è la scelta giusta.
 
 ## I livelli del caching per sistemi AI
 

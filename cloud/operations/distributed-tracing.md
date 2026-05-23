@@ -7,13 +7,13 @@ sidebar_position: 3
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 6.3</span>
+  <span>Lezione 7.3</span>
   <span>~13 min di lettura</span>
 </div>
 
 <p class="lesson-lead">In un sistema distribuito, una richiesta attraversa molti pezzi. Il tracing è il filo che li tiene uniti — senza di esso, una latenza anomala è un mistero senza soluzione.</p>
 
-Nella 6.2 hai impostato metriche e alert: sai *che* la latenza è alta. Ma in un sistema fatto di API Gateway, Lambda, SQS, un microservizio di notifiche e un database, "la latenza è alta" è l'inizio dell'indagine, non la fine. **Dove si è perso il tempo?** A quale hop? È una singola richiesta lenta o tutte?
+Nella 7.2 hai impostato metriche e alert: sai *che* la latenza è alta. Ma in un sistema fatto di API Gateway, Lambda, SQS, un microservizio di notifiche e un database, "la latenza è alta" è l'inizio dell'indagine, non la fine. **Dove si è perso il tempo?** A quale hop? È una singola richiesta lenta o tutte?
 
 Il distributed tracing è la risposta a questa domanda.
 
@@ -157,4 +157,4 @@ Questo è l'observability matura: non solo sapere che qualcosa si è rotto, ma c
 
 ## Prossima lezione
 
-Sai rilevare i problemi e tracciarne il percorso. La 6.4 affronta la domanda che i team di sicurezza fanno sempre: il sistema è configurato in modo sicuro? Least privilege, superficie d'attacco, errori di configurazione comuni — e come scoprirli prima che lo faccia qualcun altro.
+Sai rilevare i problemi e tracciarne il percorso. La 7.4 affronta la domanda che i team di sicurezza fanno sempre: il sistema è configurato in modo sicuro? Least privilege, superficie d'attacco, errori di configurazione comuni — e come scoprirli prima che lo faccia qualcun altro.

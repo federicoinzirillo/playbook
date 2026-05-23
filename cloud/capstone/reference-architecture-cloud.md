@@ -7,13 +7,13 @@ sidebar_position: 1
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 7.1</span>
+  <span>Lezione 8.1</span>
   <span>~12 min di lettura</span>
 </div>
 
 <p class="lesson-lead">Hai studiato i mattoni separatamente — VPC, Lambda, RDS, SQS, IAM, CloudWatch. Questa lezione li assembla in un sistema coerente e ti insegna a leggere, valutare e adattare qualsiasi architettura di riferimento.</p>
 
-Hai toccato ogni pezzo nelle lezioni precedenti. Il networking in Parte 1, il compute in Parte 2, l'IaC in Parte 3, i servizi AWS in Parte 4, il cloud per l'AI in Parte 5, le operations in Parte 6. Ogni lezione ti ha dato un mattone. Adesso è il momento di vederli assemblati.
+Hai toccato ogni pezzo nelle lezioni precedenti. Il networking in Parte 1, il compute in Parte 2, i dati in movimento in Parte 3, l'IaC in Parte 4, i servizi AWS in Parte 5, il cloud per l'AI in Parte 6, le operations in Parte 7. Ogni lezione ti ha dato un mattone. Adesso è il momento di vederli assemblati.
 
 **Una reference architecture** è un blueprint collaudato che distilla decisioni già prese, trappole già toccate e pattern che funzionano su larga scala. Non è un dogma: è il punto di partenza di una conversazione. Un senior che disegna un sistema su una lavagna bianca non parte da zero — parte dalla reference che conosce, poi la piega ai vincoli reali del problema.
 

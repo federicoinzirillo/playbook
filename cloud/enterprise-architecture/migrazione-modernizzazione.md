@@ -7,7 +7,7 @@ sidebar_position: 3
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 8.3</span>
+  <span>Lezione 9.3</span>
 </div>
 
-> Lezione in arrivo. Vedi il [SYLLABUS](/cloud/SYLLABUS), punto 8.3.
+> Lezione in arrivo. Vedi il [SYLLABUS](/cloud/SYLLABUS), punto 9.3.

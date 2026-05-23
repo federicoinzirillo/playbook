@@ -7,7 +7,7 @@ sidebar_position: 8
 
 <div class="lesson-meta">
   <span class="badge-stato stabile">Stabile</span>
-  <span>Lezione 4.8</span>
+  <span>Lezione 5.8</span>
   <span>~10 min di lettura</span>
 </div>
 
@@ -142,7 +142,7 @@ Il requisito di anonimizzare l'IP non è un dettaglio: è obbligatorio per GDPR 
 
 ## Riflessione finale
 
-La Parte 4 ti ha portato dall'orientarsi nella console AWS alla capacità di disegnare un sistema completo con compute, storage, networking, IaC e monitoring. Questo drill è il test che mette insieme tutti i pezzi.
+La Parte 5 ti ha portato dall'orientarsi nella console AWS alla capacità di disegnare un sistema completo con compute, storage, networking, IaC e monitoring. Questo drill è il test che mette insieme tutti i pezzi.
 
 Se hai risposto alle domande prima di aprire la griglia — e sei riuscito a giustificare le scelte principali (DynamoDB vs RDS, tracking asincrono, IAM per Lambda) — hai la comprensione giusta per affrontare scenari reali e colloqui su cloud architecture.
 

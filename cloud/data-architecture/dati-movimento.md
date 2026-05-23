@@ -1,13 +1,13 @@
 ---
 title: Dati in movimento
-sidebar_position: 6
+sidebar_position: 1
 ---
 
 # Dati in movimento
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 2.6</span>
+  <span>Lezione 3.1</span>
   <span>~11 min di lettura</span>
 </div>
 
@@ -125,4 +125,4 @@ Apache Flink e Google Dataflow (Beam) hanno gestione sofisticata dei watermark. 
 
 ## Prossima lezione
 
-Hai ora il set completo di strumenti concettuali: dove girare il codice (VM/container/serverless), come disaccoppiare i servizi (async/event-driven), come esporli (API design), e come gestire i dati in tempo reale (streaming). La prossima lezione è il decision drill della Parte 2: scenari reali dove applicare tutti questi concetti in modo integrato.
+Hai ora il pezzo di architettura dei dati che blocca se fatto tardi: stream, log distribuito, event sourcing, CDC. Il quadro concettuale è chiuso — runtime (Parte 2), dati in movimento (Parte 3). La **Parte 4** copre l'**Infrastructure as Code**: come si traduce tutto questo in infrastruttura riproducibile, versionata, automatizzabile invece di click in console.

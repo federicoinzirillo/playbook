@@ -111,7 +111,7 @@ L'idempotenza si ottiene solitamente con un **idempotency key**: un identificato
 
 ## Per approfondire
 
-- **AWS docs**: "What is Amazon SQS", "What is Amazon SNS", "What is Amazon EventBridge" su `docs.aws.amazon.com` — tre servizi, tre pattern, coperti nella lezione 4.3.
+- **AWS docs**: "What is Amazon SQS", "What is Amazon SNS", "What is Amazon EventBridge" su `docs.aws.amazon.com` — tre servizi, tre pattern, coperti nella lezione 5.3.
 - **"Enterprise Integration Patterns"** (Hohpe, Woolf): il catalogo di pattern di messaggistica. Non serve leggerlo tutto — i capitoli su Message Channel, Message Router, e Dead Letter Channel coprono il 90% dei casi pratici.
 
 ## Prossima lezione

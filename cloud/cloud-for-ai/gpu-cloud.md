@@ -7,13 +7,13 @@ sidebar_position: 1
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 5.1</span>
+  <span>Lezione 6.1</span>
   <span>~12 min di lettura</span>
 </div>
 
 <p class="lesson-lead">Le GPU sono la risorsa più costosa e più scarsa del cloud AI. Capire perché costano, come si provisiona e quando evitarle è la differenza tra un sistema AI sostenibile e una bolletta che esplode.</p>
 
-Fino alla Parte 4 hai lavorato con CPU — EC2, ECS, Lambda, tutto su processori general-purpose. I carichi AI cambiano le carte in tavola. Un modello da 7 miliardi di parametri su CPU richiede decine di secondi per risposta; sulla GPU giusta, millisecondi. La differenza non è un dettaglio: è ciò che rende un sistema usabile.
+Fino alla Parte 5 hai lavorato con CPU — EC2, ECS, Lambda, tutto su processori general-purpose. I carichi AI cambiano le carte in tavola. Un modello da 7 miliardi di parametri su CPU richiede decine di secondi per risposta; sulla GPU giusta, millisecondi. La differenza non è un dettaglio: è ciò che rende un sistema usabile.
 
 ## Perché le GPU
 

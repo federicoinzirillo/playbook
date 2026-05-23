@@ -7,7 +7,7 @@ sidebar_position: 2
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">In evoluzione</span>
-  <span>Lezione 7.2</span>
+  <span>Lezione 8.2</span>
   <span>~16 min di lettura</span>
 </div>
 
@@ -138,7 +138,7 @@ Nota: le credenziali AWS nel workflow dovrebbero usare **OIDC** (*OpenID Connect
 
 Il RAG assistant è il punto in cui i due percorsi di studio si chiudono in un artefatto unico. Il **cosa fa il sistema** (RAG, embedding, LLM, guardrail) viene dalla guida AI — lezioni 2.1, 3.x, 4.x. Il **dove gira e come sopravvive** viene da questa guida — VPC, ECS, S3, IAM, CloudWatch, Terraform, CI/CD.
 
-La scelta infrastrutturale che dipende dall'AI: **dove metto il vettore store?** La lezione 5.7 di questa guida e la lezione 2.1 della guida AI convergono qui. La risposta dipende dal volume, dalla frequenza di aggiornamento e dal budget: pgvector su RDS per sistemi piccoli con DB relazionale già presente; OpenSearch Serverless per volumi medi senza gestione server; Pinecone o Weaviate self-hosted su ECS per controllo massimo.
+La scelta infrastrutturale che dipende dall'AI: **dove metto il vettore store?** La lezione 6.7 di questa guida e la lezione 2.1 della guida AI convergono qui. La risposta dipende dal volume, dalla frequenza di aggiornamento e dal budget: pgvector su RDS per sistemi piccoli con DB relazionale già presente; OpenSearch Serverless per volumi medi senza gestione server; Pinecone o Weaviate self-hosted su ECS per controllo massimo.
 
 La scelta di costo che dipende dall'AI: **quando fare caching semantico?** ElastiCache (Redis) con embedding delle domande come chiave: se la similarità coseno tra la nuova domanda e una domanda già in cache supera 0.95, si restituisce la risposta cached. Su un sistema con domande ricorrenti, questo riduce le chiamate LLM del 40-60%.
 
