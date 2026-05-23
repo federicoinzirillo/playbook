@@ -27,18 +27,23 @@ Stesso metodo dell'AI Playbook: leggi una lezione, poi **chiudi la pagina e fai 
 - [0.2 IaaS, PaaS, SaaS](./foundations/iaas-paas-saas.md) — bozza
 - [0.3 Le risorse fondamentali](./foundations/risorse-fondamentali.md) — bozza
 - [0.4 Regioni, zone, geografia](./foundations/regioni-zone-geografia.md) — bozza
+- [0.5 Persistenza dei dati: SQL, NoSQL, oggetti, vector](./foundations/data-layer.md) — bozza
+- [0.6 Linux essenziale per cloud](./foundations/linux-essenziale.md) — bozza
 
 ### 1 — Networking & sicurezza
 - [1.1 Networking nel cloud](./networking-security/networking.md) — bozza
-- [1.2 Identity e permessi (IAM concettuale)](./networking-security/identity-iam.md) — bozza
-- [1.3 Segreti, chiavi, dati sensibili](./networking-security/segreti-chiavi.md) — bozza
-- [1.4 Decision drill — Networking & accessi](./networking-security/drill.md) — bozza
+- [1.2 DNS, TLS, Load Balancing, CDN](./networking-security/dns-tls-lb-cdn.md) — bozza
+- [1.3 Identity e permessi (IAM concettuale)](./networking-security/identity-iam.md) — bozza
+- [1.4 Segreti, chiavi, dati sensibili](./networking-security/segreti-chiavi.md) — bozza
+- [1.5 Decision drill — Networking & accessi](./networking-security/drill.md) — bozza
 
-### 2 — Container & compute
+### 2 — Compute & runtime
 - [2.1 Container](./compute/container.md) — bozza
 - [2.2 Orchestrazione e Kubernetes (concetti)](./compute/kubernetes-concetti.md) — bozza
 - [2.3 VM vs Container vs Serverless](./compute/vm-container-serverless.md) — bozza
-- [2.4 Decision drill — Dove far girare la mia app](./compute/drill.md) — bozza
+- [2.4 Async ed event-driven](./compute/async-event-driven.md) — bozza
+- [2.5 API design per servizi cloud](./compute/api-design.md) — bozza
+- [2.6 Decision drill — Dove far girare la mia app](./compute/drill.md) — bozza
 
 ### 3 — IaC & automazione
 - [3.1 Infrastructure as Code (Terraform)](./iac-automation/iac-terraform.md) — bozza
@@ -58,15 +63,17 @@ Stesso metodo dell'AI Playbook: leggi una lezione, poi **chiudi la pagina e fai 
 - [5.1 GPU nel cloud](./cloud-for-ai/gpu-cloud.md) — bozza
 - [5.2 Servizi AI gestiti vs self-hosted](./cloud-for-ai/gestiti-vs-self-hosted.md) — bozza
 - [5.3 Ottimizzare i costi di inferenza](./cloud-for-ai/costi-inferenza.md) — bozza
-- [5.4 Kubernetes per workload AI](./cloud-for-ai/k8s-per-ai.md) — bozza
-- [5.5 Architettura di un sistema AI in produzione](./cloud-for-ai/architettura-sistema-ai.md) — bozza
-- [5.6 Decision drill — Deploy RAG su AWS](./cloud-for-ai/drill.md) — bozza
+- [5.4 Caching e CDN strategies](./cloud-for-ai/caching-strategie.md) — bozza
+- [5.5 Kubernetes per workload AI](./cloud-for-ai/k8s-per-ai.md) — bozza
+- [5.6 Architettura di un sistema AI in produzione](./cloud-for-ai/architettura-sistema-ai.md) — bozza
+- [5.7 Decision drill — Deploy RAG su AWS](./cloud-for-ai/drill.md) — bozza
 
 ### 6 — Operations
 - [6.1 FinOps: il cloud costa in modi sorprendenti](./operations/finops.md) — bozza
 - [6.2 Monitoring e incident response](./operations/monitoring-incident.md) — bozza
-- [6.3 Sicurezza in produzione](./operations/sicurezza-produzione.md) — bozza
-- [6.4 Decision drill — I costi sono raddoppiati](./operations/drill.md) — bozza
+- [6.3 Distributed tracing e observability avanzata](./operations/distributed-tracing.md) — bozza
+- [6.4 Sicurezza in produzione](./operations/sicurezza-produzione.md) — bozza
+- [6.5 Decision drill — I costi sono raddoppiati](./operations/drill.md) — bozza
 
 ### 7 — Sintesi
 - [7.1 Reference architecture cloud](./capstone/reference-architecture-cloud.md) — bozza
@@ -75,4 +82,4 @@ Stesso metodo dell'AI Playbook: leggi una lezione, poi **chiudi la pagina e fai 
 
 ## Totale
 
-**35 lezioni** distribuite su 8 parti. Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md).
+**42 lezioni** distribuite su 8 parti. Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md).

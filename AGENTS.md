@@ -4,10 +4,10 @@
 > Scopo: scrivere una pagina (o poche) per volta, con qualità costante, senza ripartire da zero.
 
 > **Due playbook, stesse regole.** Le istruzioni qui valgono identiche per entrambi i percorsi:
-> - **AI Playbook** — contenuto in `docs/`, syllabus in [`docs/SYLLABUS.md`](docs/SYLLABUS.md), stato pagine in [`docs/README.md`](docs/README.md).
+> - **AI Playbook** — contenuto in `ai/`, syllabus in [`ai/SYLLABUS.md`](ai/SYLLABUS.md), stato pagine in [`ai/README.md`](ai/README.md).
 > - **Cloud Playbook** — contenuto in `cloud/`, syllabus in [`cloud/SYLLABUS.md`](cloud/SYLLABUS.md), stato pagine in [`cloud/README.md`](cloud/README.md).
 >
-> Stessa voce, stesso template di lezione, stessi badge di stato. Studio in alternanza a blocchi (mai due fronti aperti lo stesso giorno). Il RADAR è unico in [`docs/RADAR.md`](docs/RADAR.md).
+> Stessa voce, stesso template di lezione, stessi badge di stato. Studio in alternanza a blocchi (mai due fronti aperti lo stesso giorno). Il RADAR è unico in [`ai/RADAR.md`](ai/RADAR.md).
 
 ---
 
@@ -31,8 +31,8 @@ Una guida di studio sull'AI applicativa moderna, in Markdown, per **diventare co
 
 ## 3. Template di ogni pagina (LEZIONE) — versione definitiva
 
-> Riferimenti di qualità: `docs/foundations/come-funziona-un-llm.md` (0.1) e
-> `docs/foundations/embedding.md` (0.2). La 0.1 è il **gold standard di densità**
+> Riferimenti di qualità: `ai/foundations/come-funziona-un-llm.md` (0.1) e
+> `ai/foundations/embedding.md` (0.2). La 0.1 è il **gold standard di densità**
 > (tabella anti-pattern inclusa); la 0.2 è il pavimento accettabile.
 > Il template è una CASSETTA DEGLI ATTREZZI, non una checklist da riempire sempre tutta.
 > Usa giudizio: su una lezione semplice alcuni blocchi si accorpano o si saltano. Riempire
@@ -139,17 +139,17 @@ averlo toccato con mano. Mai progetti completi.
 
 ## 6. Struttura e stato
 
-La struttura completa e l'ordine di studio con i prerequisiti vivono in **`docs/SYLLABUS.md`**
+La struttura completa e l'ordine di studio con i prerequisiti vivono in **`ai/SYLLABUS.md`**
 (8 parti, 0-7, più capstone). Lo stato di ogni pagina (scritta / da riscrivere / bozza) vive in
-**`docs/README.md`** ed è il punto di verità — da aggiornare quando una bozza diventa scritta.
+**`ai/README.md`** ed è il punto di verità — da aggiornare quando una bozza diventa scritta.
 
 AGENTS.md NON duplica la lista delle pagine: due fonti uguali divergono presto. Qui restano
 solo le regole di scrittura; cosa scrivere si legge dal SYLLABUS, in che stato è si legge
 dal README.
 
 Reference di qualità (gold standard della voce, da rileggere prima di scrivere una lezione nuova):
-- `docs/foundations/come-funziona-un-llm.md` (0.1) — densità piena, tabella anti-pattern.
-- `docs/foundations/embedding.md` (0.2) — pavimento accettabile.
+- `ai/foundations/come-funziona-un-llm.md` (0.1) — densità piena, tabella anti-pattern.
+- `ai/foundations/embedding.md` (0.2) — pavimento accettabile.
 
 ## 7. Decision drill (formato)
 
@@ -162,9 +162,9 @@ NON un news feed. Traccia solo i **cambiamenti strutturali**: quando qualcosa pa
 ## 9. Come lavorare a pezzi (workflow per sessione)
 
 1. Apri questo AGENTS.md.
-2. Apri `docs/README.md` per vedere lo stato; scegli **1-3 pagine** in bozza (non di più: la qualità cala).
+2. Apri `ai/README.md` per vedere lo stato; scegli **1-3 pagine** in bozza (non di più: la qualità cala).
 3. Per ognuna: segui il template (§3), il tono (§5), i badge (§4). Usa `foundations/come-funziona-un-llm.md` (0.1) e `foundations/embedding.md` (0.2) come metro di qualità.
-4. Aggiorna lo stato in `docs/README.md` ("bozza" → "scritta").
+4. Aggiorna lo stato in `ai/README.md` ("bozza" → "scritta").
 5. Se qualcosa è "diventato standard", aggiorna il Radar e il Changelog (quando esisteranno).
 6. Fine sessione: salva. La prossima riprende da qui.
 

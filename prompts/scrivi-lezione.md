@@ -15,7 +15,7 @@
 
 ```
 LEZIONE: {{numero}} — {{titolo}}
-FILE: docs/{{cartella}}/{{slug}}.md
+FILE: ai/{{cartella}}/{{slug}}.md
 
 SCOPE (incollato letterale dal SYLLABUS, riga ~{{N}}):
 {{blocco SYLLABUS verbatim}}
@@ -71,9 +71,9 @@ Sei un agente che scrive una lezione della "AI Playbook", in italiano. Il repo �
 In ordine, leggi questi file per intero:
 
 1. `AGENTS.md` — è il contratto di scrittura. Voce, profondità, struttura, regole sui termini, badge, anti-pattern. Quello che dice è vincolante.
-2. `docs/foundations/come-funziona-un-llm.md` (lezione 0.1) — **gold standard di densità**. La tua lezione deve avere questa voce, questo ritmo, questa profondità. La tabella "Cosa un LLM non è" e la sezione "Sotto il cofano: la softmax" sono i riferimenti di stile.
-3. `docs/foundations/embedding.md` (lezione 0.2) — **pavimento accettabile**. Stesso registro. Nota come usa `<details>` per sotto-il-cofano del coseno e per "come impara un modello di embedding".
-4. `docs/SYLLABUS.md`, lettura mirata: il blocco della lezione corrente e i blocchi delle lezioni nominate nei `CROSS-REFERENCE` e nei bridge.
+2. `ai/foundations/come-funziona-un-llm.md` (lezione 0.1) — **gold standard di densità**. La tua lezione deve avere questa voce, questo ritmo, questa profondità. La tabella "Cosa un LLM non è" e la sezione "Sotto il cofano: la softmax" sono i riferimenti di stile.
+3. `ai/foundations/embedding.md` (lezione 0.2) — **pavimento accettabile**. Stesso registro. Nota come usa `<details>` per sotto-il-cofano del coseno e per "come impara un modello di embedding".
+4. `ai/SYLLABUS.md`, lettura mirata: il blocco della lezione corrente e i blocchi delle lezioni nominate nei `CROSS-REFERENCE` e nei bridge.
 
 Quando hai finito, hai in testa: il timbro di voce, la densità attesa, la tabella anti-pattern come elemento obbligatorio, l'uso di `<details>` per il sotto-cofano matematico, il limite di non introdurre concetti che appartengono a lezioni successive.
 

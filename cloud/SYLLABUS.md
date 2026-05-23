@@ -66,22 +66,25 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
 
 ---
 
-## PARTE 0 — Cosa è il cloud, davvero 🟢 (universale)
+## PARTE 0 — Cosa è il cloud, davvero (universale)
 - **0.1 Cosa significa "cloud"** — responsabilità condivisa, CapEx vs OpEx, il cambio mentale da
   "il mio server" a "risorse che accendo/spengo/pago a consumo".
 - **0.2 IaaS / PaaS / SaaS** ⊳ 0.1 — chi gestisce cosa; scegliere il livello di astrazione. Primo decision drill.
 - **0.3 Le risorse fondamentali** ⊳ 0.1 — compute, storage (oggetti/blocchi/file), networking, db gestiti.
 - **0.4 Regioni, zone, geografia** ⊳ 0.3 — latenza, ridondanza, data residency (↔ privacy guida AI), disaster recovery.
+- **0.5 Persistenza dei dati: SQL, NoSQL, oggetti, vector** ⊳ 0.3 — quando scegli quale famiglia di storage. Concetto universale, prerequisito di 4.3 e di RAG.
+- **0.6 Linux essenziale per cloud** ⊳ 0.3 — file system, processi, permessi, SSH, log: il minimo per non essere ciechi su una VM o in un container.
 
-## PARTE 1 — Networking e sicurezza di base 🔵 (universale)
+## PARTE 1 — Networking e sicurezza di base (universale)
 *Dove i full-stack hanno i buchi più grossi, e dove si fanno i danni più costosi.*
 - **1.1 Networking nel cloud** ⊳ 0.3 — reti virtuali, subnet, IP pubblici/privati, gateway, firewall.
-- **1.2 Identity e permessi (IAM concettuale)** ⊳ 0.1 — "chi può fare cosa su quale risorsa".
+- **1.2 DNS, TLS, Load Balancing, CDN** ⊳ 1.1 — come gli utenti raggiungono il tuo sistema: nomi, certificati, distribuzione del traffico, cache di bordo. Concetti universali che precedono ogni servizio managed (Route 53, ALB, CloudFront).
+- **1.3 Identity e permessi (IAM concettuale)** ⊳ 0.1 — "chi può fare cosa su quale risorsa".
   Concetto di sicurezza n.1 del cloud. Principio del **least privilege**.
-- **1.3 Segreti, chiavi, dati sensibili** ⊳ 1.2 — credenziali fuori dal codice (↔ sicurezza guida AI).
-- **1.4 Decision drill — Networking & accessi**
+- **1.4 Segreti, chiavi, dati sensibili** ⊳ 1.3 — credenziali fuori dal codice (↔ sicurezza guida AI).
+- **1.5 Decision drill — Networking & accessi**
 
-## PARTE 2 — Container e dove far girare il codice 🔵 (universale)
+## PARTE 2 — Container e dove far girare il codice (universale)
 *Da full-stack parti avvantaggiato. Qui sta la decisione architetturale più frequente del cloud.*
 - **2.1 Container** ⊳ 0.3 — Docker concettuale, immagini, il "sul mio computer funzionava" risolto.
 - **2.2 Orchestrazione e Kubernetes (CONCETTI, non admin)** ⊳ 2.1 —
@@ -91,15 +94,17 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
 - **2.3 VM vs Container vs Serverless** ⊳ 2.1 — lo spettro di astrazione. Il decision drill
   centrale: serverless per workload spiky/event-driven e poca ops; container/K8s per traffico
   sostenuto, stateful, controllo fine. Cold start, vendor lock-in, costi a confronto.
-- **2.4 Decision drill — Dove far girare la mia app** (caso reale con vincoli di traffico/budget)
+- **2.4 Async ed event-driven** ⊳ 2.3 — quando una richiesta sincrona NON è la risposta giusta: code, pub/sub, event bus, idempotenza. Concetto universale prima dei nomi (SQS/SNS/EventBridge in 4.x).
+- **2.5 API design per servizi cloud** ⊳ 2.3 — REST vs GraphQL, versioning, paginazione, rate limiting, idempotenza, autenticazione. L'interfaccia conta più del runtime.
+- **2.6 Decision drill — Dove far girare la mia app** (caso reale con vincoli di traffico/budget)
 
-## PARTE 3 — Infrastructure as Code & automazione 🔵 (universale)
+## PARTE 3 — Infrastructure as Code & automazione (universale)
 - **3.1 IaC: infrastruttura come codice** ⊳ 2.3 — perché non si clicca più nelle console:
   riproducibilità, versioning, revisione. **Terraform** come standard (multi-cloud).
 - **3.2 CI/CD nel cloud** ⊳ 3.1 — pipeline di deploy automatico, esteso all'infrastruttura.
 - **3.3 Decision drill — Cosa automatizzare e cosa no**
 
-## PARTE 4 — AWS: dal concetto alla pratica 🟡 (specifico)
+## PARTE 4 — AWS: dal concetto alla pratica (specifico)
 *Scegli il provider e diventi spendibile. I concetti 0-3 ora hanno un nome.*
 *<span class="badge-stato evoluzione">In evoluzione</span> studia il mapping concetto→servizio, non i nomi a memoria.*
 - **4.1 Orientarsi in AWS** — console, regioni, **IAM** (= 1.2 in AWS), **billing e budget alert**
@@ -113,7 +118,7 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
   (es. URL shortener: Lambda + API Gateway + DynamoDB + IAM least-privilege + CloudWatch —
   il progetto-tipo che i colloqui 2026 vogliono vedere)
 
-## PARTE 5 — Cloud per l'AI 🔵 (la sinergia — il tuo bersaglio)
+## PARTE 5 — Cloud per l'AI (la sinergia — il tuo bersaglio)
 *Dove Cloud e AI si incontrano. È la competenza che cresce di più nel 2026 (MLOps job ~10× in 5 anni).*
 - **5.1 Far girare carichi AI sul cloud** ⊳ 4.2 — **GPU nel cloud** (perché costano, come si
   provisiona), serving a bassa latenza, batch vs real-time inference.
@@ -121,23 +126,25 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
   ospitare il proprio modello: il build-vs-buy della guida AI in versione infrastrutturale.
 - **5.3 Ottimizzare i costi di inferenza** ⊳ 5.1, 4.1 — il costo AI in produzione esplode qui;
   caching, batching, scelta dell'istanza. (↔ FinOps guida AI.)
-- **5.4 K8s per workload AI** ⊳ 2.2, 5.1 —
+- **5.4 Caching e CDN strategies** ⊳ 5.3, 1.2 — semantic cache per LLM, response cache, edge caching di embedding e risposte. La leva di costo e latenza più sottovalutata.
+- **5.5 K8s per workload AI** ⊳ 2.2, 5.1 —
   <span class="badge-stato evoluzione">In evoluzione</span> qui K8s torna rilevante anche per
   non-senior: GPU scheduling, batch job, inference scalabile. Concetti + quando serve.
-- **5.5 Architettura di un sistema AI in produzione su cloud** ⊳ tutto + Parti 5-6 guida AI —
+- **5.6 Architettura di un sistema AI in produzione su cloud** ⊳ tutto + Parti 5-6 guida AI —
   la sintesi: dove vivono retrieval, modello, guardrail, observability su infra reale.
-- **5.6 Decision drill — Deploya il RAG della guida AI su AWS**
+- **5.7 Decision drill — Deploya il RAG della guida AI su AWS**
 
-## PARTE 6 — Operations, costi, sicurezza in produzione 🟡
+## PARTE 6 — Operations, costi, sicurezza in produzione
 - **6.1 FinOps: il cloud costa in modi sorprendenti** ⊳ 4.1 — controllo spesa, gli errori che
   svuotano la carta (istanze dimenticate accese, NAT Gateway, traffico in uscita).
 - **6.2 Monitoring e incident response** ⊳ 4.6 — il giorno-2: alert sensati, cosa guardare quando
   qualcosa si rompe alle 3 di notte.
-- **6.3 Sicurezza in produzione** ⊳ 1.2, 1.3 — least privilege applicato, superficie d'attacco,
+- **6.3 Distributed tracing e observability avanzata** ⊳ 6.2 — quando il sistema è fatto di tanti pezzi (microservizi, async, LLM call): tracing end-to-end, correlazione log/metriche/trace, SLO e error budget.
+- **6.4 Sicurezza in produzione** ⊳ 1.3, 1.4 — least privilege applicato, superficie d'attacco,
   errori di configurazione comuni (bucket S3 pubblici per sbaglio, ecc.).
-- **6.4 Decision drill — I costi sono raddoppiati: cosa indaghi e in che ordine**
+- **6.5 Decision drill — I costi sono raddoppiati: cosa indaghi e in che ordine**
 
-## PARTE 7 — Sintesi e portfolio 🟡
+## PARTE 7 — Sintesi e portfolio
 - **7.1 Reference architecture cloud** ⊳ Parti 1-6.
 - **7.2 Capstone — un sistema reale end-to-end su AWS, con IaC** ⊳ tutto — idealmente ci metti
   sopra un progetto della guida AI. Cloud + AI chiusi nello stesso artefatto.

@@ -38,6 +38,7 @@ const config = {
         hashed: true,
         language: ['it', 'en'],
         indexBlog: false,
+        docsDir: ['ai', 'cloud'],
         docsRouteBasePath: ['/ai', '/cloud'],
         docsPluginIdForPreferredVersion: 'default',
         highlightSearchTermsOnTargetPage: true,
@@ -52,6 +53,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'ai',
           routeBasePath: '/ai',
           sidebarPath: './sidebars.js',
           remarkPlugins: [remarkMath],

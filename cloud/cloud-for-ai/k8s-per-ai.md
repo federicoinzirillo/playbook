@@ -1,13 +1,13 @@
 ---
 title: Kubernetes per workload AI
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Kubernetes per workload AI
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">Bozza</span>
-  <span>Lezione 5.4</span>
+  <span>Lezione 5.5</span>
 </div>
 
-> Lezione in arrivo. Vedi il [SYLLABUS](/cloud/SYLLABUS), punto 5.4.
+> Lezione in arrivo. Vedi il [SYLLABUS](/cloud/SYLLABUS), punto 5.5.
