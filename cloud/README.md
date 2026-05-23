@@ -20,7 +20,7 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 
 ## Stato delle pagine
 
-> **Parti 0–8 scritte** (50 lezioni). Le lezioni della Parte 9 sono placeholder eccetto 9.4 (compliance, scritta): il sidebar mostra la struttura completa del syllabus, ma il resto va scritto una lezione per volta. La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
+> **Parti 0–9 scritte** (56 lezioni). La struttura ordinata con i prerequisiti è in **[SYLLABUS](./SYLLABUS.md)**.
 
 ### 0 — Fondamenta
 - [0.1 Cosa significa cloud](./foundations/cosa-significa-cloud.md) — scritta
@@ -90,13 +90,13 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 - [8.3 Il portfolio che fa assumere](./capstone/portfolio.md) — scritta
 
 ### 9 — Architettura enterprise (traccia SA)
-- [9.1 AWS Well-Architected Framework](./enterprise-architecture/well-architected.md) — bozza
-- [9.2 Governance multi-account](./enterprise-architecture/governance-multiacccount.md) — bozza
-- [9.3 Migrazione e modernizzazione](./enterprise-architecture/migrazione-modernizzazione.md) — bozza
+- [9.1 AWS Well-Architected Framework](./enterprise-architecture/well-architected.md) — scritta
+- [9.2 Governance multi-account](./enterprise-architecture/governance-multiacccount.md) — scritta
+- [9.3 Migrazione e modernizzazione](./enterprise-architecture/migrazione-modernizzazione.md) — scritta
 - [9.4 Compliance enterprise](./enterprise-architecture/compliance-enterprise.md) — scritta
-- [9.5 Multi-cloud: consapevolezza senza dispersione](./enterprise-architecture/multicloud-awareness.md) — bozza
-- [9.6 Decision drill — Landing zone enterprise](./enterprise-architecture/drill.md) — bozza
+- [9.5 Multi-cloud awareness](./enterprise-architecture/multicloud-awareness.md) — scritta
+- [9.6 Decision drill — Landing zone enterprise](./enterprise-architecture/drill.md) — scritta
 
 ## Totale
 
-**50 lezioni** distribuite su 10 parti. **50 scritte**, 4 placeholder (Parte 9 eccetto 9.4). Da scrivere in ordine secondo i prerequisiti del [SYLLABUS](./SYLLABUS.md). La Parte 9 è opzionale — traccia per chi punta ad AI Cloud Solution Architect.
+**56 lezioni** distribuite su 10 parti. **Tutte scritte**. La Parte 9 è opzionale — traccia per chi punta ad AI Cloud Solution Architect. La struttura con i prerequisiti è in [SYLLABUS](./SYLLABUS.md).
