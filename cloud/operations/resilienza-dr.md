@@ -1,9 +1,9 @@
 ---
-title: Decision drill — I costi sono raddoppiati
-sidebar_position: 7
+title: Resilienza e disaster recovery
+sidebar_position: 5
 ---
 
-# Decision drill — I costi sono raddoppiati
+# Resilienza e disaster recovery
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">Bozza</span>

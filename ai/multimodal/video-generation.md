@@ -1,6 +1,6 @@
 ---
 title: "Video generation: cosa sa fare, costi, quando usarlo"
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 # Video generation: cosa sa fare, costi, quando usarlo

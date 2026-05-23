@@ -1,6 +1,6 @@
 ---
 title: Quando multimodale, quando pipeline separate
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Quando multimodale, quando pipeline separate

@@ -141,18 +141,21 @@ fondazionali (Parti 0-1-3-5) reggono per anni; i tool no.
   modalità) vs pipeline separate: oggi il nativo è lo standard di fatto.
 - **2.2 Vision: cosa sa fare l'AI sulle immagini** ⊳ 2.1 — classificazione, object detection, OCR,
   document understanding, video. A livello di capacità e casi d'uso.
-- **2.3 Audio e speech** ⊳ 2.1 — speech-to-text e text-to-speech; quando usare un modello dedicato
+- **2.3 Multimodal RAG — retrieval su documenti complessi** ⊳ 1.1, 2.2 — ColPali e vision
+  embeddings per PDF, immagini, documenti con layout complesso; quando il RAG testuale non basta
+  e come combinare retrieval visivo e testuale.
+- **2.4 Audio e speech** ⊳ 2.1 — speech-to-text e text-to-speech; quando usare un modello dedicato
   (solo trascrizione) vs un multimodale (trascrizione + ragionamento).
-- **2.4 Generazione di immagini (diffusion models)** ⊳ 2.1 — l'idea di base, senza la matematica;
+- **2.5 Generazione di immagini (diffusion models)** ⊳ 2.1 — l'idea di base, senza la matematica;
   casi d'uso e limiti.
-- **2.5 Quando multimodale, quando pipeline separate** ⊳ 2.1 — criteri di scelta e trade-off.
-- **2.6 Decision drill — Multimodale**
-- **2.7 Voice agents in tempo reale** ⊳ 2.3, 1.4 —
+- **2.6 Quando multimodale, quando pipeline separate** ⊳ 2.1 — criteri di scelta e trade-off.
+- **2.7 Decision drill — Multimodale**
+- **2.8 Voice agents in tempo reale** ⊳ 2.4, 1.4 —
   <span class="badge-stato evoluzione">In evoluzione</span> conversazione vocale fluida sotto la
   soglia degli ~800ms percepiti. Perché la pipeline STT→LLM→TTS non basta, modelli speech-to-speech
   nativi (Realtime API, Gemini Live), gestione delle interruzioni (barge-in, turn detection),
   vincoli di rete mobile. Quando NON usarlo.
-- **2.8 Video generation: cosa sa fare, costi, quando usarlo** ⊳ 2.1 —
+- **2.9 Video generation: cosa sa fare, costi, quando usarlo** ⊳ 2.1 —
   <span class="badge-stato evoluzione">In evoluzione</span> Sora, Veo, Runway, Kling: capability
   reali al 2026, modello di costo (pagamento al secondo di output, latenza in minuti), casi d'uso
   seri (mockup, b-roll, formazione, advertising) vs theatre da demo. Limiti: coerenza temporale,

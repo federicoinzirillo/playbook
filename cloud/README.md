@@ -43,7 +43,8 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 - [2.3 VM vs Container vs Serverless](./compute/vm-container-serverless.md) — bozza
 - [2.4 Async ed event-driven](./compute/async-event-driven.md) — bozza
 - [2.5 API design per servizi cloud](./compute/api-design.md) — bozza
-- [2.6 Decision drill — Dove far girare la mia app](./compute/drill.md) — bozza
+- [2.6 Dati in movimento — batch, streaming, CDC](./compute/dati-movimento.md) — bozza
+- [2.7 Decision drill — Dove far girare la mia app](./compute/drill.md) — bozza
 
 ### 3 — IaC & automazione
 - [3.1 Infrastructure as Code (Terraform)](./iac-automation/iac-terraform.md) — bozza
@@ -68,14 +69,18 @@ Leggi una lezione, poi **chiudi la pagina e fai la "Verifica di comprensione" a 
 - [5.4 Caching e CDN strategies](./cloud-for-ai/caching-strategie.md) — bozza
 - [5.5 Kubernetes per workload AI](./cloud-for-ai/k8s-per-ai.md) — bozza
 - [5.6 Architettura di un sistema AI in produzione](./cloud-for-ai/architettura-sistema-ai.md) — bozza
-- [5.7 Decision drill — Deploy RAG su AWS](./cloud-for-ai/drill.md) — bozza
+- [5.7 Vector database managed vs self-hosted](./cloud-for-ai/vector-db.md) — bozza
+- [5.8 Training pipeline gestiti](./cloud-for-ai/training-pipeline.md) — bozza
+- [5.9 Decision drill — Deploy RAG su AWS](./cloud-for-ai/drill.md) — bozza
 
 ### 6 — Operations
 - [6.1 FinOps: il cloud costa in modi sorprendenti](./operations/finops.md) — bozza
 - [6.2 Monitoring e incident response](./operations/monitoring-incident.md) — bozza
 - [6.3 Distributed tracing e observability avanzata](./operations/distributed-tracing.md) — bozza
 - [6.4 Sicurezza in produzione](./operations/sicurezza-produzione.md) — bozza
-- [6.5 Decision drill — I costi sono raddoppiati](./operations/drill.md) — bozza
+- [6.5 Resilienza e disaster recovery](./operations/resilienza-dr.md) — bozza
+- [6.6 Compliance enterprise](./operations/compliance-enterprise.md) — bozza
+- [6.7 Decision drill — I costi sono raddoppiati](./operations/drill.md) — bozza
 
 ### 7 — Sintesi
 - [7.1 Reference architecture cloud](./capstone/reference-architecture-cloud.md) — bozza

@@ -1,6 +1,6 @@
 ---
 title: Voice agents in tempo reale
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Voice agents in tempo reale

@@ -1,9 +1,9 @@
 ---
-title: Decision drill — Deploy RAG su AWS
-sidebar_position: 9
+title: Vector database managed vs self-hosted
+sidebar_position: 7
 ---
 
-# Decision drill — Deploy RAG su AWS
+# Vector database managed vs self-hosted
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">Bozza</span>

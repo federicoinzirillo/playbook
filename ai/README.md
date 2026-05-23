@@ -43,12 +43,13 @@ Leggere non basta e dà una falsa sicurezza. Il metodo: leggi una lezione, poi *
 ### 2 — Multimodale e altri tipi di AI
 - [2.1 Come funziona il multimodale](./multimodal/come-funziona-multimodale.md) — scritta
 - [2.2 Vision](./multimodal/vision.md) — scritta
-- [2.3 Audio e speech](./multimodal/audio.md) — scritta
-- [2.4 Generazione di immagini](./multimodal/generazione-immagini.md) — scritta
-- [2.5 Multimodale vs pipeline separate](./multimodal/multimodale-vs-pipeline.md) — scritta
-- [2.6 Decision drill — Multimodale](./multimodal/drill.md) — scritta
-- [2.7 Voice agents in tempo reale](./multimodal/voice-agents.md) — scritta
-- [2.8 Video generation](./multimodal/video-generation.md) — bozza
+- [2.3 Multimodal RAG](./multimodal/multimodal-rag.md) — da scrivere
+- [2.4 Audio e speech](./multimodal/audio.md) — scritta
+- [2.5 Generazione di immagini](./multimodal/generazione-immagini.md) — scritta
+- [2.6 Multimodale vs pipeline separate](./multimodal/multimodale-vs-pipeline.md) — scritta
+- [2.7 Decision drill — Multimodale](./multimodal/drill.md) — scritta
+- [2.8 Voice agents in tempo reale](./multimodal/voice-agents.md) — scritta
+- [2.9 Video generation](./multimodal/video-generation.md) — bozza
 
 ### 3 — Valutare e rendere affidabile
 - [3.1 LLM-as-judge](./evaluation/llm-as-judge.md) — scritta

@@ -1,9 +1,9 @@
 ---
-title: Decision drill — Dove far girare la mia app
-sidebar_position: 7
+title: Dati in movimento — batch, streaming, CDC
+sidebar_position: 6
 ---
 
-# Decision drill — Dove far girare la mia app
+# Dati in movimento — batch, streaming, CDC
 
 <div class="lesson-meta">
   <span class="badge-stato evoluzione">Bozza</span>

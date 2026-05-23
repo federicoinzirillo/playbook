@@ -1,6 +1,6 @@
 ---
 title: Generazione di immagini (diffusion models)
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # Generazione di immagini (diffusion models)

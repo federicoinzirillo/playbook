@@ -100,7 +100,10 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
   globale a bassa latenza vince, trade-off V8 isolate vs container, limiti di runtime.
 - **2.4 Async ed event-driven** ⊳ 2.3 — quando una richiesta sincrona NON è la risposta giusta: code, pub/sub, event bus, idempotenza. Concetto universale prima dei nomi (SQS/SNS/EventBridge in 4.x).
 - **2.5 API design per servizi cloud** ⊳ 2.3 — REST vs GraphQL, versioning, paginazione, rate limiting, idempotenza, autenticazione. L'interfaccia conta più del runtime.
-- **2.6 Decision drill — Dove far girare la mia app** (caso reale con vincoli di traffico/budget)
+- **2.6 Dati in movimento — batch, streaming, CDC** ⊳ 2.4 — quando il batch non basta: stream
+  processing, event sourcing, Change Data Capture. Kafka e Kinesis come concetto. Una scelta di
+  architettura che blocca se fatta tardi.
+- **2.7 Decision drill — Dove far girare la mia app** (caso reale con vincoli di traffico/budget)
 
 ## PARTE 3 — Infrastructure as Code & automazione (universale)
 - **3.1 IaC: infrastruttura come codice** ⊳ 2.3 — perché non si clicca più nelle console:
@@ -150,7 +153,12 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
   il pattern **LLM gateway** (LiteLLM, Portkey, Helicone) come componente di sistema: dove vive
   (in front di Bedrock o di un endpoint self-hosted), cosa fa (routing multi-modello, caching,
   rate limit, budget), perché conta. Cross-ref a 5.6 AI (caching semantico + model routing).
-- **5.7 Decision drill — Deploya il RAG della guida AI su AWS**
+- **5.7 Vector database managed vs self-hosted** ⊳ 0.5, 5.1 — Pinecone, OpenSearch KNN, pgvector,
+  Weaviate: la decisione build/managed applicata allo storage vettoriale. Quando pgvector nel DB
+  esistente batte il servizio dedicato e quando no.
+- **5.8 Training pipeline gestiti** ⊳ 5.1, 5.2 — SageMaker Pipelines, model registry, feature
+  store: il pezzo MLOps che cade tra le due guide. Concetti senza entrare nell'addestramento.
+- **5.9 Decision drill — Deploya il RAG della guida AI su AWS**
 
 ## PARTE 6 — Operations, costi, sicurezza in produzione
 - **6.1 FinOps: il cloud costa in modi sorprendenti** ⊳ 4.1 — controllo spesa, gli errori che
@@ -163,7 +171,13 @@ I progetti non sono opzionali — nel cloud ancora più che altrove, perché è 
 - **6.3 Distributed tracing e observability avanzata** ⊳ 6.2 — quando il sistema è fatto di tanti pezzi (microservizi, async, LLM call): tracing end-to-end, correlazione log/metriche/trace, SLO e error budget.
 - **6.4 Sicurezza in produzione** ⊳ 1.3, 1.4 — least privilege applicato, superficie d'attacco,
   errori di configurazione comuni (bucket S3 pubblici per sbaglio, ecc.).
-- **6.5 Decision drill — I costi sono raddoppiati: cosa indaghi e in che ordine**
+- **6.5 Resilienza e disaster recovery** ⊳ 0.4, 4.2 — RPO/RTO, backup, failover multi-AZ e
+  multi-region, chaos engineering: i concetti che il business chiede e l'engineer deve saper
+  ragionare prima che succeda qualcosa.
+- **6.6 Compliance enterprise** ⊳ 6.4 — SOC 2, ISO 27001, HIPAA: cosa chiedono davvero, cosa
+  devi predisporre nell'infrastruttura, audit trail. Non diventa un compliance officer, ma non
+  si blocca al primo meeting enterprise.
+- **6.7 Decision drill — I costi sono raddoppiati: cosa indaghi e in che ordine**
 
 ## PARTE 7 — Sintesi e portfolio
 - **7.1 Reference architecture cloud** ⊳ Parti 1-6.

@@ -1,6 +1,6 @@
 ---
 title: Decision drill — Multimodale
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # Decision drill — Multimodale
