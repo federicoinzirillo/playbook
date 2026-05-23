@@ -13,12 +13,11 @@
 
 ## 1. Cos'è questo progetto
 
-Una guida di studio sull'AI applicativa moderna, in Markdown, per **diventare competitivi nel campo senza laurea** — capire di cosa parlano tutti, saper decidere, saper costruire l'essenziale.
+Una guida di studio sull'AI applicativa moderna e sul cloud, in Markdown, per **capire di cosa si parla, saper decidere, saper costruire l'essenziale**.
 
-- **Pubblico**: io. Background: so programmare bene (Python/SW eng), niente ML formale.
-- **Obiettivo a tendere**: profilo da AI Engineer applicativo → AI Solution Architect.
+- **Pubblico**: sviluppatori con background software (Python, full-stack, backend) che vogliono padroneggiare AI e cloud applicativi. Nessun prerequisito di ML formale.
 - **Non interessa**: addestramento di modelli da zero, ricerca, matematica pesante.
-- **Interessa**: progettare, valutare, mettere in sicurezza, deployare e governare sistemi basati su LLM.
+- **Interessa**: progettare, valutare, mettere in sicurezza, deployare e governare sistemi basati su LLM — e farli girare sul cloud.
 - **Motore di pubblicazione**: Markdown puro. Studiabile in Obsidian, pubblicabile con MkDocs Material o Docusaurus (decisione reversibile, non bloccante).
 
 ## 2. Principio guida (non violarlo)
